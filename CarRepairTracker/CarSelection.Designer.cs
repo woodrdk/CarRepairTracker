@@ -169,7 +169,7 @@
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.cbYear);
             this.Name = "frmCarSelection";
-            this.Text = "CarSelection";
+            this.Text = "Add Car";
             this.Load += new System.EventHandler(this.frmCarSelection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

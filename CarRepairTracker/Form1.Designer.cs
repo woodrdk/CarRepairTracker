@@ -30,6 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.navigationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vehicleListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.repairsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vehicleListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,14 +45,7 @@
             this.addRepairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRepairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRepairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whoseCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.navigationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vehicleListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.repairsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,54 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.navigationToolStripMenuItem,
+            this.vehicleListToolStripMenuItem1,
+            this.repairsToolStripMenuItem1});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // navigationToolStripMenuItem
+            // 
+            this.navigationToolStripMenuItem.Name = "navigationToolStripMenuItem";
+            this.navigationToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.navigationToolStripMenuItem.Text = "Navigation";
+            // 
+            // vehicleListToolStripMenuItem1
+            // 
+            this.vehicleListToolStripMenuItem1.Name = "vehicleListToolStripMenuItem1";
+            this.vehicleListToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
+            this.vehicleListToolStripMenuItem1.Text = "Vehicle List";
+            // 
+            // repairsToolStripMenuItem1
+            // 
+            this.repairsToolStripMenuItem1.Name = "repairsToolStripMenuItem1";
+            this.repairsToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
+            this.repairsToolStripMenuItem1.Text = "Repairs";
+            // 
             // vehicleListToolStripMenuItem
             // 
             this.vehicleListToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -85,7 +133,7 @@
             // addCarToolStripMenuItem
             // 
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.addCarToolStripMenuItem.Text = "Add Car";
             this.addCarToolStripMenuItem.Click += new System.EventHandler(this.AddCarToolStripMenuItem_Click);
             // 
@@ -94,12 +142,14 @@
             this.deleteCarToolStripMenuItem.Name = "deleteCarToolStripMenuItem";
             this.deleteCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteCarToolStripMenuItem.Text = "Delete Car";
+            this.deleteCarToolStripMenuItem.Click += new System.EventHandler(this.deleteCarToolStripMenuItem_Click);
             // 
             // editCarDetailsToolStripMenuItem
             // 
             this.editCarDetailsToolStripMenuItem.Name = "editCarDetailsToolStripMenuItem";
             this.editCarDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editCarDetailsToolStripMenuItem.Text = "Edit Car Details";
+            this.editCarDetailsToolStripMenuItem.Click += new System.EventHandler(this.editCarDetailsToolStripMenuItem_Click);
             // 
             // repairsToolStripMenuItem
             // 
@@ -117,30 +167,21 @@
             this.addRepairToolStripMenuItem.Name = "addRepairToolStripMenuItem";
             this.addRepairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addRepairToolStripMenuItem.Text = "Add Repair";
+            this.addRepairToolStripMenuItem.Click += new System.EventHandler(this.addRepairToolStripMenuItem_Click);
             // 
             // editRepairToolStripMenuItem
             // 
             this.editRepairToolStripMenuItem.Name = "editRepairToolStripMenuItem";
             this.editRepairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editRepairToolStripMenuItem.Text = "Edit Repair";
+            this.editRepairToolStripMenuItem.Click += new System.EventHandler(this.editRepairToolStripMenuItem_Click);
             // 
             // deleteRepairToolStripMenuItem
             // 
             this.deleteRepairToolStripMenuItem.Name = "deleteRepairToolStripMenuItem";
             this.deleteRepairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteRepairToolStripMenuItem.Text = "Delete Repair";
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.deleteRepairToolStripMenuItem.Click += new System.EventHandler(this.deleteRepairToolStripMenuItem_Click);
             // 
             // whoseCarToolStripMenuItem
             // 
@@ -148,42 +189,6 @@
             this.whoseCarToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.whoseCarToolStripMenuItem.Text = "Whose Car";
             this.whoseCarToolStripMenuItem.Click += new System.EventHandler(this.whoseCarToolStripMenuItem_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.navigationToolStripMenuItem,
-            this.vehicleListToolStripMenuItem1,
-            this.repairsToolStripMenuItem1});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // navigationToolStripMenuItem
-            // 
-            this.navigationToolStripMenuItem.Name = "navigationToolStripMenuItem";
-            this.navigationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.navigationToolStripMenuItem.Text = "Navigation";
-            // 
-            // vehicleListToolStripMenuItem1
-            // 
-            this.vehicleListToolStripMenuItem1.Name = "vehicleListToolStripMenuItem1";
-            this.vehicleListToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.vehicleListToolStripMenuItem1.Text = "Vehicle List";
-            // 
-            // repairsToolStripMenuItem1
-            // 
-            this.repairsToolStripMenuItem1.Name = "repairsToolStripMenuItem1";
-            this.repairsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.repairsToolStripMenuItem1.Text = "Repairs";
             // 
             // frmMain
             // 

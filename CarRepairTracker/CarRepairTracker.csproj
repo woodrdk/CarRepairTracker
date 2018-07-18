@@ -58,6 +58,30 @@
     <Compile Include="CarSelection.Designer.cs">
       <DependentUpon>CarSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCar.Designer.cs">
+      <DependentUpon>DeleteCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteRepair.Designer.cs">
+      <DependentUpon>DeleteRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCar.Designer.cs">
+      <DependentUpon>EditCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRepair.Designer.cs">
+      <DependentUpon>EditRepair.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +110,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CarSelection.resx">
       <DependentUpon>CarSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCar.resx">
+      <DependentUpon>DeleteCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteRepair.resx">
+      <DependentUpon>DeleteRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCar.resx">
+      <DependentUpon>EditCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRepair.resx">
+      <DependentUpon>EditRepair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

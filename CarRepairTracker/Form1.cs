@@ -53,9 +53,7 @@ namespace CarRepairTracker
 
         private void repairsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmModRepair ModRepair = new frmModRepair();
-            ModRepair.MdiParent = this;
-            ModRepair.Show();
+           
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -63,16 +61,57 @@ namespace CarRepairTracker
             Navigation navForm = new Navigation();
             navForm.MdiParent = this;
             navForm.Show();
+
+            ShowNavForm();
+        }
+
+        private void ShowNavForm()
+        {
+            IntroWho introForm = new IntroWho();
+            introForm.MdiParent = this;
+            introForm.Show();
         }
 
         private void whoseCarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IntroWho introForm = new IntroWho();
-            // introForm.ShowDialog();
-            introForm.MdiParent = this;
-            introForm.Show();
-           
-           
+            ShowNavForm();
+        }
+
+        private void addRepairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModRepair ModRepair = new frmModRepair();
+            ModRepair.MdiParent = this;
+            ModRepair.Show();
+        }
+
+        private void deleteCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteCar DeleteCar = new DeleteCar();
+            DeleteCar.MdiParent = this;
+            DeleteCar.Show();
+
+        }
+
+        private void editCarDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCar EditCar = new EditCar();
+            EditCar.MdiParent = this;
+            EditCar.Show();
+
+        }
+
+        private void editRepairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRepair EditRepair = new EditRepair();
+            EditRepair.MdiParent = this;
+            EditRepair.Show();
+        }
+
+        private void deleteRepairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteRepair DeleteRepair = new DeleteRepair();
+            DeleteRepair.MdiParent = this;
+            DeleteRepair.Show();
         }
     }
 }
