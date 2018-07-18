@@ -57,6 +57,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IntroWho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroWho.Designer.cs">
+      <DependentUpon>IntroWho.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModRepair.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroWho.resx">
+      <DependentUpon>IntroWho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModRepair.resx">
       <DependentUpon>ModRepair.cs</DependentUpon>
