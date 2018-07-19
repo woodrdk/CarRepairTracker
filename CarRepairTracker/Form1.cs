@@ -28,27 +28,7 @@ namespace CarRepairTracker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-             * frmCarSelection secondForm = new frmCarSelection();
-            secondForm.TopLevel = false;
-            secondForm.AutoScroll = true;
-            this.pnlMain.Controls.Add(secondForm);
-            secondForm.Show();
 
-            */
-            /*
-            Panel p = Parent as Panel;
-            if (p != null)
-            {
-                frmCarSelection myForm = new frmCarSelection();
-                myForm.FormBorderStyle = FormBorderStyle.None;
-                myForm.TopLevel = false;
-                myForm.AutoScroll = true;
-                p.Controls.Add(myForm);
-                myForm.Show();
-                
-            }
-            */
         }
 
         private void repairsToolStripMenuItem_Click(object sender, EventArgs e)
