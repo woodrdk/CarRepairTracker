@@ -86,6 +86,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.gbPurchaseDetails = new System.Windows.Forms.GroupBox();
             this.lblExpMileage = new System.Windows.Forms.Label();
             this.lblExpDate = new System.Windows.Forms.Label();
             this.textBox25 = new System.Windows.Forms.TextBox();
@@ -102,14 +105,13 @@
             this.lblPurchased = new System.Windows.Forms.Label();
             this.lblComments = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
             this.gbGeneral.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.gbPurchaseDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcVehicleData
@@ -637,7 +639,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 29);
+            this.label6.Location = new System.Drawing.Point(7, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 0;
@@ -645,22 +647,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.lblExpMileage);
-            this.tabPage3.Controls.Add(this.lblExpDate);
-            this.tabPage3.Controls.Add(this.textBox25);
-            this.tabPage3.Controls.Add(this.textBox24);
-            this.tabPage3.Controls.Add(this.checkBox2);
-            this.tabPage3.Controls.Add(this.lblWarranty);
-            this.tabPage3.Controls.Add(this.checkBox1);
-            this.tabPage3.Controls.Add(this.lblPurchaseMileage);
-            this.tabPage3.Controls.Add(this.textBox23);
-            this.tabPage3.Controls.Add(this.textBox22);
-            this.tabPage3.Controls.Add(this.lblPurchasePrice);
-            this.tabPage3.Controls.Add(this.lblPurchaseDate);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
-            this.tabPage3.Controls.Add(this.lblPurchased);
-            this.tabPage3.Controls.Add(this.lblComments);
-            this.tabPage3.Controls.Add(this.textBox21);
+            this.tabPage3.Controls.Add(this.gbPurchaseDetails);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -668,140 +655,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Purchase Details";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // lblExpMileage
-            // 
-            this.lblExpMileage.AutoSize = true;
-            this.lblExpMileage.Location = new System.Drawing.Point(460, 176);
-            this.lblExpMileage.Name = "lblExpMileage";
-            this.lblExpMileage.Size = new System.Drawing.Size(93, 13);
-            this.lblExpMileage.TabIndex = 15;
-            this.lblExpMileage.Text = "Expiration Mileage";
-            // 
-            // lblExpDate
-            // 
-            this.lblExpDate.AutoSize = true;
-            this.lblExpDate.Location = new System.Drawing.Point(318, 173);
-            this.lblExpDate.Name = "lblExpDate";
-            this.lblExpDate.Size = new System.Drawing.Size(79, 13);
-            this.lblExpDate.TabIndex = 14;
-            this.lblExpDate.Text = "Expiration Date";
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(463, 207);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(100, 20);
-            this.textBox25.TabIndex = 13;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(318, 205);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 20);
-            this.textBox24.TabIndex = 12;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(175, 207);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // lblWarranty
-            // 
-            this.lblWarranty.AutoSize = true;
-            this.lblWarranty.Location = new System.Drawing.Point(25, 207);
-            this.lblWarranty.Name = "lblWarranty";
-            this.lblWarranty.Size = new System.Drawing.Size(56, 13);
-            this.lblWarranty.TabIndex = 10;
-            this.lblWarranty.Text = "Warranty?";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(89, 207);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // lblPurchaseMileage
-            // 
-            this.lblPurchaseMileage.AutoSize = true;
-            this.lblPurchaseMileage.Location = new System.Drawing.Point(25, 174);
-            this.lblPurchaseMileage.Name = "lblPurchaseMileage";
-            this.lblPurchaseMileage.Size = new System.Drawing.Size(92, 13);
-            this.lblPurchaseMileage.TabIndex = 8;
-            this.lblPurchaseMileage.Text = "Purchase Mileage";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(127, 174);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 20);
-            this.textBox23.TabIndex = 7;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(127, 132);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 20);
-            this.textBox22.TabIndex = 6;
-            // 
-            // lblPurchasePrice
-            // 
-            this.lblPurchasePrice.AutoSize = true;
-            this.lblPurchasePrice.Location = new System.Drawing.Point(25, 132);
-            this.lblPurchasePrice.Name = "lblPurchasePrice";
-            this.lblPurchasePrice.Size = new System.Drawing.Size(79, 13);
-            this.lblPurchasePrice.TabIndex = 5;
-            this.lblPurchasePrice.Text = "Purchase Price";
-            // 
-            // lblPurchaseDate
-            // 
-            this.lblPurchaseDate.AutoSize = true;
-            this.lblPurchaseDate.Location = new System.Drawing.Point(25, 97);
-            this.lblPurchaseDate.Name = "lblPurchaseDate";
-            this.lblPurchaseDate.Size = new System.Drawing.Size(78, 13);
-            this.lblPurchaseDate.TabIndex = 4;
-            this.lblPurchaseDate.Text = "Purchase Date";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(127, 97);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // lblPurchased
-            // 
-            this.lblPurchased.AutoSize = true;
-            this.lblPurchased.Location = new System.Drawing.Point(22, 57);
-            this.lblPurchased.Name = "lblPurchased";
-            this.lblPurchased.Size = new System.Drawing.Size(95, 13);
-            this.lblPurchased.TabIndex = 2;
-            this.lblPurchased.Text = "Purchase location:";
-            // 
-            // lblComments
-            // 
-            this.lblComments.AutoSize = true;
-            this.lblComments.Location = new System.Drawing.Point(7, 242);
-            this.lblComments.Name = "lblComments";
-            this.lblComments.Size = new System.Drawing.Size(56, 13);
-            this.lblComments.TabIndex = 1;
-            this.lblComments.Text = "Comments";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(89, 242);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(354, 20);
-            this.textBox21.TabIndex = 0;
             // 
             // btnSubmit
             // 
@@ -820,6 +673,165 @@
             this.btnCancel.TabIndex = 24;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // gbPurchaseDetails
+            // 
+            this.gbPurchaseDetails.Controls.Add(this.lblExpMileage);
+            this.gbPurchaseDetails.Controls.Add(this.lblExpDate);
+            this.gbPurchaseDetails.Controls.Add(this.textBox25);
+            this.gbPurchaseDetails.Controls.Add(this.textBox24);
+            this.gbPurchaseDetails.Controls.Add(this.checkBox2);
+            this.gbPurchaseDetails.Controls.Add(this.lblWarranty);
+            this.gbPurchaseDetails.Controls.Add(this.checkBox1);
+            this.gbPurchaseDetails.Controls.Add(this.lblPurchaseMileage);
+            this.gbPurchaseDetails.Controls.Add(this.textBox23);
+            this.gbPurchaseDetails.Controls.Add(this.textBox22);
+            this.gbPurchaseDetails.Controls.Add(this.lblPurchasePrice);
+            this.gbPurchaseDetails.Controls.Add(this.lblPurchaseDate);
+            this.gbPurchaseDetails.Controls.Add(this.dateTimePicker1);
+            this.gbPurchaseDetails.Controls.Add(this.lblPurchased);
+            this.gbPurchaseDetails.Controls.Add(this.lblComments);
+            this.gbPurchaseDetails.Controls.Add(this.textBox21);
+            this.gbPurchaseDetails.Location = new System.Drawing.Point(27, 23);
+            this.gbPurchaseDetails.Name = "gbPurchaseDetails";
+            this.gbPurchaseDetails.Size = new System.Drawing.Size(533, 298);
+            this.gbPurchaseDetails.TabIndex = 0;
+            this.gbPurchaseDetails.TabStop = false;
+            this.gbPurchaseDetails.Text = "Purchase Details";
+            // 
+            // lblExpMileage
+            // 
+            this.lblExpMileage.AutoSize = true;
+            this.lblExpMileage.Location = new System.Drawing.Point(408, 137);
+            this.lblExpMileage.Name = "lblExpMileage";
+            this.lblExpMileage.Size = new System.Drawing.Size(93, 13);
+            this.lblExpMileage.TabIndex = 31;
+            this.lblExpMileage.Text = "Expiration Mileage";
+            // 
+            // lblExpDate
+            // 
+            this.lblExpDate.AutoSize = true;
+            this.lblExpDate.Location = new System.Drawing.Point(266, 134);
+            this.lblExpDate.Name = "lblExpDate";
+            this.lblExpDate.Size = new System.Drawing.Size(79, 13);
+            this.lblExpDate.TabIndex = 30;
+            this.lblExpDate.Text = "Expiration Date";
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(411, 168);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(100, 20);
+            this.textBox25.TabIndex = 29;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(266, 166);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(100, 20);
+            this.textBox24.TabIndex = 28;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(175, 225);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.TabIndex = 27;
+            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // lblWarranty
+            // 
+            this.lblWarranty.AutoSize = true;
+            this.lblWarranty.Location = new System.Drawing.Point(29, 229);
+            this.lblWarranty.Name = "lblWarranty";
+            this.lblWarranty.Size = new System.Drawing.Size(56, 13);
+            this.lblWarranty.TabIndex = 26;
+            this.lblWarranty.Text = "Warranty?";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(89, 225);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 25;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // lblPurchaseMileage
+            // 
+            this.lblPurchaseMileage.AutoSize = true;
+            this.lblPurchaseMileage.Location = new System.Drawing.Point(7, 137);
+            this.lblPurchaseMileage.Name = "lblPurchaseMileage";
+            this.lblPurchaseMileage.Size = new System.Drawing.Size(92, 13);
+            this.lblPurchaseMileage.TabIndex = 24;
+            this.lblPurchaseMileage.Text = "Purchase Mileage";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(124, 142);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 20);
+            this.textBox23.TabIndex = 23;
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(111, 106);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 20);
+            this.textBox22.TabIndex = 22;
+            // 
+            // lblPurchasePrice
+            // 
+            this.lblPurchasePrice.AutoSize = true;
+            this.lblPurchasePrice.Location = new System.Drawing.Point(7, 106);
+            this.lblPurchasePrice.Name = "lblPurchasePrice";
+            this.lblPurchasePrice.Size = new System.Drawing.Size(79, 13);
+            this.lblPurchasePrice.TabIndex = 21;
+            this.lblPurchasePrice.Text = "Purchase Price";
+            // 
+            // lblPurchaseDate
+            // 
+            this.lblPurchaseDate.AutoSize = true;
+            this.lblPurchaseDate.Location = new System.Drawing.Point(7, 63);
+            this.lblPurchaseDate.Name = "lblPurchaseDate";
+            this.lblPurchaseDate.Size = new System.Drawing.Size(78, 13);
+            this.lblPurchaseDate.TabIndex = 20;
+            this.lblPurchaseDate.Text = "Purchase Date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(111, 57);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 19;
+            // 
+            // lblPurchased
+            // 
+            this.lblPurchased.AutoSize = true;
+            this.lblPurchased.Location = new System.Drawing.Point(7, 37);
+            this.lblPurchased.Name = "lblPurchased";
+            this.lblPurchased.Size = new System.Drawing.Size(95, 13);
+            this.lblPurchased.TabIndex = 18;
+            this.lblPurchased.Text = "Purchase location:";
+            // 
+            // lblComments
+            // 
+            this.lblComments.AutoSize = true;
+            this.lblComments.Location = new System.Drawing.Point(7, 275);
+            this.lblComments.Name = "lblComments";
+            this.lblComments.Size = new System.Drawing.Size(56, 13);
+            this.lblComments.TabIndex = 17;
+            this.lblComments.Text = "Comments";
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(86, 272);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(440, 20);
+            this.textBox21.TabIndex = 16;
             // 
             // frmCarSelection
             // 
@@ -841,7 +853,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.gbPurchaseDetails.ResumeLayout(false);
+            this.gbPurchaseDetails.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -908,6 +921,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.GroupBox gbPurchaseDetails;
         private System.Windows.Forms.Label lblExpMileage;
         private System.Windows.Forms.Label lblExpDate;
         private System.Windows.Forms.TextBox textBox25;
