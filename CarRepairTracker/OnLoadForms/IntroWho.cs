@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CarRepairTracker
 {
+  
     public partial class IntroWho : Form
     {
         public IntroWho()
@@ -17,7 +18,7 @@ namespace CarRepairTracker
             InitializeComponent();
         }
 
-   
+
             
         
         private void cbWho_SelectedIndexChanged(object sender, EventArgs e)
@@ -31,15 +32,13 @@ namespace CarRepairTracker
             cbWho.Items.Add("Rob Wood");
         }
 
+       
         String who;
+   
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             who = cbWho.Text;
-            /*
-             * cbWho.Visible = false;
-             * lblWho.Visible = false;
-             * btnSubmit.Visible = false;
-            */
             pnlWho.Visible = false;
 
             if (lblCarOfWho.SelectedItem == null)
@@ -49,6 +48,7 @@ namespace CarRepairTracker
 
             scDisplay.Visible = true;
             lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";
+ 
         }
 
         private void lblCarOfWho_SelectedIndexChanged(object sender, EventArgs e)
