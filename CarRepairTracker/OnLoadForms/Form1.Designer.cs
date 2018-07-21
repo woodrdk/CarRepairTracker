@@ -290,14 +290,15 @@
             this.vehicleListToolStripMenuItem1,
             this.repairsToolStripMenuItem1});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // navigationToolStripMenuItem
             // 
             this.navigationToolStripMenuItem.Name = "navigationToolStripMenuItem";
-            this.navigationToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.navigationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.navigationToolStripMenuItem.Text = "Navigation";
+            this.navigationToolStripMenuItem.Click += new System.EventHandler(this.navigationToolStripMenuItem_Click_1);
             // 
             // vehicleListToolStripMenuItem1
             // 
@@ -357,6 +358,7 @@
             this.whoseCarToolStripMenuItem.Name = "whoseCarToolStripMenuItem";
             this.whoseCarToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.whoseCarToolStripMenuItem.Text = "Whose Car";
+            this.whoseCarToolStripMenuItem.Click += new System.EventHandler(this.whoseCarToolStripMenuItem_Click_1);
             // 
             // vehicleListToolStripMenuItem
             // 
@@ -371,20 +373,23 @@
             // addCarToolStripMenuItem
             // 
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCarToolStripMenuItem.Text = "Add Car";
+            this.addCarToolStripMenuItem.Click += new System.EventHandler(this.addCarToolStripMenuItem_Click_1);
             // 
             // deleteCarToolStripMenuItem
             // 
             this.deleteCarToolStripMenuItem.Name = "deleteCarToolStripMenuItem";
-            this.deleteCarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.deleteCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteCarToolStripMenuItem.Text = "Delete Car";
+            this.deleteCarToolStripMenuItem.Click += new System.EventHandler(this.deleteCarToolStripMenuItem_Click);
             // 
             // editCarDetailsToolStripMenuItem
             // 
             this.editCarDetailsToolStripMenuItem.Name = "editCarDetailsToolStripMenuItem";
-            this.editCarDetailsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.editCarDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editCarDetailsToolStripMenuItem.Text = "Edit Car Details";
+            this.editCarDetailsToolStripMenuItem.Click += new System.EventHandler(this.editCarDetailsToolStripMenuItem_Click_1);
             // 
             // repairsToolStripMenuItem
             // 
@@ -399,20 +404,23 @@
             // addRepairToolStripMenuItem
             // 
             this.addRepairToolStripMenuItem.Name = "addRepairToolStripMenuItem";
-            this.addRepairToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.addRepairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addRepairToolStripMenuItem.Text = "Add Repair";
+            this.addRepairToolStripMenuItem.Click += new System.EventHandler(this.addRepairToolStripMenuItem_Click_1);
             // 
             // editRepairToolStripMenuItem
             // 
             this.editRepairToolStripMenuItem.Name = "editRepairToolStripMenuItem";
-            this.editRepairToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.editRepairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editRepairToolStripMenuItem.Text = "Edit Repair";
+            this.editRepairToolStripMenuItem.Click += new System.EventHandler(this.editRepairToolStripMenuItem_Click_1);
             // 
             // deleteRepairToolStripMenuItem
             // 
             this.deleteRepairToolStripMenuItem.Name = "deleteRepairToolStripMenuItem";
-            this.deleteRepairToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.deleteRepairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteRepairToolStripMenuItem.Text = "Delete Repair";
+            this.deleteRepairToolStripMenuItem.Click += new System.EventHandler(this.deleteRepairToolStripMenuItem_Click_1);
             // 
             // frmMain
             // 
