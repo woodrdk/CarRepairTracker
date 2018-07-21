@@ -30,5 +30,35 @@ namespace CarRepairTracker
             cbWho.Items.Add("Anthony McCann");
             cbWho.Items.Add("Rob Wood");
         }
+
+        String who;
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            who = cbWho.Text;
+            /*
+             * cbWho.Visible = false;
+             * lblWho.Visible = false;
+             * btnSubmit.Visible = false;
+            */
+            pnlWho.Visible = false;
+
+            if (lblCarOfWho.SelectedItem == null)
+            {
+                // make the add car form run
+            }
+
+            scDisplay.Visible = true;
+            lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";
+        }
+
+        private void lblCarOfWho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

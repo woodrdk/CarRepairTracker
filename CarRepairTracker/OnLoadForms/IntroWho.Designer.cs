@@ -31,13 +31,23 @@
             this.cbWho = new System.Windows.Forms.ComboBox();
             this.lblWho = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.pnlWho = new System.Windows.Forms.Panel();
+            this.lblCarOfWho = new System.Windows.Forms.ComboBox();
+            this.scDisplay = new System.Windows.Forms.SplitContainer();
+            this.lblWhoPicked = new System.Windows.Forms.Label();
+            this.btnRepairHistory = new System.Windows.Forms.Button();
+            this.pnlWho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scDisplay)).BeginInit();
+            this.scDisplay.Panel1.SuspendLayout();
+            this.scDisplay.Panel2.SuspendLayout();
+            this.scDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbWho
             // 
             this.cbWho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbWho.FormattingEnabled = true;
-            this.cbWho.Location = new System.Drawing.Point(117, 107);
+            this.cbWho.Location = new System.Drawing.Point(24, 49);
             this.cbWho.Name = "cbWho";
             this.cbWho.Size = new System.Drawing.Size(121, 21);
             this.cbWho.TabIndex = 0;
@@ -46,34 +56,96 @@
             // lblWho
             // 
             this.lblWho.AutoSize = true;
-            this.lblWho.Location = new System.Drawing.Point(114, 74);
+            this.lblWho.Location = new System.Drawing.Point(21, 16);
             this.lblWho.Name = "lblWho";
-            this.lblWho.Size = new System.Drawing.Size(257, 13);
+            this.lblWho.Size = new System.Drawing.Size(261, 13);
             this.lblWho.TabIndex = 1;
-            this.lblWho.Text = "Hello, Who\'s car do you wish to keep track of today?";
+            this.lblWho.Text = "Hello, Whose car do you wish to keep track of today?";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(296, 107);
+            this.btnSubmit.Location = new System.Drawing.Point(203, 88);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // pnlWho
+            // 
+            this.pnlWho.Controls.Add(this.lblCarOfWho);
+            this.pnlWho.Controls.Add(this.lblWho);
+            this.pnlWho.Controls.Add(this.btnSubmit);
+            this.pnlWho.Controls.Add(this.cbWho);
+            this.pnlWho.Location = new System.Drawing.Point(12, 12);
+            this.pnlWho.Name = "pnlWho";
+            this.pnlWho.Size = new System.Drawing.Size(298, 142);
+            this.pnlWho.TabIndex = 3;
+            // 
+            // lblCarOfWho
+            // 
+            this.lblCarOfWho.FormattingEnabled = true;
+            this.lblCarOfWho.Location = new System.Drawing.Point(24, 89);
+            this.lblCarOfWho.Name = "lblCarOfWho";
+            this.lblCarOfWho.Size = new System.Drawing.Size(121, 21);
+            this.lblCarOfWho.TabIndex = 3;
+            this.lblCarOfWho.SelectedIndexChanged += new System.EventHandler(this.lblCarOfWho_SelectedIndexChanged);
+            // 
+            // scDisplay
+            // 
+            this.scDisplay.Location = new System.Drawing.Point(12, 207);
+            this.scDisplay.Name = "scDisplay";
+            // 
+            // scDisplay.Panel1
+            // 
+            this.scDisplay.Panel1.Controls.Add(this.btnRepairHistory);
+            this.scDisplay.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
+            // 
+            // scDisplay.Panel2
+            // 
+            this.scDisplay.Panel2.Controls.Add(this.lblWhoPicked);
+            this.scDisplay.Size = new System.Drawing.Size(462, 231);
+            this.scDisplay.SplitterDistance = 126;
+            this.scDisplay.TabIndex = 4;
+            this.scDisplay.Visible = false;
+            // 
+            // lblWhoPicked
+            // 
+            this.lblWhoPicked.AutoSize = true;
+            this.lblWhoPicked.Location = new System.Drawing.Point(3, 4);
+            this.lblWhoPicked.Name = "lblWhoPicked";
+            this.lblWhoPicked.Size = new System.Drawing.Size(114, 13);
+            this.lblWhoPicked.TabIndex = 0;
+            this.lblWhoPicked.Text = "place holder for design";
+            // 
+            // btnRepairHistory
+            // 
+            this.btnRepairHistory.Location = new System.Drawing.Point(4, 4);
+            this.btnRepairHistory.Name = "btnRepairHistory";
+            this.btnRepairHistory.Size = new System.Drawing.Size(114, 23);
+            this.btnRepairHistory.TabIndex = 0;
+            this.btnRepairHistory.Text = "Repair History";
+            this.btnRepairHistory.UseVisualStyleBackColor = true;
             // 
             // IntroWho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lblWho);
-            this.Controls.Add(this.cbWho);
+            this.ClientSize = new System.Drawing.Size(516, 462);
+            this.Controls.Add(this.scDisplay);
+            this.Controls.Add(this.pnlWho);
             this.Name = "IntroWho";
             this.Text = "IntroWho";
             this.Load += new System.EventHandler(this.IntroWho_Load);
+            this.pnlWho.ResumeLayout(false);
+            this.pnlWho.PerformLayout();
+            this.scDisplay.Panel1.ResumeLayout(false);
+            this.scDisplay.Panel2.ResumeLayout(false);
+            this.scDisplay.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scDisplay)).EndInit();
+            this.scDisplay.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -82,5 +154,10 @@
         private System.Windows.Forms.ComboBox cbWho;
         private System.Windows.Forms.Label lblWho;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Panel pnlWho;
+        private System.Windows.Forms.ComboBox lblCarOfWho;
+        private System.Windows.Forms.SplitContainer scDisplay;
+        private System.Windows.Forms.Label lblWhoPicked;
+        private System.Windows.Forms.Button btnRepairHistory;
     }
 }
