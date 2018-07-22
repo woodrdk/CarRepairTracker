@@ -16,12 +16,8 @@ https://visualstudio.microsoft.com/downloads/
 
 ### Coding Style Requirements
 
-Explain what these tests test and why
-
-```
 ![alt text](https://github.com/woodrdk/CarRepairTracker/blob/master/CSharpCodingGuidelinesCheatsheet.pdf)
 
-```
 
 ## Built With
 
