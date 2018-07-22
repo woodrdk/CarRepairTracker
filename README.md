@@ -21,8 +21,8 @@ https://csharpcodingguidelines.com/#11-what-is-this
 
 ### Coding Style Cheat Sheet
 
-![alt text](https://github.com/woodrdk/CarRepairTracker/blob/master/CSharpCodingGuidelinesCheatSheet1.PNG)
-![alt text](https://github.com/woodrdk/CarRepairTracker/blob/master/CSharpCodingGuidelinesCheatSheet2.PNG)
+![alt text](https://github.com/woodrdk/CarRepairTracker/blob/master/READMEImages/CSharpCodingGuidelinesCheatSheet1.PNG)
+![alt text](https://github.com/woodrdk/CarRepairTracker/blob/master/READMEImages/CSharpCodingGuidelinesCheatSheet2.PNG)
 
 
 The full PDF can be found here: 
