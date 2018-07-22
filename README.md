@@ -26,7 +26,7 @@ https://csharpcodingguidelines.com/#11-what-is-this
 
 
 The full PDF can be found here: 
-https://github.com/woodrdk/CarRepairTracker/blob/master/CSharpCodingGuidelinesCheatsheet.pdf
+https://github.com/woodrdk/CarRepairTracker/blob/master/READMEImages/CSharpCodingGuidelinesCheatsheet.pdf
 
 
 ## Built With
