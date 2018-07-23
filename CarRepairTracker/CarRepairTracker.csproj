@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +66,13 @@
     <Compile Include="CarForms\DeleteCar.Designer.cs">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807222013550_Added Part.cs" />
+    <Compile Include="Migrations\201807222013550_Added Part.Designer.cs">
+      <DependentUpon>201807222013550_Added Part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CarRepairDbContext.cs" />
+    <Compile Include="Models\Part.cs" />
     <Compile Include="RepairForms\DeleteRepair.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +123,9 @@
     <EmbeddedResource Include="CarForms\DeleteCar.resx">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807222013550_Added Part.resx">
+      <DependentUpon>201807222013550_Added Part.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,7 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="Models\" />
     <Folder Include="UserForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

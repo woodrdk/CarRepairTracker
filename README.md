@@ -4,7 +4,7 @@ The initial deployment of this application is for tracking individual owners, th
 
 ## Getting Started
 
-To get started, as the development process is still underway, a development enivironment must be set-up prior to launching application.
+To get started, as the development process is still underway, a development environment must be set-up prior to launching application.
 
 ### Prerequisites
 
