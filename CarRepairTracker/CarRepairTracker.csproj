@@ -70,9 +70,21 @@
     <Compile Include="Migrations\201807222013550_Added Part.Designer.cs">
       <DependentUpon>201807222013550_Added Part.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807232105092_Added Initial Table Classes.cs" />
+    <Compile Include="Migrations\201807232105092_Added Initial Table Classes.Designer.cs">
+      <DependentUpon>201807232105092_Added Initial Table Classes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807232106124_Added Repair Class.cs" />
+    <Compile Include="Migrations\201807232106124_Added Repair Class.Designer.cs">
+      <DependentUpon>201807232106124_Added Repair Class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
+    <Compile Include="Models\Make.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Part.cs" />
+    <Compile Include="Models\Repair.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="RepairForms\DeleteRepair.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807222013550_Added Part.resx">
       <DependentUpon>201807222013550_Added Part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807232105092_Added Initial Table Classes.resx">
+      <DependentUpon>201807232105092_Added Initial Table Classes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807232106124_Added Repair Class.resx">
+      <DependentUpon>201807232106124_Added Repair Class.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>
