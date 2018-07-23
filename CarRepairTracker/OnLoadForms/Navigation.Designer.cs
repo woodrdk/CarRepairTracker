@@ -53,6 +53,7 @@
             this.btnDeleteRepair.TabIndex = 13;
             this.btnDeleteRepair.Text = "Delete Repair";
             this.btnDeleteRepair.UseVisualStyleBackColor = true;
+            this.btnDeleteRepair.Click += new System.EventHandler(this.btnDeleteRepair_Click);
             // 
             // btnEditRepair
             // 
@@ -62,6 +63,7 @@
             this.btnEditRepair.TabIndex = 12;
             this.btnEditRepair.Text = "Edit Repair";
             this.btnEditRepair.UseVisualStyleBackColor = true;
+            this.btnEditRepair.Click += new System.EventHandler(this.btnEditRepair_Click);
             // 
             // btnAddRepair
             // 
@@ -71,6 +73,7 @@
             this.btnAddRepair.TabIndex = 11;
             this.btnAddRepair.Text = "Add Repair";
             this.btnAddRepair.UseVisualStyleBackColor = true;
+            this.btnAddRepair.Click += new System.EventHandler(this.btnAddRepair_Click);
             // 
             // btnDeleteCar
             // 
@@ -80,6 +83,7 @@
             this.btnDeleteCar.TabIndex = 10;
             this.btnDeleteCar.Text = "Delete Car";
             this.btnDeleteCar.UseVisualStyleBackColor = true;
+            this.btnDeleteCar.Click += new System.EventHandler(this.btnDeleteCar_Click);
             // 
             // btnEditCar
             // 
@@ -89,6 +93,7 @@
             this.btnEditCar.TabIndex = 9;
             this.btnEditCar.Text = "Edit Car";
             this.btnEditCar.UseVisualStyleBackColor = true;
+            this.btnEditCar.Click += new System.EventHandler(this.btnEditCar_Click);
             // 
             // btnAddCar
             // 
@@ -98,6 +103,7 @@
             this.btnAddCar.TabIndex = 8;
             this.btnAddCar.Text = "Add Car";
             this.btnAddCar.UseVisualStyleBackColor = true;
+            this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
             // 
             // btnAddUser
             // 
@@ -107,6 +113,7 @@
             this.btnAddUser.TabIndex = 14;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnEditUser
             // 
@@ -116,6 +123,7 @@
             this.btnEditUser.TabIndex = 15;
             this.btnEditUser.Text = "Edit User";
             this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnDelete
             // 
@@ -125,6 +133,7 @@
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Delete User";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // gbCar
             // 
@@ -161,6 +170,7 @@
             this.gbUser.TabIndex = 19;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "User Details";
+            this.gbUser.Enter += new System.EventHandler(this.gbUser_Enter);
             // 
             // Navigation
             // 
