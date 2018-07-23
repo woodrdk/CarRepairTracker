@@ -39,21 +39,21 @@
             this.lblMileage = new System.Windows.Forms.Label();
             this.lblQty = new System.Windows.Forms.Label();
             this.txtQty = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.rtbNotes = new System.Windows.Forms.RichTextBox();
+            this.txtMileage = new System.Windows.Forms.TextBox();
+            this.txtPartName = new System.Windows.Forms.TextBox();
+            this.txtPartNum = new System.Windows.Forms.TextBox();
+            this.txtPartBrand = new System.Windows.Forms.TextBox();
+            this.txtPartCost = new System.Windows.Forms.TextBox();
+            this.txtLaborCost = new System.Windows.Forms.TextBox();
+            this.txtShopName = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblCarSelected = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCars = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtTotalCost = new System.Windows.Forms.TextBox();
             this.lblTotalCost = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -154,62 +154,62 @@
             this.txtQty.Size = new System.Drawing.Size(23, 20);
             this.txtQty.TabIndex = 10;
             // 
-            // richTextBox1
+            // rtbNotes
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(228, 213);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 96);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.rtbNotes.Location = new System.Drawing.Point(228, 213);
+            this.rtbNotes.Name = "rtbNotes";
+            this.rtbNotes.Size = new System.Drawing.Size(100, 96);
+            this.rtbNotes.TabIndex = 11;
+            this.rtbNotes.Text = "";
             // 
-            // textBox1
+            // txtMileage
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 20);
-            this.textBox1.TabIndex = 12;
+            this.txtMileage.Location = new System.Drawing.Point(155, 137);
+            this.txtMileage.Name = "txtMileage";
+            this.txtMileage.Size = new System.Drawing.Size(83, 20);
+            this.txtMileage.TabIndex = 12;
             // 
-            // textBox2
+            // txtPartName
             // 
-            this.textBox2.Location = new System.Drawing.Point(19, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 13;
+            this.txtPartName.Location = new System.Drawing.Point(19, 74);
+            this.txtPartName.Name = "txtPartName";
+            this.txtPartName.Size = new System.Drawing.Size(100, 20);
+            this.txtPartName.TabIndex = 13;
             // 
-            // textBox3
+            // txtPartNum
             // 
-            this.textBox3.Location = new System.Drawing.Point(21, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 14;
+            this.txtPartNum.Location = new System.Drawing.Point(21, 113);
+            this.txtPartNum.Name = "txtPartNum";
+            this.txtPartNum.Size = new System.Drawing.Size(100, 20);
+            this.txtPartNum.TabIndex = 14;
             // 
-            // textBox4
+            // txtPartBrand
             // 
-            this.textBox4.Location = new System.Drawing.Point(22, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 15;
+            this.txtPartBrand.Location = new System.Drawing.Point(22, 153);
+            this.txtPartBrand.Name = "txtPartBrand";
+            this.txtPartBrand.Size = new System.Drawing.Size(100, 20);
+            this.txtPartBrand.TabIndex = 15;
             // 
-            // textBox5
+            // txtPartCost
             // 
-            this.textBox5.Location = new System.Drawing.Point(22, 193);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 16;
+            this.txtPartCost.Location = new System.Drawing.Point(22, 193);
+            this.txtPartCost.Name = "txtPartCost";
+            this.txtPartCost.Size = new System.Drawing.Size(100, 20);
+            this.txtPartCost.TabIndex = 16;
             // 
-            // textBox6
+            // txtLaborCost
             // 
-            this.textBox6.Location = new System.Drawing.Point(22, 233);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 17;
+            this.txtLaborCost.Location = new System.Drawing.Point(22, 233);
+            this.txtLaborCost.Name = "txtLaborCost";
+            this.txtLaborCost.Size = new System.Drawing.Size(100, 20);
+            this.txtLaborCost.TabIndex = 17;
             // 
-            // textBox7
+            // txtShopName
             // 
-            this.textBox7.Location = new System.Drawing.Point(22, 312);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 18;
+            this.txtShopName.Location = new System.Drawing.Point(22, 312);
+            this.txtShopName.Name = "txtShopName";
+            this.txtShopName.Size = new System.Drawing.Size(100, 20);
+            this.txtShopName.TabIndex = 18;
             // 
             // dateTimePicker1
             // 
@@ -227,14 +227,14 @@
             this.lblCarSelected.TabIndex = 20;
             this.lblCarSelected.Text = "Car Selected";
             // 
-            // comboBox1
+            // cbCars
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(274, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 21;
+            this.cbCars.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCars.FormattingEnabled = true;
+            this.cbCars.Location = new System.Drawing.Point(274, 36);
+            this.cbCars.Name = "cbCars";
+            this.cbCars.Size = new System.Drawing.Size(121, 21);
+            this.cbCars.TabIndex = 21;
             // 
             // btnClose
             // 
@@ -263,12 +263,12 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txtTotalCost
             // 
-            this.textBox8.Location = new System.Drawing.Point(21, 272);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 25;
+            this.txtTotalCost.Location = new System.Drawing.Point(21, 272);
+            this.txtTotalCost.Name = "txtTotalCost";
+            this.txtTotalCost.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalCost.TabIndex = 25;
             // 
             // lblTotalCost
             // 
@@ -285,21 +285,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 373);
             this.Controls.Add(this.lblTotalCost);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtTotalCost);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCars);
             this.Controls.Add(this.lblCarSelected);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtShopName);
+            this.Controls.Add(this.txtLaborCost);
+            this.Controls.Add(this.txtPartCost);
+            this.Controls.Add(this.txtPartBrand);
+            this.Controls.Add(this.txtPartNum);
+            this.Controls.Add(this.txtPartName);
+            this.Controls.Add(this.txtMileage);
+            this.Controls.Add(this.rtbNotes);
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.lblQty);
             this.Controls.Add(this.lblMileage);
@@ -332,21 +332,21 @@
         private System.Windows.Forms.Label lblMileage;
         private System.Windows.Forms.Label lblQty;
         private System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.RichTextBox rtbNotes;
+        private System.Windows.Forms.TextBox txtMileage;
+        private System.Windows.Forms.TextBox txtPartName;
+        private System.Windows.Forms.TextBox txtPartNum;
+        private System.Windows.Forms.TextBox txtPartBrand;
+        private System.Windows.Forms.TextBox txtPartCost;
+        private System.Windows.Forms.TextBox txtLaborCost;
+        private System.Windows.Forms.TextBox txtShopName;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblCarSelected;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCars;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtTotalCost;
         private System.Windows.Forms.Label lblTotalCost;
     }
 }
