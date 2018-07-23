@@ -22,5 +22,13 @@ namespace CarRepairTracker.Models
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Part> Parts { get; set; }
+
+        public virtual DbSet<Make> Makes { get; set; }
+
+        public virtual DbSet<Model> Models { get; set; }
+
+        public virtual DbSet<User> Users { get; set; }
+
+        public virtual DbSet<Repair> Repairs { get; set; }
     }
 }
