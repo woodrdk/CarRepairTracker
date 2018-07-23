@@ -67,12 +67,14 @@ namespace CarRepairTracker
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-
+            UserForms.EditUser EditUser = new UserForms.EditUser();
+            EditUser.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            UserForms.DeleteUser deleteUser = new UserForms.DeleteUser();
+            deleteUser.Show();
         }
     }
 }

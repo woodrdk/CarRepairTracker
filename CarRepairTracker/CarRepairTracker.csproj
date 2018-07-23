@@ -135,6 +135,18 @@
     <Compile Include="UserForms\addUser.Designer.cs">
       <DependentUpon>addUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForms\DeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\DeleteUser.Designer.cs">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CarForms\CarSelection.resx">
       <DependentUpon>CarSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +194,12 @@
     </Compile>
     <EmbeddedResource Include="UserForms\addUser.resx">
       <DependentUpon>addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\DeleteUser.resx">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
