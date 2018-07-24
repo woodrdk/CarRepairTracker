@@ -19,7 +19,7 @@ namespace CarRepairTracker.Models
 
         public int YearStarted { get; set; }
 
-        public int YearEnded { get; set; }
+        public int? YearEnded { get; set; }
 
         // TODO: Add description
     }
