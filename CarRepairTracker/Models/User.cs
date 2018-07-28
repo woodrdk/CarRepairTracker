@@ -22,5 +22,18 @@ namespace CarRepairTracker.Models
         public string LastName { get; set; }
 
         // TODO: Add description
+
+        public static List<User> GetAllUsers()
+        {
+            using (CarRepairDbContext context = new CarRepairDbContext())
+            {
+                var allUsers =
+                    (from c in context.Users
+                     select c).ToList();
+                List<User> Users = allUsers.ToList();
+
+                return allUsers;
+            }
+        }
     }
 }

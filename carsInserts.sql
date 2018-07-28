@@ -96,6 +96,3 @@ INSERT Models(ModelName, ModelYearStart, ModelYearEnd) VALUES
 ('Prelude',  1978, 2001),
 ('S2000', 1999, 2008)
 
-INSERT Users(UserID,UserName) VALUES 
-( 'Anthony McCann'),
-( 'Robert Wood')

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarRepairTracker.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,16 @@ namespace CarRepairTracker
 
         private void label9_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void cbMake_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String year = cbYear.Text;
+
+            List<Make> Makes = Make.GetAllMakes(year);
+            cbMake.DataSource = Makes;
+            cbMake.DisplayMember = nameof(Make.Name);
 
         }
     }

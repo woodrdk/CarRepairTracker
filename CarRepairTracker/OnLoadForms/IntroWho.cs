@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarRepairTracker.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,13 +24,15 @@ namespace CarRepairTracker
         
         private void cbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
         }
 
         private void IntroWho_Load(object sender, EventArgs e)
         {
+            List<User> Users = User.GetAllUsers();
+            cbWho.DataSource = Users;
+            cbWho.DisplayMember = nameof(User.FirstName);
 
-            cbWho.Items.Add("Anthony McCann");
-            cbWho.Items.Add("Rob Wood");
         }
 
        
@@ -39,16 +42,25 @@ namespace CarRepairTracker
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             who = cbWho.Text;
-            pnlWho.Visible = false;
-
-            if (lblCarOfWho.SelectedItem == null)
+            if(who == "Add a new user")
             {
-                // make the add car form run
+                UserForms.addUser AddUser = new UserForms.addUser();
+                AddUser.Show();
             }
+            else
+            {
 
-            scDisplay.Visible = true;
-            lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";
- 
+                pnlWho.Visible = false;
+
+                if (lblCarOfWho.SelectedItem == null)
+                {
+                    // make the add car form run
+                }
+
+                scDisplay.Visible = true;
+                lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";
+
+            }
         }
 
         private void lblCarOfWho_SelectedIndexChanged(object sender, EventArgs e)

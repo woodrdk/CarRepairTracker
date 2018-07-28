@@ -86,8 +86,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.gbPurchaseDetails = new System.Windows.Forms.GroupBox();
             this.lblExpMileage = new System.Windows.Forms.Label();
             this.lblExpDate = new System.Windows.Forms.Label();
@@ -105,6 +103,8 @@
             this.lblPurchased = new System.Windows.Forms.Label();
             this.lblComments = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
@@ -273,6 +273,7 @@
             this.cbMake.Name = "cbMake";
             this.cbMake.Size = new System.Drawing.Size(121, 21);
             this.cbMake.TabIndex = 18;
+            this.cbMake.SelectedIndexChanged += new System.EventHandler(this.cbMake_SelectedIndexChanged);
             // 
             // lblEngine
             // 
@@ -656,24 +657,6 @@
             this.tabPage3.Text = "Purchase Details";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.Location = new System.Drawing.Point(559, 393);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 25;
-            this.btnSubmit.Text = "Save";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(478, 393);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 24;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
             // gbPurchaseDetails
             // 
             this.gbPurchaseDetails.Controls.Add(this.lblExpMileage);
@@ -832,6 +815,24 @@
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(440, 20);
             this.textBox21.TabIndex = 16;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(559, 393);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 25;
+            this.btnSubmit.Text = "Save";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(478, 393);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // frmCarSelection
             // 

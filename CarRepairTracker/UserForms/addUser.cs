@@ -20,11 +20,18 @@ namespace CarRepairTracker.UserForms
 
         private void btnAddUserName_Click(object sender, EventArgs e)
         {
+            using (CarRepairDbContext objUserContext = new CarRepairDbContext())
+            {
+                User userName = new User();
+                userName.FirstName = txtFirstName.Text;
+                userName.LastName = txtLastName.Text;
+                objUserContext.Users.Add(userName);
+                objUserContext.SaveChanges();
 
-            User userName = new User();
-            userName.FirstName = txtFirstName.Text;
-            userName.LastName = txtLastName.Text;
 
+                // need to put in code for if inserted properly  alerts ya it was inserted
+            };
+            
 
 
         }
