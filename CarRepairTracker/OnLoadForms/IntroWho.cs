@@ -24,7 +24,7 @@ namespace CarRepairTracker
         
         private void cbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbCarOfWho.Visible = true;
+            
         }
 
         private void IntroWho_Load(object sender, EventArgs e)
@@ -34,11 +34,9 @@ namespace CarRepairTracker
             if(Users.Count() == 0)
             {
                 cbWho.Items.Add(addNew);
-                // cbWho.Items.Add = "Add a new user";
             }
             else
             {
-         
                 cbWho.DataSource = Users;
                 cbWho.DisplayMember = nameof(User.FirstName);
             }
@@ -53,7 +51,8 @@ namespace CarRepairTracker
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             who = cbWho.Text;
-            if(who == "Add a new user")
+            string addCar = "Add a car";
+            if (who == "Add a new user")
             {
                 UserForms.addUser AddUser = new UserForms.addUser();
                 AddUser.Show();
@@ -62,8 +61,7 @@ namespace CarRepairTracker
             {
 
                 pnlWho.Visible = false;
-
-                if (cbCarOfWho.SelectedItem == null)
+                if (cbCarOfWho.SelectedItem == null || cbCarOfWho.Text == addCar)
                 {
                     // make the add car form run
                 }

@@ -35,7 +35,10 @@ namespace CarRepairTracker
                 cbYear.Items.Add(i);
             }
             cbMake.SelectedItem = "";
-           
+
+            // temp vars for testing
+            cbTrim.Items.Add("HEMI");
+            cbEngine.Items.Add("V8");
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -68,6 +71,74 @@ namespace CarRepairTracker
             cbMake.DisplayMember = nameof(Make.Name);
 
         
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            using (CarRepairDbContext objUserContext = new CarRepairDbContext())
+            {
+                UserCar userCars = new UserCar();
+
+
+                userCars.CarNameDescription = txtCarNameIdentifier.Text;
+                userCars.Year = Int32.Parse( cbYear.SelectedItem.ToString());
+                userCars.Make = ((Make)cbMake.SelectedItem).Name;
+
+                //
+                // Make SelectedMake = cbMake.SelectedItem as Make;
+                // userCars.Make = SelectedMake.Name;
+                //
+
+                userCars.Model = ((Model)cbModel.SelectedItem).Name;
+                userCars.Trim = cbTrim.SelectedItem.ToString(); ;
+                userCars.Engine = cbEngine.SelectedItem.ToString(); ;
+                userCars.Vin = txtVin.Text;
+                userCars.Plate = txtPlate.Text;
+                userCars.State = txtState.Text;
+                userCars.Color = txtColor.Text;
+                userCars.UniqueIdentifiers = rtbUnique.Text;
+                userCars.OilGrade = txtOilGrade.Text;
+                userCars.OilFilter = txtOilFilter.Text;
+                userCars.AirFilter = txtAirFilter.Text;
+                userCars.SparkPlugs = txtSparkPlugs.Text;
+                userCars.HeadlightBulb = txtHeadlight.Text;
+                userCars.TireSize = txtTireSize.Text;
+                userCars.PurchaseDate = datePurchase.Value; 
+                //userCars.PurchasePrice = Convert.ToDouble(txtPurchasePrice.Text); //double.Parse
+                //userCars.PurchaseMileage = Convert.ToInt32(txtPurchaseMileage.Text);
+                
+                //userCars.Warranty = Convert.ToBoolean( cbWarranty.Text); // need to get data
+                userCars.ExpirationDate = dtpWarrExp.Value;
+                //userCars.ExpirationMileage = Convert.ToInt32(txtWarrMileage.Text);
+                userCars.Comments = txtComments.Text;
+
+                objUserContext.UserCars.Add(userCars);
+                objUserContext.SaveChanges();
+
+                // need to put in code for if inserted properly  alerts ya it was inserted
+            };
+        }
+
+        private void cbWarranty_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbWarranty.Checked)
+            {
+                cbWarranty.Text = "True";
+            }
+            else
+            {
+                cbWarranty.Text = "False";
+            }
+        }
+
+        private void cbTrim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbEngine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

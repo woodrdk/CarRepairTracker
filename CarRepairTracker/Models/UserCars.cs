@@ -13,8 +13,9 @@ namespace CarRepairTracker.Models
         [Key] // Makes the property the PK
               // If PK property is an integer, it will be an identity column by default.
         [Required]
-        public int UserCarId { get; set;
-        }
+        public int UserCarId { get; set;}
+        
+
         [StringLength(40)]
         public String CarNameDescription { get; set; }
         [Required]
@@ -45,14 +46,14 @@ namespace CarRepairTracker.Models
         public string HeadlightBulb { get; set; }
         public string TireSize { get; set; }
 
-        public DateTime PurchaseDate{ get; set; }
+        public DateTime? PurchaseDate{ get; set; }
 
-        [DataType(DataType.Currency)]
+       // [DataType(DataType.Currency)]
         public double PurchasePrice { get; set; }
 
         public int PurchaseMileage { get; set; }
         public bool Warranty { get; set; }
-        public DateTime ExpirationDate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
         public int ExpirationMileage { get; set; }
 
         [StringLength(500)]
