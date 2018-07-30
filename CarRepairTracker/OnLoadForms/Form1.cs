@@ -90,7 +90,7 @@ namespace CarRepairTracker
 
         private void whoseCarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            ShowNavForm();
+           
         }
 
         private void addCarToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -140,6 +140,17 @@ namespace CarRepairTracker
             DeleteCar deleteCar = new DeleteCar();
             deleteCar.MdiParent = this;
             deleteCar.Show();
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserForms.addUser AddUser = new UserForms.addUser();
+            AddUser.Show();
+        }
+
+        private void changeUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowNavForm();
         }
     }
 }

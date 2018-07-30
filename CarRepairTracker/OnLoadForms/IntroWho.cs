@@ -29,9 +29,20 @@ namespace CarRepairTracker
 
         private void IntroWho_Load(object sender, EventArgs e)
         {
+            string addNew = "Add a new user";
             List<User> Users = User.GetAllUsers();
-            cbWho.DataSource = Users;
-            cbWho.DisplayMember = nameof(User.FirstName);
+            if(Users.Count() == 0)
+            {
+                cbWho.Items.Add(addNew);
+                // cbWho.Items.Add = "Add a new user";
+            }
+            else
+            {
+         
+                cbWho.DataSource = Users;
+                cbWho.DisplayMember = nameof(User.FirstName);
+            }
+                
 
         }
 
