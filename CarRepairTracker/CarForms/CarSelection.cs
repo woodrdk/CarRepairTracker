@@ -28,7 +28,9 @@ namespace CarRepairTracker
 
         private void frmCarSelection_Load(object sender, EventArgs e)
         {
-            for (int i = 2020; i > 1900; i--)
+            DateTime currYear = DateTime.Now;
+            int year = currYear.Year;
+            for (int i = year + 1; i > 1900; i--)
             {
                 cbYear.Items.Add(i);
             }

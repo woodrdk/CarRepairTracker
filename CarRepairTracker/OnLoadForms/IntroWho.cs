@@ -24,7 +24,7 @@ namespace CarRepairTracker
         
         private void cbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            cbCarOfWho.Visible = true;
         }
 
         private void IntroWho_Load(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace CarRepairTracker
 
                 pnlWho.Visible = false;
 
-                if (lblCarOfWho.SelectedItem == null)
+                if (cbCarOfWho.SelectedItem == null)
                 {
                     // make the add car form run
                 }

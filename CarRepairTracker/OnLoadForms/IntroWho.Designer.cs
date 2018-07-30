@@ -32,10 +32,10 @@
             this.lblWho = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.pnlWho = new System.Windows.Forms.Panel();
-            this.lblCarOfWho = new System.Windows.Forms.ComboBox();
+            this.cbCarOfWho = new System.Windows.Forms.ComboBox();
             this.scDisplay = new System.Windows.Forms.SplitContainer();
-            this.lblWhoPicked = new System.Windows.Forms.Label();
             this.btnRepairHistory = new System.Windows.Forms.Button();
+            this.lblWhoPicked = new System.Windows.Forms.Label();
             this.pnlWho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scDisplay)).BeginInit();
             this.scDisplay.Panel1.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             // pnlWho
             // 
-            this.pnlWho.Controls.Add(this.lblCarOfWho);
+            this.pnlWho.Controls.Add(this.cbCarOfWho);
             this.pnlWho.Controls.Add(this.lblWho);
             this.pnlWho.Controls.Add(this.btnSubmit);
             this.pnlWho.Controls.Add(this.cbWho);
@@ -83,14 +83,15 @@
             this.pnlWho.Size = new System.Drawing.Size(298, 142);
             this.pnlWho.TabIndex = 3;
             // 
-            // lblCarOfWho
+            // cbCarOfWho
             // 
-            this.lblCarOfWho.FormattingEnabled = true;
-            this.lblCarOfWho.Location = new System.Drawing.Point(24, 89);
-            this.lblCarOfWho.Name = "lblCarOfWho";
-            this.lblCarOfWho.Size = new System.Drawing.Size(121, 21);
-            this.lblCarOfWho.TabIndex = 3;
-            this.lblCarOfWho.SelectedIndexChanged += new System.EventHandler(this.lblCarOfWho_SelectedIndexChanged);
+            this.cbCarOfWho.FormattingEnabled = true;
+            this.cbCarOfWho.Location = new System.Drawing.Point(24, 89);
+            this.cbCarOfWho.Name = "cbCarOfWho";
+            this.cbCarOfWho.Size = new System.Drawing.Size(121, 21);
+            this.cbCarOfWho.TabIndex = 3;
+            this.cbCarOfWho.Visible = false;
+            this.cbCarOfWho.SelectedIndexChanged += new System.EventHandler(this.lblCarOfWho_SelectedIndexChanged);
             // 
             // scDisplay
             // 
@@ -110,15 +111,6 @@
             this.scDisplay.TabIndex = 4;
             this.scDisplay.Visible = false;
             // 
-            // lblWhoPicked
-            // 
-            this.lblWhoPicked.AutoSize = true;
-            this.lblWhoPicked.Location = new System.Drawing.Point(3, 4);
-            this.lblWhoPicked.Name = "lblWhoPicked";
-            this.lblWhoPicked.Size = new System.Drawing.Size(114, 13);
-            this.lblWhoPicked.TabIndex = 0;
-            this.lblWhoPicked.Text = "place holder for design";
-            // 
             // btnRepairHistory
             // 
             this.btnRepairHistory.Location = new System.Drawing.Point(4, 4);
@@ -127,6 +119,15 @@
             this.btnRepairHistory.TabIndex = 0;
             this.btnRepairHistory.Text = "Repair History";
             this.btnRepairHistory.UseVisualStyleBackColor = true;
+            // 
+            // lblWhoPicked
+            // 
+            this.lblWhoPicked.AutoSize = true;
+            this.lblWhoPicked.Location = new System.Drawing.Point(3, 4);
+            this.lblWhoPicked.Name = "lblWhoPicked";
+            this.lblWhoPicked.Size = new System.Drawing.Size(114, 13);
+            this.lblWhoPicked.TabIndex = 0;
+            this.lblWhoPicked.Text = "place holder for design";
             // 
             // IntroWho
             // 
@@ -155,7 +156,7 @@
         private System.Windows.Forms.Label lblWho;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Panel pnlWho;
-        private System.Windows.Forms.ComboBox lblCarOfWho;
+        private System.Windows.Forms.ComboBox cbCarOfWho;
         private System.Windows.Forms.SplitContainer scDisplay;
         private System.Windows.Forms.Label lblWhoPicked;
         private System.Windows.Forms.Button btnRepairHistory;
