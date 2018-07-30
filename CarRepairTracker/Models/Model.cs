@@ -22,5 +22,35 @@ namespace CarRepairTracker.Models
         public int? YearEnded { get; set; }
 
         // TODO: Add description
+
+
+        public static List<Model> GetAllModels(String make, String year)
+        {
+            
+            using (CarRepairDbContext context = new CarRepairDbContext())
+            {
+                int ModelYear = Int32.Parse(year); // converts string value of the year to an int for search purposes
+                var allModels =
+                    (from ModelName in context.Models
+                     where (                                    // where
+                            (ModelName.YearStarted <= ModelYear)      // year make started is less than or equal to the year looking for
+                           )
+                                   &&                           // and
+                           (
+                            (ModelName.YearEnded >= ModelYear)        // where  the brand ended was equal to or after the year selected
+                                   ||                           // or
+                            (ModelName.YearEnded == null)            // brand is still in existance currently
+                           )
+                   
+                           // -------------- need to add brand id variable
+                     select ModelName).ToList();
+                List<Model> Models = allModels.ToList();
+
+                return Models;
+            }
+        }
+
+
+
     }
 }

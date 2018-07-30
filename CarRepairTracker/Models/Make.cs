@@ -21,27 +21,33 @@ namespace CarRepairTracker.Models
 
         public int? YearEnded { get; set; }
 
-        // TODO: Add description
-
-
-            // ----------- needs finished- -----------------
-        public static List<Make> GetAllMakes(String year)
+        public static List<Make> GetAllMakes(String year)        //this method searches for the makes available in a selected year
         {
-            int MakeYear = Int16.Parse(year);
-            using (CarRepairDbContext context = new CarRepairDbContext())
+            int MakeYear = Int32.Parse(year); // converts string value of the year to an int for search purposes
+            using (CarRepairDbContext context = new CarRepairDbContext())   // connects to DB
             {
-                var allMakes =
-                    (from Make in context.Makes
-                     where ( Make.YearStarted <= MakeYear )
-                        && ((Make.YearEnded >= MakeYear)) //|| (Make.YearEnded == null));
-                     select Make).ToList();
-                List<Make> Makes = allMakes.ToList();
+                var allMakes =  // makes a list of all makes
+                    (from Make in context.Makes     // searches the makes table for all makes names
+                     where (                                    // where
+                            (Make.YearStarted <= MakeYear)      // year make started is less than or equal to the year looking for
+                           )
+                                   &&                           // and
+                           (
+                            (Make.YearEnded >= MakeYear)        // where  the brand ended was equal to or after the year selected
+                                   ||                           // or
+                            (Make.YearEnded == null)            // brand is still in existance currently
+                           )
+                     select Make).ToList();                     // selects the proper values, then puts them to list 
+                List<Make> Makes = allMakes.ToList();           // moves the list to the Makes List
 
-                return allMakes;
+                return Makes;                                   // returns list of selected values
             }
         }
 
-                  
+
+        
+        
+
 
 
     }

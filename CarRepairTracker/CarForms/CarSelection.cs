@@ -16,11 +16,14 @@ namespace CarRepairTracker
         public frmCarSelection()
         {
             InitializeComponent();
-        }
 
+       
+        }
+        
         private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
+
         }
 
         private void frmCarSelection_Load(object sender, EventArgs e)
@@ -29,6 +32,8 @@ namespace CarRepairTracker
             {
                 cbYear.Items.Add(i);
             }
+            cbMake.SelectedItem = "";
+           
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -38,12 +43,29 @@ namespace CarRepairTracker
 
         private void cbMake_SelectedIndexChanged(object sender, EventArgs e)
         {
+            String make = cbMake.Text;
+            String year = cbYear.Text;
+
+            List<Model> Models = Model.GetAllModels(make, year);
+            cbModel.DataSource = Models;
+            cbModel.DisplayMember = nameof(Model.Name);
+            // need to set this up to change models when this is refreshed
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cbYear_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
             String year = cbYear.Text;
 
             List<Make> Makes = Make.GetAllMakes(year);
             cbMake.DataSource = Makes;
             cbMake.DisplayMember = nameof(Make.Name);
 
+        
         }
     }
 }
