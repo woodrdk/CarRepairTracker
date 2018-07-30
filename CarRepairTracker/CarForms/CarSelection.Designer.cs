@@ -105,6 +105,8 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtCarNameIdentifier = new System.Windows.Forms.TextBox();
+            this.lbltxtCarNameIdentifier = new System.Windows.Forms.Label();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
@@ -239,6 +241,8 @@
             // 
             // gbGeneral
             // 
+            this.gbGeneral.Controls.Add(this.txtCarNameIdentifier);
+            this.gbGeneral.Controls.Add(this.lbltxtCarNameIdentifier);
             this.gbGeneral.Controls.Add(this.cbYear);
             this.gbGeneral.Controls.Add(this.cbMake);
             this.gbGeneral.Controls.Add(this.lblEngine);
@@ -260,7 +264,7 @@
             // 
             this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(73, 54);
+            this.cbYear.Location = new System.Drawing.Point(66, 27);
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(121, 21);
             this.cbYear.TabIndex = 12;
@@ -270,7 +274,7 @@
             // 
             this.cbMake.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMake.FormattingEnabled = true;
-            this.cbMake.Location = new System.Drawing.Point(73, 81);
+            this.cbMake.Location = new System.Drawing.Point(66, 54);
             this.cbMake.Name = "cbMake";
             this.cbMake.Size = new System.Drawing.Size(121, 21);
             this.cbMake.TabIndex = 18;
@@ -279,7 +283,7 @@
             // lblEngine
             // 
             this.lblEngine.AutoSize = true;
-            this.lblEngine.Location = new System.Drawing.Point(20, 165);
+            this.lblEngine.Location = new System.Drawing.Point(13, 138);
             this.lblEngine.Name = "lblEngine";
             this.lblEngine.Size = new System.Drawing.Size(40, 13);
             this.lblEngine.TabIndex = 17;
@@ -288,7 +292,7 @@
             // lblYear
             // 
             this.lblYear.AutoSize = true;
-            this.lblYear.Location = new System.Drawing.Point(20, 57);
+            this.lblYear.Location = new System.Drawing.Point(13, 30);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(29, 13);
             this.lblYear.TabIndex = 13;
@@ -298,7 +302,7 @@
             // 
             this.cbModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbModel.FormattingEnabled = true;
-            this.cbModel.Location = new System.Drawing.Point(73, 108);
+            this.cbModel.Location = new System.Drawing.Point(66, 81);
             this.cbModel.Name = "cbModel";
             this.cbModel.Size = new System.Drawing.Size(121, 21);
             this.cbModel.TabIndex = 19;
@@ -306,7 +310,7 @@
             // lblMake
             // 
             this.lblMake.AutoSize = true;
-            this.lblMake.Location = new System.Drawing.Point(20, 84);
+            this.lblMake.Location = new System.Drawing.Point(13, 57);
             this.lblMake.Name = "lblMake";
             this.lblMake.Size = new System.Drawing.Size(34, 13);
             this.lblMake.TabIndex = 14;
@@ -315,7 +319,7 @@
             // lblTrim
             // 
             this.lblTrim.AutoSize = true;
-            this.lblTrim.Location = new System.Drawing.Point(20, 138);
+            this.lblTrim.Location = new System.Drawing.Point(13, 111);
             this.lblTrim.Name = "lblTrim";
             this.lblTrim.Size = new System.Drawing.Size(27, 13);
             this.lblTrim.TabIndex = 16;
@@ -325,7 +329,7 @@
             // 
             this.cbEngine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEngine.FormattingEnabled = true;
-            this.cbEngine.Location = new System.Drawing.Point(73, 162);
+            this.cbEngine.Location = new System.Drawing.Point(66, 135);
             this.cbEngine.Name = "cbEngine";
             this.cbEngine.Size = new System.Drawing.Size(121, 21);
             this.cbEngine.TabIndex = 21;
@@ -334,7 +338,7 @@
             // 
             this.cbTrim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTrim.FormattingEnabled = true;
-            this.cbTrim.Location = new System.Drawing.Point(73, 135);
+            this.cbTrim.Location = new System.Drawing.Point(66, 108);
             this.cbTrim.Name = "cbTrim";
             this.cbTrim.Size = new System.Drawing.Size(121, 21);
             this.cbTrim.TabIndex = 20;
@@ -342,7 +346,7 @@
             // lblModel
             // 
             this.lblModel.AutoSize = true;
-            this.lblModel.Location = new System.Drawing.Point(20, 111);
+            this.lblModel.Location = new System.Drawing.Point(13, 84);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(36, 13);
             this.lblModel.TabIndex = 15;
@@ -836,6 +840,22 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtCarNameIdentifier
+            // 
+            this.txtCarNameIdentifier.Location = new System.Drawing.Point(16, 181);
+            this.txtCarNameIdentifier.Name = "txtCarNameIdentifier";
+            this.txtCarNameIdentifier.Size = new System.Drawing.Size(171, 20);
+            this.txtCarNameIdentifier.TabIndex = 11;
+            // 
+            // lbltxtCarNameIdentifier
+            // 
+            this.lbltxtCarNameIdentifier.AutoSize = true;
+            this.lbltxtCarNameIdentifier.Location = new System.Drawing.Point(13, 165);
+            this.lbltxtCarNameIdentifier.Name = "lbltxtCarNameIdentifier";
+            this.lbltxtCarNameIdentifier.Size = new System.Drawing.Size(112, 13);
+            this.lbltxtCarNameIdentifier.TabIndex = 10;
+            this.lbltxtCarNameIdentifier.Text = "Car name  description:";
+            // 
             // frmCarSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -941,5 +961,7 @@
         private System.Windows.Forms.Label lblPurchased;
         private System.Windows.Forms.Label lblComments;
         private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtCarNameIdentifier;
+        private System.Windows.Forms.Label lbltxtCarNameIdentifier;
     }
 }
