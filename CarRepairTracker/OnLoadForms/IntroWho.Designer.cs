@@ -119,6 +119,7 @@
             this.btnRepairHistory.TabIndex = 0;
             this.btnRepairHistory.Text = "Repair History";
             this.btnRepairHistory.UseVisualStyleBackColor = true;
+            this.btnRepairHistory.Click += new System.EventHandler(this.btnRepairHistory_Click);
             // 
             // lblWhoPicked
             // 

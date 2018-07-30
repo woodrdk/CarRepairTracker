@@ -76,7 +76,7 @@ INSERT Models(ModelName, ModelYearStart, ModelYearEnd) VALUES
 ('Avenger', 2007, 2014),
 ('Caravan Passenger', 1984, null),
 ('Dakota', 1987, 2011),
-('Durango', 1998, null),
+('Durango', 1998, null), 
 ('Intrepid', 1993, 2004),
 ('Neon', 1995, 2005),
 ('Ram', 1981, null),
