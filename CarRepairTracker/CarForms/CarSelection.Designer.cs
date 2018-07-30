@@ -53,38 +53,18 @@
             this.cbTrim = new System.Windows.Forms.ComboBox();
             this.lblModel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtTireSize = new System.Windows.Forms.TextBox();
+            this.txtHeadlight = new System.Windows.Forms.TextBox();
+            this.lblTireSize = new System.Windows.Forms.Label();
+            this.lblHeadlight = new System.Windows.Forms.Label();
+            this.txtSparkPlugs = new System.Windows.Forms.TextBox();
+            this.txtAirFilter = new System.Windows.Forms.TextBox();
+            this.txtOilFilter = new System.Windows.Forms.TextBox();
+            this.txtOilGrade = new System.Windows.Forms.TextBox();
+            this.lblSparkPlugs = new System.Windows.Forms.Label();
+            this.lblAirFilter = new System.Windows.Forms.Label();
+            this.lblOilFilter = new System.Windows.Forms.Label();
+            this.lblOil = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gbPurchaseDetails = new System.Windows.Forms.GroupBox();
             this.lblExpMileage = new System.Windows.Forms.Label();
@@ -354,38 +334,18 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox17);
-            this.tabPage2.Controls.Add(this.textBox18);
-            this.tabPage2.Controls.Add(this.textBox19);
-            this.tabPage2.Controls.Add(this.textBox20);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.textBox13);
-            this.tabPage2.Controls.Add(this.textBox14);
-            this.tabPage2.Controls.Add(this.textBox15);
-            this.tabPage2.Controls.Add(this.textBox16);
-            this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox11);
-            this.tabPage2.Controls.Add(this.textBox12);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.textBox8);
-            this.tabPage2.Controls.Add(this.textBox7);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.txtTireSize);
+            this.tabPage2.Controls.Add(this.txtHeadlight);
+            this.tabPage2.Controls.Add(this.lblTireSize);
+            this.tabPage2.Controls.Add(this.lblHeadlight);
+            this.tabPage2.Controls.Add(this.txtSparkPlugs);
+            this.tabPage2.Controls.Add(this.txtAirFilter);
+            this.tabPage2.Controls.Add(this.txtOilFilter);
+            this.tabPage2.Controls.Add(this.txtOilGrade);
+            this.tabPage2.Controls.Add(this.lblSparkPlugs);
+            this.tabPage2.Controls.Add(this.lblAirFilter);
+            this.tabPage2.Controls.Add(this.lblOilFilter);
+            this.tabPage2.Controls.Add(this.lblOil);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -394,262 +354,102 @@
             this.tabPage2.Text = "Specifications";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox17
+            // txtTireSize
             // 
-            this.textBox17.Location = new System.Drawing.Point(261, 191);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 31;
+            this.txtTireSize.Location = new System.Drawing.Point(85, 140);
+            this.txtTireSize.Name = "txtTireSize";
+            this.txtTireSize.Size = new System.Drawing.Size(100, 20);
+            this.txtTireSize.TabIndex = 13;
             // 
-            // textBox18
+            // txtHeadlight
             // 
-            this.textBox18.Location = new System.Drawing.Point(261, 170);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 30;
+            this.txtHeadlight.Location = new System.Drawing.Point(85, 115);
+            this.txtHeadlight.Name = "txtHeadlight";
+            this.txtHeadlight.Size = new System.Drawing.Size(100, 20);
+            this.txtHeadlight.TabIndex = 12;
             // 
-            // textBox19
+            // lblTireSize
             // 
-            this.textBox19.Location = new System.Drawing.Point(262, 148);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 29;
+            this.lblTireSize.AutoSize = true;
+            this.lblTireSize.Location = new System.Drawing.Point(7, 139);
+            this.lblTireSize.Name = "lblTireSize";
+            this.lblTireSize.Size = new System.Drawing.Size(48, 13);
+            this.lblTireSize.TabIndex = 9;
+            this.lblTireSize.Text = "Tire Size";
             // 
-            // textBox20
+            // lblHeadlight
             // 
-            this.textBox20.Location = new System.Drawing.Point(262, 123);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(100, 20);
-            this.textBox20.TabIndex = 28;
+            this.lblHeadlight.AutoSize = true;
+            this.lblHeadlight.Location = new System.Drawing.Point(7, 122);
+            this.lblHeadlight.Name = "lblHeadlight";
+            this.lblHeadlight.Size = new System.Drawing.Size(75, 13);
+            this.lblHeadlight.TabIndex = 8;
+            this.lblHeadlight.Text = "Headlight bulb";
             // 
-            // label18
+            // txtSparkPlugs
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(220, 199);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
-            this.label18.TabIndex = 27;
-            this.label18.Text = "label18";
+            this.txtSparkPlugs.Location = new System.Drawing.Point(85, 89);
+            this.txtSparkPlugs.Name = "txtSparkPlugs";
+            this.txtSparkPlugs.Size = new System.Drawing.Size(100, 20);
+            this.txtSparkPlugs.TabIndex = 7;
             // 
-            // label19
+            // txtAirFilter
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(219, 170);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(41, 13);
-            this.label19.TabIndex = 26;
-            this.label19.Text = "label19";
+            this.txtAirFilter.Location = new System.Drawing.Point(85, 68);
+            this.txtAirFilter.Name = "txtAirFilter";
+            this.txtAirFilter.Size = new System.Drawing.Size(100, 20);
+            this.txtAirFilter.TabIndex = 6;
             // 
-            // label20
+            // txtOilFilter
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(220, 148);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(41, 13);
-            this.label20.TabIndex = 25;
-            this.label20.Text = "label20";
+            this.txtOilFilter.Location = new System.Drawing.Point(86, 46);
+            this.txtOilFilter.Name = "txtOilFilter";
+            this.txtOilFilter.Size = new System.Drawing.Size(100, 20);
+            this.txtOilFilter.TabIndex = 5;
             // 
-            // label21
+            // txtOilGrade
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(220, 131);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 13);
-            this.label21.TabIndex = 24;
-            this.label21.Text = "label21";
+            this.txtOilGrade.Location = new System.Drawing.Point(86, 21);
+            this.txtOilGrade.Name = "txtOilGrade";
+            this.txtOilGrade.Size = new System.Drawing.Size(100, 20);
+            this.txtOilGrade.TabIndex = 4;
             // 
-            // textBox13
+            // lblSparkPlugs
             // 
-            this.textBox13.Location = new System.Drawing.Point(262, 89);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 23;
+            this.lblSparkPlugs.AutoSize = true;
+            this.lblSparkPlugs.Location = new System.Drawing.Point(7, 97);
+            this.lblSparkPlugs.Name = "lblSparkPlugs";
+            this.lblSparkPlugs.Size = new System.Drawing.Size(64, 13);
+            this.lblSparkPlugs.TabIndex = 3;
+            this.lblSparkPlugs.Text = "Spark Plugs";
+            this.lblSparkPlugs.Click += new System.EventHandler(this.label9_Click);
             // 
-            // textBox14
+            // lblAirFilter
             // 
-            this.textBox14.Location = new System.Drawing.Point(262, 68);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 22;
+            this.lblAirFilter.AutoSize = true;
+            this.lblAirFilter.Location = new System.Drawing.Point(6, 68);
+            this.lblAirFilter.Name = "lblAirFilter";
+            this.lblAirFilter.Size = new System.Drawing.Size(44, 13);
+            this.lblAirFilter.TabIndex = 2;
+            this.lblAirFilter.Text = "Air Filter";
             // 
-            // textBox15
+            // lblOilFilter
             // 
-            this.textBox15.Location = new System.Drawing.Point(263, 46);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 21;
+            this.lblOilFilter.AutoSize = true;
+            this.lblOilFilter.Location = new System.Drawing.Point(7, 46);
+            this.lblOilFilter.Name = "lblOilFilter";
+            this.lblOilFilter.Size = new System.Drawing.Size(44, 13);
+            this.lblOilFilter.TabIndex = 1;
+            this.lblOilFilter.Text = "Oil Filter";
             // 
-            // textBox16
+            // lblOil
             // 
-            this.textBox16.Location = new System.Drawing.Point(263, 21);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 20;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(221, 97);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "label14";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(220, 68);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "label15";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(221, 46);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "label16";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(221, 29);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 13);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "label17";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(47, 183);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 15;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(47, 162);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 14;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(48, 140);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 13;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(48, 115);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 12;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 191);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "label10";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 162);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "label11";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 140);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "label12";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 123);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "label13";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(48, 89);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 7;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(48, 68);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(49, 46);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(49, 21);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 97);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "label9";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "label8";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "label7";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label6";
+            this.lblOil.AutoSize = true;
+            this.lblOil.Location = new System.Drawing.Point(7, 24);
+            this.lblOil.Name = "lblOil";
+            this.lblOil.Size = new System.Drawing.Size(51, 13);
+            this.lblOil.TabIndex = 0;
+            this.lblOil.Text = "Oil Grade";
             // 
             // tabPage3
             // 
@@ -912,38 +712,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbGeneral;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label lblSparkPlugs;
+        private System.Windows.Forms.Label lblAirFilter;
+        private System.Windows.Forms.Label lblOilFilter;
+        private System.Windows.Forms.Label lblOil;
+        private System.Windows.Forms.TextBox txtTireSize;
+        private System.Windows.Forms.TextBox txtHeadlight;
+        private System.Windows.Forms.Label lblTireSize;
+        private System.Windows.Forms.Label lblHeadlight;
+        private System.Windows.Forms.TextBox txtSparkPlugs;
+        private System.Windows.Forms.TextBox txtAirFilter;
+        private System.Windows.Forms.TextBox txtOilFilter;
+        private System.Windows.Forms.TextBox txtOilGrade;
         private System.Windows.Forms.GroupBox gbPurchaseDetails;
         private System.Windows.Forms.Label lblExpMileage;
         private System.Windows.Forms.Label lblExpDate;
