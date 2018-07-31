@@ -1,5 +1,5 @@
 -- all auto brand year info is from wikipedia.com
-INSERT Makes (BrandName, YearStarted, YearEnded) VALUES 
+INSERT Makes (Name, YearStarted, YearEnded) VALUES 
 -- American Cars
 ( 'Dodge', 1900, 2018),
 ('AM General', 2011, null),
@@ -68,7 +68,7 @@ INSERT Makes (BrandName, YearStarted, YearEnded) VALUES
 
 
 
-INSERT Models(ModelName, ModelYearStart, ModelYearEnd) VALUES 
+INSERT Models(Name, YearStarted, YearEnded) VALUES 
 
 ('Magnum', 2005, 2008),
 -- every Dodge made in 2000 below
