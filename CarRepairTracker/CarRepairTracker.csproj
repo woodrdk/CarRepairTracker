@@ -235,5 +235,9 @@
   <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQLFiles\carsInserts.sql" />
+    <Content Include="SQLFiles\create_cars.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
