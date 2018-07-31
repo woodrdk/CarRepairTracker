@@ -22,31 +22,31 @@ namespace CarRepairTracker
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            ShowNavButtons();
-            ShowNavForm();
+            ShowNavButtons(); // on load  shows nav buttons
+            ShowNavForm();      // on load shows nav form
         }
 
         private void ShowNavButtons()
-        {
+        {   // this method is te code to make the nav show
             Navigation navForm = new Navigation();
             navForm.MdiParent = this;
             navForm.Show();
         }
 
         private void ShowNavForm()
-        {
+        { // this method is te code to make the nav show
             IntroWho introForm = new IntroWho();
             introForm.MdiParent = this;
             introForm.Show();
         }
 
         private void navigationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        { // this method is te code to make the nav buttons show
             ShowNavButtons();
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
+        {   // code for pop up verification box upon close
             DialogResult choice = MessageBox.Show("Are you sure you want to quit? ", "Do you want to quit? ",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (choice == DialogResult.No)

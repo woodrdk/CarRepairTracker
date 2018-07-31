@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,15 @@ namespace CarRepairTracker.Models
 
                 return allUsers;
             }
+        }
+
+
+        public static void Delete(User person)
+        {
+            var context = new CarRepairDbContext();
+            context.Users.Add(person);
+            context.Entry(person).State = EntityState.Deleted;
+            context.SaveChanges();
         }
     }
 }

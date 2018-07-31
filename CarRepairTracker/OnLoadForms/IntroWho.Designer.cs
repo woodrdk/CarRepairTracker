@@ -90,7 +90,6 @@
             this.cbCarOfWho.Name = "cbCarOfWho";
             this.cbCarOfWho.Size = new System.Drawing.Size(121, 21);
             this.cbCarOfWho.TabIndex = 3;
-            this.cbCarOfWho.Visible = false;
             this.cbCarOfWho.SelectedIndexChanged += new System.EventHandler(this.lblCarOfWho_SelectedIndexChanged);
             // 
             // scDisplay
