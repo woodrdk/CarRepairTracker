@@ -31,17 +31,19 @@
             this.tcVehicleData = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gbIdentifications = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.txtPlate = new System.Windows.Forms.TextBox();
+            this.txtVin = new System.Windows.Forms.TextBox();
+            this.rtbUnique = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbGeneral = new System.Windows.Forms.GroupBox();
+            this.txtCarNameIdentifier = new System.Windows.Forms.TextBox();
+            this.lbltxtCarNameIdentifier = new System.Windows.Forms.Label();
             this.cbYear = new System.Windows.Forms.ComboBox();
             this.cbMake = new System.Windows.Forms.ComboBox();
             this.lblEngine = new System.Windows.Forms.Label();
@@ -69,24 +71,21 @@
             this.gbPurchaseDetails = new System.Windows.Forms.GroupBox();
             this.lblExpMileage = new System.Windows.Forms.Label();
             this.lblExpDate = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.txtWarrMileage = new System.Windows.Forms.TextBox();
             this.lblWarranty = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbWarranty = new System.Windows.Forms.CheckBox();
             this.lblPurchaseMileage = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtPurchaseMileage = new System.Windows.Forms.TextBox();
+            this.txtPurchasePrice = new System.Windows.Forms.TextBox();
             this.lblPurchasePrice = new System.Windows.Forms.Label();
             this.lblPurchaseDate = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datePurchase = new System.Windows.Forms.DateTimePicker();
             this.lblPurchased = new System.Windows.Forms.Label();
             this.lblComments = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtComments = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtCarNameIdentifier = new System.Windows.Forms.TextBox();
-            this.lbltxtCarNameIdentifier = new System.Windows.Forms.Label();
+            this.dtpWarrExp = new System.Windows.Forms.DateTimePicker();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
@@ -121,11 +120,11 @@
             // 
             // gbIdentifications
             // 
-            this.gbIdentifications.Controls.Add(this.textBox4);
-            this.gbIdentifications.Controls.Add(this.textBox3);
-            this.gbIdentifications.Controls.Add(this.textBox2);
-            this.gbIdentifications.Controls.Add(this.textBox1);
-            this.gbIdentifications.Controls.Add(this.richTextBox1);
+            this.gbIdentifications.Controls.Add(this.txtColor);
+            this.gbIdentifications.Controls.Add(this.txtState);
+            this.gbIdentifications.Controls.Add(this.txtPlate);
+            this.gbIdentifications.Controls.Add(this.txtVin);
+            this.gbIdentifications.Controls.Add(this.rtbUnique);
             this.gbIdentifications.Controls.Add(this.label5);
             this.gbIdentifications.Controls.Add(this.label4);
             this.gbIdentifications.Controls.Add(this.label3);
@@ -138,41 +137,41 @@
             this.gbIdentifications.TabStop = false;
             this.gbIdentifications.Text = "Identification";
             // 
-            // textBox4
+            // txtColor
             // 
-            this.textBox4.Location = new System.Drawing.Point(64, 103);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtColor.Location = new System.Drawing.Point(64, 103);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(100, 20);
+            this.txtColor.TabIndex = 9;
             // 
-            // textBox3
+            // txtState
             // 
-            this.textBox3.Location = new System.Drawing.Point(64, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtState.Location = new System.Drawing.Point(64, 73);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(100, 20);
+            this.txtState.TabIndex = 8;
             // 
-            // textBox2
+            // txtPlate
             // 
-            this.textBox2.Location = new System.Drawing.Point(64, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtPlate.Location = new System.Drawing.Point(64, 49);
+            this.txtPlate.Name = "txtPlate";
+            this.txtPlate.Size = new System.Drawing.Size(100, 20);
+            this.txtPlate.TabIndex = 7;
             // 
-            // textBox1
+            // txtVin
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtVin.Location = new System.Drawing.Point(64, 27);
+            this.txtVin.Name = "txtVin";
+            this.txtVin.Size = new System.Drawing.Size(100, 20);
+            this.txtVin.TabIndex = 6;
             // 
-            // richTextBox1
+            // rtbUnique
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(19, 160);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(161, 79);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.rtbUnique.Location = new System.Drawing.Point(19, 160);
+            this.rtbUnique.Name = "rtbUnique";
+            this.rtbUnique.Size = new System.Drawing.Size(161, 79);
+            this.rtbUnique.TabIndex = 5;
+            this.rtbUnique.Text = "";
             // 
             // label5
             // 
@@ -239,6 +238,22 @@
             this.gbGeneral.TabIndex = 22;
             this.gbGeneral.TabStop = false;
             this.gbGeneral.Text = "General";
+            // 
+            // txtCarNameIdentifier
+            // 
+            this.txtCarNameIdentifier.Location = new System.Drawing.Point(16, 181);
+            this.txtCarNameIdentifier.Name = "txtCarNameIdentifier";
+            this.txtCarNameIdentifier.Size = new System.Drawing.Size(171, 20);
+            this.txtCarNameIdentifier.TabIndex = 11;
+            // 
+            // lbltxtCarNameIdentifier
+            // 
+            this.lbltxtCarNameIdentifier.AutoSize = true;
+            this.lbltxtCarNameIdentifier.Location = new System.Drawing.Point(13, 165);
+            this.lbltxtCarNameIdentifier.Name = "lbltxtCarNameIdentifier";
+            this.lbltxtCarNameIdentifier.Size = new System.Drawing.Size(112, 13);
+            this.lbltxtCarNameIdentifier.TabIndex = 10;
+            this.lbltxtCarNameIdentifier.Text = "Car name  description:";
             // 
             // cbYear
             // 
@@ -313,6 +328,7 @@
             this.cbEngine.Name = "cbEngine";
             this.cbEngine.Size = new System.Drawing.Size(121, 21);
             this.cbEngine.TabIndex = 21;
+            this.cbEngine.SelectedIndexChanged += new System.EventHandler(this.cbEngine_SelectedIndexChanged);
             // 
             // cbTrim
             // 
@@ -322,6 +338,7 @@
             this.cbTrim.Name = "cbTrim";
             this.cbTrim.Size = new System.Drawing.Size(121, 21);
             this.cbTrim.TabIndex = 20;
+            this.cbTrim.SelectedIndexChanged += new System.EventHandler(this.cbTrim_SelectedIndexChanged);
             // 
             // lblModel
             // 
@@ -464,22 +481,21 @@
             // 
             // gbPurchaseDetails
             // 
+            this.gbPurchaseDetails.Controls.Add(this.dtpWarrExp);
             this.gbPurchaseDetails.Controls.Add(this.lblExpMileage);
             this.gbPurchaseDetails.Controls.Add(this.lblExpDate);
-            this.gbPurchaseDetails.Controls.Add(this.textBox25);
-            this.gbPurchaseDetails.Controls.Add(this.textBox24);
-            this.gbPurchaseDetails.Controls.Add(this.checkBox2);
+            this.gbPurchaseDetails.Controls.Add(this.txtWarrMileage);
             this.gbPurchaseDetails.Controls.Add(this.lblWarranty);
-            this.gbPurchaseDetails.Controls.Add(this.checkBox1);
+            this.gbPurchaseDetails.Controls.Add(this.cbWarranty);
             this.gbPurchaseDetails.Controls.Add(this.lblPurchaseMileage);
-            this.gbPurchaseDetails.Controls.Add(this.textBox23);
-            this.gbPurchaseDetails.Controls.Add(this.textBox22);
+            this.gbPurchaseDetails.Controls.Add(this.txtPurchaseMileage);
+            this.gbPurchaseDetails.Controls.Add(this.txtPurchasePrice);
             this.gbPurchaseDetails.Controls.Add(this.lblPurchasePrice);
             this.gbPurchaseDetails.Controls.Add(this.lblPurchaseDate);
-            this.gbPurchaseDetails.Controls.Add(this.dateTimePicker1);
+            this.gbPurchaseDetails.Controls.Add(this.datePurchase);
             this.gbPurchaseDetails.Controls.Add(this.lblPurchased);
             this.gbPurchaseDetails.Controls.Add(this.lblComments);
-            this.gbPurchaseDetails.Controls.Add(this.textBox21);
+            this.gbPurchaseDetails.Controls.Add(this.txtComments);
             this.gbPurchaseDetails.Location = new System.Drawing.Point(27, 23);
             this.gbPurchaseDetails.Name = "gbPurchaseDetails";
             this.gbPurchaseDetails.Size = new System.Drawing.Size(533, 298);
@@ -490,7 +506,7 @@
             // lblExpMileage
             // 
             this.lblExpMileage.AutoSize = true;
-            this.lblExpMileage.Location = new System.Drawing.Point(408, 137);
+            this.lblExpMileage.Location = new System.Drawing.Point(371, 190);
             this.lblExpMileage.Name = "lblExpMileage";
             this.lblExpMileage.Size = new System.Drawing.Size(93, 13);
             this.lblExpMileage.TabIndex = 31;
@@ -499,54 +515,38 @@
             // lblExpDate
             // 
             this.lblExpDate.AutoSize = true;
-            this.lblExpDate.Location = new System.Drawing.Point(266, 134);
+            this.lblExpDate.Location = new System.Drawing.Point(39, 222);
             this.lblExpDate.Name = "lblExpDate";
             this.lblExpDate.Size = new System.Drawing.Size(79, 13);
             this.lblExpDate.TabIndex = 30;
             this.lblExpDate.Text = "Expiration Date";
             // 
-            // textBox25
+            // txtWarrMileage
             // 
-            this.textBox25.Location = new System.Drawing.Point(411, 168);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(100, 20);
-            this.textBox25.TabIndex = 29;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(266, 166);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 20);
-            this.textBox24.TabIndex = 28;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(175, 225);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 27;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.txtWarrMileage.Location = new System.Drawing.Point(411, 222);
+            this.txtWarrMileage.Name = "txtWarrMileage";
+            this.txtWarrMileage.Size = new System.Drawing.Size(100, 20);
+            this.txtWarrMileage.TabIndex = 29;
             // 
             // lblWarranty
             // 
             this.lblWarranty.AutoSize = true;
-            this.lblWarranty.Location = new System.Drawing.Point(29, 229);
+            this.lblWarranty.Location = new System.Drawing.Point(3, 190);
             this.lblWarranty.Name = "lblWarranty";
             this.lblWarranty.Size = new System.Drawing.Size(56, 13);
             this.lblWarranty.TabIndex = 26;
             this.lblWarranty.Text = "Warranty?";
             // 
-            // checkBox1
+            // cbWarranty
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(89, 225);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbWarranty.AutoSize = true;
+            this.cbWarranty.Location = new System.Drawing.Point(63, 186);
+            this.cbWarranty.Name = "cbWarranty";
+            this.cbWarranty.Size = new System.Drawing.Size(80, 17);
+            this.cbWarranty.TabIndex = 25;
+            this.cbWarranty.Text = "checkBox1";
+            this.cbWarranty.UseVisualStyleBackColor = true;
+            this.cbWarranty.CheckedChanged += new System.EventHandler(this.cbWarranty_CheckedChanged);
             // 
             // lblPurchaseMileage
             // 
@@ -557,19 +557,19 @@
             this.lblPurchaseMileage.TabIndex = 24;
             this.lblPurchaseMileage.Text = "Purchase Mileage";
             // 
-            // textBox23
+            // txtPurchaseMileage
             // 
-            this.textBox23.Location = new System.Drawing.Point(124, 142);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 20);
-            this.textBox23.TabIndex = 23;
+            this.txtPurchaseMileage.Location = new System.Drawing.Point(124, 142);
+            this.txtPurchaseMileage.Name = "txtPurchaseMileage";
+            this.txtPurchaseMileage.Size = new System.Drawing.Size(100, 20);
+            this.txtPurchaseMileage.TabIndex = 23;
             // 
-            // textBox22
+            // txtPurchasePrice
             // 
-            this.textBox22.Location = new System.Drawing.Point(111, 106);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 20);
-            this.textBox22.TabIndex = 22;
+            this.txtPurchasePrice.Location = new System.Drawing.Point(111, 106);
+            this.txtPurchasePrice.Name = "txtPurchasePrice";
+            this.txtPurchasePrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPurchasePrice.TabIndex = 22;
             // 
             // lblPurchasePrice
             // 
@@ -589,12 +589,12 @@
             this.lblPurchaseDate.TabIndex = 20;
             this.lblPurchaseDate.Text = "Purchase Date";
             // 
-            // dateTimePicker1
+            // datePurchase
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(111, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.datePurchase.Location = new System.Drawing.Point(111, 57);
+            this.datePurchase.Name = "datePurchase";
+            this.datePurchase.Size = new System.Drawing.Size(200, 20);
+            this.datePurchase.TabIndex = 19;
             // 
             // lblPurchased
             // 
@@ -614,12 +614,12 @@
             this.lblComments.TabIndex = 17;
             this.lblComments.Text = "Comments";
             // 
-            // textBox21
+            // txtComments
             // 
-            this.textBox21.Location = new System.Drawing.Point(86, 272);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(440, 20);
-            this.textBox21.TabIndex = 16;
+            this.txtComments.Location = new System.Drawing.Point(86, 272);
+            this.txtComments.Name = "txtComments";
+            this.txtComments.Size = new System.Drawing.Size(440, 20);
+            this.txtComments.TabIndex = 16;
             // 
             // btnSubmit
             // 
@@ -629,6 +629,7 @@
             this.btnSubmit.TabIndex = 25;
             this.btnSubmit.Text = "Save";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
@@ -640,21 +641,12 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtCarNameIdentifier
+            // dtpWarrExp
             // 
-            this.txtCarNameIdentifier.Location = new System.Drawing.Point(16, 181);
-            this.txtCarNameIdentifier.Name = "txtCarNameIdentifier";
-            this.txtCarNameIdentifier.Size = new System.Drawing.Size(171, 20);
-            this.txtCarNameIdentifier.TabIndex = 11;
-            // 
-            // lbltxtCarNameIdentifier
-            // 
-            this.lbltxtCarNameIdentifier.AutoSize = true;
-            this.lbltxtCarNameIdentifier.Location = new System.Drawing.Point(13, 165);
-            this.lbltxtCarNameIdentifier.Name = "lbltxtCarNameIdentifier";
-            this.lbltxtCarNameIdentifier.Size = new System.Drawing.Size(112, 13);
-            this.lbltxtCarNameIdentifier.TabIndex = 10;
-            this.lbltxtCarNameIdentifier.Text = "Car name  description:";
+            this.dtpWarrExp.Location = new System.Drawing.Point(124, 222);
+            this.dtpWarrExp.Name = "dtpWarrExp";
+            this.dtpWarrExp.Size = new System.Drawing.Size(200, 20);
+            this.dtpWarrExp.TabIndex = 32;
             // 
             // frmCarSelection
             // 
@@ -701,11 +693,11 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox gbIdentifications;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.TextBox txtPlate;
+        private System.Windows.Forms.TextBox txtVin;
+        private System.Windows.Forms.RichTextBox rtbUnique;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -727,21 +719,20 @@
         private System.Windows.Forms.GroupBox gbPurchaseDetails;
         private System.Windows.Forms.Label lblExpMileage;
         private System.Windows.Forms.Label lblExpDate;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox txtWarrMileage;
         private System.Windows.Forms.Label lblWarranty;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbWarranty;
         private System.Windows.Forms.Label lblPurchaseMileage;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtPurchaseMileage;
+        private System.Windows.Forms.TextBox txtPurchasePrice;
         private System.Windows.Forms.Label lblPurchasePrice;
         private System.Windows.Forms.Label lblPurchaseDate;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datePurchase;
         private System.Windows.Forms.Label lblPurchased;
         private System.Windows.Forms.Label lblComments;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtComments;
         private System.Windows.Forms.TextBox txtCarNameIdentifier;
         private System.Windows.Forms.Label lbltxtCarNameIdentifier;
+        private System.Windows.Forms.DateTimePicker dtpWarrExp;
     }
 }

@@ -86,6 +86,14 @@
     <Compile Include="Migrations\201807302159494_UserCars.Designer.cs">
       <DependentUpon>201807302159494_UserCars.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807302311075_User car Info.cs" />
+    <Compile Include="Migrations\201807302311075_User car Info.Designer.cs">
+      <DependentUpon>201807302311075_User car Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807310238579_Added UserId To Vehicles owned Database.cs" />
+    <Compile Include="Migrations\201807310238579_Added UserId To Vehicles owned Database.Designer.cs">
+      <DependentUpon>201807310238579_Added UserId To Vehicles owned Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
     <Compile Include="Models\Make.cs" />
@@ -176,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807302159494_UserCars.resx">
       <DependentUpon>201807302159494_UserCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807302311075_User car Info.resx">
+      <DependentUpon>201807302311075_User car Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310238579_Added UserId To Vehicles owned Database.resx">
+      <DependentUpon>201807310238579_Added UserId To Vehicles owned Database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>

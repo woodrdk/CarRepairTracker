@@ -13,8 +13,10 @@ namespace CarRepairTracker.Models
         [Key] // Makes the property the PK
               // If PK property is an integer, it will be an identity column by default.
         [Required]
-        public int UserCarId { get; set;
-        }
+        public int UserCarId { get; set;}
+        
+        [Required]
+        public int UserId { get; set; }
         [StringLength(40)]
         public String CarNameDescription { get; set; }
         [Required]
@@ -45,18 +47,39 @@ namespace CarRepairTracker.Models
         public string HeadlightBulb { get; set; }
         public string TireSize { get; set; }
 
-        public DateTime PurchaseDate{ get; set; }
+        public DateTime? PurchaseDate{ get; set; }
 
-        [DataType(DataType.Currency)]
+       // [DataType(DataType.Currency)]
         public double PurchasePrice { get; set; }
 
         public int PurchaseMileage { get; set; }
         public bool Warranty { get; set; }
-        public DateTime ExpirationDate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
         public int ExpirationMileage { get; set; }
 
         [StringLength(500)]
         public string Comments { get; set; }
+
+
+        public static List<UserCar> GetAllUserCars()
+        {
+            using (CarRepairDbContext context = new CarRepairDbContext())
+            {
+                
+                var GetAllUserCar =
+                    (from carUser in context.UserCars
+                     where (                                    // where
+                           (carUser.UserId == IntroWho.whoUsing)      // year make started is less than or equal to the year looking for
+                          )
+                           
+                     select carUser).ToList();
+
+                List<UserCar> UserCars = GetAllUserCar.ToList();
+
+                return GetAllUserCar;
+            }
+        }
+        
 
     }
 }
