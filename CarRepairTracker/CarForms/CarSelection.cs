@@ -36,6 +36,7 @@ namespace CarRepairTracker
             {
                 cbYear.Items.Add(i);
             }
+
             cbMake.SelectedItem = "";
 
             // temp vars for testing

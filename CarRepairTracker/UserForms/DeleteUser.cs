@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarRepairTracker.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,27 @@ namespace CarRepairTracker.UserForms
 
             pnlDeleteUserSuccess.Visible = true;
             lblDeletedUserSuccess.Text = " You successfully deleted " + deleted + " from the user list!";
+        }
+
+        private void DeleteUser_Load(object sender, EventArgs e)
+        {
+            List<User> Users = User.GetAllUsers();
+            if (Users.Count() == 0) // if there are no users in database
+            {
+                cbUserToDelete.Items.Add("No users to delete");    // insert add a new user to dropdown box
+            }
+            else // if there are users
+            {
+                cbUserToDelete.DataSource = Users; // get users from database
+                cbUserToDelete.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
+            }
+
+           
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

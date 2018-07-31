@@ -19,57 +19,52 @@ namespace CarRepairTracker
             InitializeComponent();
         }
 
-
-            
-        
         private void cbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
         public static int whoUsing;
+
         private void IntroWho_Load(object sender, EventArgs e)
         {
             string addNew = "Add a new user";
             List<User> Users = User.GetAllUsers();
-            if(Users.Count() == 0)
+            if(Users.Count() == 0) // if there are no users in database
             {
-                cbWho.Items.Add(addNew);
+                cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
             }
-            else
+            else // if there are users
             {
-                cbWho.DataSource = Users;
-                cbWho.DisplayMember = nameof(User.FirstName);
+                cbWho.DataSource = Users; // get users from database
+                cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
             }
 
             whoUsing = ((User)cbWho.SelectedItem).UserID; // defines the user id of who picked
 
-            string addNewCar = "Add a new car";
-            List<UserCar> UserCars = UserCar.GetAllUserCars();
-            if (UserCars.Count() == 0)
+            string addNewCar = "Add a new car";     // variable to add the input 
+            List<UserCar> UserCars = UserCar.GetAllUserCars(); // makes list of users cars
+            if (UserCars.Count() == 0)  // if no cars in the users car list
             {
-                cbCarOfWho.Items.Add(addNewCar);
+                cbCarOfWho.Items.Add(addNewCar);    // input add a new car to drop down
             }
-            else
+            else   // if user has cars
             {
-                cbCarOfWho.DataSource = UserCars;
-                cbCarOfWho.DisplayMember = nameof(UserCar.CarNameDescription);
+                cbCarOfWho.DataSource = UserCars;   // pulls cars from database
+                cbCarOfWho.DisplayMember = nameof(UserCar.CarNameDescription);  // populates the dropdown with the users cars
             }
-
-
         }
 
-       
-        String who;
+        String who; //variable in class scope
  
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
         {
-            who = cbWho.Text;
+            who = cbWho.Text; // defines the variable as the selected text from the who drop down box
            
-            string addCar = "Add a car";
-            if (who == "Add a new user")
+            string addCar = "Add a car";    // makes variable to save typing later
+            if (who == "Add a new user")    // if when clicked submit and the value is add a new user
             {
-                UserForms.addUser AddUser = new UserForms.addUser();
-                AddUser.Show();
+                UserForms.addUser AddUser = new UserForms.addUser();    
+                AddUser.Show(); // opens the adduser form
             }
          
             else
@@ -82,8 +77,8 @@ namespace CarRepairTracker
                     // make the add car form run
                 }
 
-                scDisplay.Visible = true;
-                lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";
+                scDisplay.Visible = true;   // makes the scdisplay visible
+                lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
 
             }
         }
