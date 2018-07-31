@@ -34,7 +34,10 @@ namespace CarRepairTracker
             
             if (Users.Count() == 0) // if there are no users in database
             {
-                cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
+                //cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
+
+                UserForms.addUser AddUser = new UserForms.addUser();
+                AddUser.Show(); // opens the adduser form
             }
             else // if there are users
             {
