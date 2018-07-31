@@ -15,7 +15,8 @@ namespace CarRepairTracker.Models
         [Required]
         public int UserCarId { get; set;}
         
-
+        [Required]
+        public int UserId { get; set; }
         [StringLength(40)]
         public String CarNameDescription { get; set; }
         [Required]
@@ -58,6 +59,27 @@ namespace CarRepairTracker.Models
 
         [StringLength(500)]
         public string Comments { get; set; }
+
+
+        public static List<UserCar> GetAllUserCars()
+        {
+            using (CarRepairDbContext context = new CarRepairDbContext())
+            {
+                
+                var GetAllUserCar =
+                    (from carUser in context.UserCars
+                     where (                                    // where
+                           (carUser.UserId == IntroWho.whoUsing)      // year make started is less than or equal to the year looking for
+                          )
+                           
+                     select carUser).ToList();
+
+                List<UserCar> UserCars = GetAllUserCar.ToList();
+
+                return GetAllUserCar;
+            }
+        }
+        
 
     }
 }
