@@ -124,6 +124,7 @@
             this.Controls.Add(this.btnCancel);
             this.Name = "addUser";
             this.Text = "Add User Name";
+            this.Load += new System.EventHandler(this.addUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

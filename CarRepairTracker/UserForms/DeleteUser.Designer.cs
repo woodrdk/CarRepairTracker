@@ -47,6 +47,7 @@
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // cbUserToDelete
             // 
@@ -113,6 +114,7 @@
             this.Controls.Add(this.pnlDeleteUserSuccess);
             this.Name = "DeleteUser";
             this.Text = "DeleteUser";
+            this.Load += new System.EventHandler(this.DeleteUser_Load);
             this.pnlDeleteUserSuccess.ResumeLayout(false);
             this.pnlDeleteUserSuccess.PerformLayout();
             this.pnlWhoToDelete.ResumeLayout(false);

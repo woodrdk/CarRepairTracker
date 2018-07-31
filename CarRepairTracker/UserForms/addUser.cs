@@ -45,5 +45,10 @@ namespace CarRepairTracker.UserForms
         {
             Close();
         }
+
+        private void addUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
