@@ -98,6 +98,10 @@
     <Compile Include="Migrations\201807311751535_updating error.Designer.cs">
       <DependentUpon>201807311751535_updating error.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807311756380_Migraion Conflict.cs" />
+    <Compile Include="Migrations\201807311756380_Migraion Conflict.Designer.cs">
+      <DependentUpon>201807311756380_Migraion Conflict.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
     <Compile Include="Models\Make.cs" />
@@ -197,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807310238579_Added UserId To Vehicles owned Database.resx">
       <DependentUpon>201807310238579_Added UserId To Vehicles owned Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311756380_Migraion Conflict.resx">
+      <DependentUpon>201807311756380_Migraion Conflict.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>
