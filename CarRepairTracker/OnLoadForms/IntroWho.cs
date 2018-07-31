@@ -31,13 +31,14 @@ namespace CarRepairTracker
 
             
             List<User> Users = User.GetAllUsers();
-            Users.Insert(0, new User() {FirstName= "Select a user" });
-            if (Users.Count() > 1) // if there are no users in database
+            
+            if (Users.Count() == 0) // if there are no users in database
             {
                 cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
             }
             else // if there are users
             {
+                Users.Insert(0, new User() { FirstName = "Select a user" });
                 cbWho.DataSource = Users; // get users from database
 
                 cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
