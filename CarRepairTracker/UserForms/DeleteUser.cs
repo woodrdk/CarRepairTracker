@@ -29,7 +29,8 @@ namespace CarRepairTracker.UserForms
 
             }
             else
-            {
+            {// --------------------------------------------------------------- needs finished
+
                 // if( deletion from database is successful){
                 // lblCarDeletionSuccess.Text = " Success you deleted " + deleted + " from the car list";
                 // }
