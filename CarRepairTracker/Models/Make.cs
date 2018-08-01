@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,11 @@ namespace CarRepairTracker.Models
         public int YearStarted { get; set; }
 
         public int? YearEnded { get; set; }
+
+        // for foreign key not working //
+        public virtual ICollection<Model> Models { get; set; }
+
+
 
         public static List<Make> GetAllMakes(String year)        //this method searches for the makes available in a selected year
         {

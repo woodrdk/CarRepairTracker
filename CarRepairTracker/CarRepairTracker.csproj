@@ -66,41 +66,9 @@
     <Compile Include="CarForms\DeleteCar.Designer.cs">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807222013550_Added Part.cs" />
-    <Compile Include="Migrations\201807222013550_Added Part.Designer.cs">
-      <DependentUpon>201807222013550_Added Part.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807232105092_Added Initial Table Classes.cs" />
-    <Compile Include="Migrations\201807232105092_Added Initial Table Classes.Designer.cs">
-      <DependentUpon>201807232105092_Added Initial Table Classes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807232106124_Added Repair Class.cs" />
-    <Compile Include="Migrations\201807232106124_Added Repair Class.Designer.cs">
-      <DependentUpon>201807232106124_Added Repair Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807241814067_Year ended optional for Make and Model.cs" />
-    <Compile Include="Migrations\201807241814067_Year ended optional for Make and Model.Designer.cs">
-      <DependentUpon>201807241814067_Year ended optional for Make and Model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807302159494_UserCars.cs" />
-    <Compile Include="Migrations\201807302159494_UserCars.Designer.cs">
-      <DependentUpon>201807302159494_UserCars.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807302311075_User car Info.cs" />
-    <Compile Include="Migrations\201807302311075_User car Info.Designer.cs">
-      <DependentUpon>201807302311075_User car Info.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807310238579_Added UserId To Vehicles owned Database.cs" />
-    <Compile Include="Migrations\201807310238579_Added UserId To Vehicles owned Database.Designer.cs">
-      <DependentUpon>201807310238579_Added UserId To Vehicles owned Database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311751535_updating error.cs" />
-    <Compile Include="Migrations\201807311751535_updating error.Designer.cs">
-      <DependentUpon>201807311751535_updating error.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311756380_Migraion Conflict.cs" />
-    <Compile Include="Migrations\201807311756380_Migraion Conflict.Designer.cs">
-      <DependentUpon>201807311756380_Migraion Conflict.cs</DependentUpon>
+    <Compile Include="Migrations\201808011957308_model.cs" />
+    <Compile Include="Migrations\201808011957308_model.Designer.cs">
+      <DependentUpon>201808011957308_model.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
@@ -178,29 +146,8 @@
     <EmbeddedResource Include="CarForms\DeleteCar.resx">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807222013550_Added Part.resx">
-      <DependentUpon>201807222013550_Added Part.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807232105092_Added Initial Table Classes.resx">
-      <DependentUpon>201807232105092_Added Initial Table Classes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807232106124_Added Repair Class.resx">
-      <DependentUpon>201807232106124_Added Repair Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807241814067_Year ended optional for Make and Model.resx">
-      <DependentUpon>201807241814067_Year ended optional for Make and Model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807302159494_UserCars.resx">
-      <DependentUpon>201807302159494_UserCars.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311751535_updating error.resx">
-      <DependentUpon>201807311751535_updating error.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807302311075_User car Info.resx">
-      <DependentUpon>201807302311075_User car Info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310238579_Added UserId To Vehicles owned Database.resx">
-      <DependentUpon>201807310238579_Added UserId To Vehicles owned Database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808011957308_model.resx">
+      <DependentUpon>201808011957308_model.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807311756380_Migraion Conflict.resx">
       <DependentUpon>201807311756380_Migraion Conflict.cs</DependentUpon>

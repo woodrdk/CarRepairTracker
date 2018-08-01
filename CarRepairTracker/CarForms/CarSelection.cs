@@ -78,6 +78,7 @@ namespace CarRepairTracker
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            var ifCarAdded = UserCar.GetAllUserCars().Count();
             using (CarRepairDbContext objUserContext = new CarRepairDbContext())
             {
                 UserCar userCars = new UserCar();
@@ -87,12 +88,10 @@ namespace CarRepairTracker
                 userCars.CarNameDescription = txtCarNameIdentifier.Text;
                 userCars.Year = Int32.Parse( cbYear.SelectedItem.ToString());
                 userCars.Make = ((Make)cbMake.SelectedItem).Name;
-                
-                //
+                // another way to do prev line of code
                 // Make SelectedMake = cbMake.SelectedItem as Make;
                 // userCars.Make = SelectedMake.Name;
-                //
-
+            
                 userCars.Model = ((Model)cbModel.SelectedItem).Name;
                 userCars.Trim = cbTrim.SelectedItem.ToString(); ;
                 userCars.Engine = cbEngine.SelectedItem.ToString(); ;
@@ -119,7 +118,12 @@ namespace CarRepairTracker
                 objUserContext.UserCars.Add(userCars);
                 objUserContext.SaveChanges();
 
-                // need to put in code for if inserted properly  alerts ya it was inserted
+                // code to verify added
+                if((ifCarAdded + 1) == UserCar.GetAllUserCars().Count())
+                {
+                    Close();
+                    MessageBox.Show("Car Successfully Added");
+                }
             };
         }
 
