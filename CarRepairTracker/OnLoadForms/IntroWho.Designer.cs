@@ -36,6 +36,7 @@
             this.scDisplay = new System.Windows.Forms.SplitContainer();
             this.btnRepairHistory = new System.Windows.Forms.Button();
             this.lblWhoPicked = new System.Windows.Forms.Label();
+            this.btnChangeCar = new System.Windows.Forms.Button();
             this.pnlWho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scDisplay)).BeginInit();
             this.scDisplay.Panel1.SuspendLayout();
@@ -99,6 +100,7 @@
             // 
             // scDisplay.Panel1
             // 
+            this.scDisplay.Panel1.Controls.Add(this.btnChangeCar);
             this.scDisplay.Panel1.Controls.Add(this.btnRepairHistory);
             this.scDisplay.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
@@ -128,6 +130,16 @@
             this.lblWhoPicked.Size = new System.Drawing.Size(114, 13);
             this.lblWhoPicked.TabIndex = 0;
             this.lblWhoPicked.Text = "place holder for design";
+            // 
+            // btnChangeCar
+            // 
+            this.btnChangeCar.Location = new System.Drawing.Point(4, 33);
+            this.btnChangeCar.Name = "btnChangeCar";
+            this.btnChangeCar.Size = new System.Drawing.Size(114, 23);
+            this.btnChangeCar.TabIndex = 1;
+            this.btnChangeCar.Text = "Change Car";
+            this.btnChangeCar.UseVisualStyleBackColor = true;
+            this.btnChangeCar.Click += new System.EventHandler(this.btnChangeCar_Click);
             // 
             // IntroWho
             // 
@@ -160,5 +172,6 @@
         private System.Windows.Forms.SplitContainer scDisplay;
         private System.Windows.Forms.Label lblWhoPicked;
         private System.Windows.Forms.Button btnRepairHistory;
+        private System.Windows.Forms.Button btnChangeCar;
     }
 }

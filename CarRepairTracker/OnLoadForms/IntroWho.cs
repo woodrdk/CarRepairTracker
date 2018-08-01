@@ -98,5 +98,13 @@ namespace CarRepairTracker
            
 
         }
+
+        private void btnChangeCar_Click(object sender, EventArgs e)
+        {
+            pnlWho.Visible = true;
+            scDisplay.Visible = false;
+            cbWho.Visible = false;
+            lblWho.Text = "Which car would you like to change to?";
+        }
     }
 }
