@@ -24,9 +24,9 @@ namespace CarRepairTracker.Models
 
 
         // next two are for foreign key
+        // [ForeignKey("Makes")]
        // public int MakeID { get; set; }
-   
-        //public virtual Make Makes { get; set; }
+        public virtual Make Makes { get; set; }
 
         // TODO: Add description
 

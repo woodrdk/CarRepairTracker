@@ -39,7 +39,7 @@ namespace CarRepairTracker.Models
 
 
         public static void Delete(User person)
-        {
+        { // not working
             var context = new CarRepairDbContext();
             context.Users.Add(person);
             context.Entry(person).State = EntityState.Deleted;

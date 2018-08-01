@@ -7,13 +7,13 @@ namespace CarRepairTracker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedInitialTableClasses : IMigrationMetadata
+    public sealed partial class model : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedInitialTableClasses));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(model));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807232105092_Added Initial Table Classes"; }
+            get { return "201808011957308_model"; }
         }
         
         string IMigrationMetadata.Source
