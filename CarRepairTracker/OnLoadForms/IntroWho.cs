@@ -29,9 +29,20 @@ namespace CarRepairTracker
         {
             string addNew = "Add a new user";
 
-            
             List<User> Users = User.GetAllUsers();
             
+            string addNewCar = "Add a new car";     // variable to add the input 
+            List<UserCar> UserCars = UserCar.GetAllUserCars(); // makes list of users cars
+            if (UserCars.Count() == 0)  // if no cars in the users car list
+            {
+                cbCarOfWho.Items.Add(addNewCar);    // input add a new car to drop down
+            }
+            else   // if user has cars
+            {
+                cbCarOfWho.DataSource = UserCars;   // pulls cars from database
+                cbCarOfWho.DisplayMember = nameof(UserCar.CarNameDescription);  // populates the dropdown with the users cars
+            }
+
             if (Users.Count() == 0) // if there are no users in database
             {
                 //cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
@@ -46,18 +57,6 @@ namespace CarRepairTracker
 
                 cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
                 cbWho.SelectedIndex = 0;
-            }
-
-            string addNewCar = "Add a new car";     // variable to add the input 
-            List<UserCar> UserCars = UserCar.GetAllUserCars(); // makes list of users cars
-            if (UserCars.Count() == 0)  // if no cars in the users car list
-            {
-                cbCarOfWho.Items.Add(addNewCar);    // input add a new car to drop down
-            }
-            else   // if user has cars
-            {
-                cbCarOfWho.DataSource = UserCars;   // pulls cars from database
-                cbCarOfWho.DisplayMember = nameof(UserCar.CarNameDescription);  // populates the dropdown with the users cars
             }
         }
 

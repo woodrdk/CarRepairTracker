@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarRepairTracker.Models;
 
 namespace CarRepairTracker
 {
@@ -20,7 +21,7 @@ namespace CarRepairTracker
             InitializeComponent();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private void FrmMain_Load(object sender, EventArgs e)
         {
             ShowNavButtons(); // on load  shows nav buttons
             ShowNavForm();      // on load shows nav form
@@ -28,127 +29,164 @@ namespace CarRepairTracker
 
         private void ShowNavButtons()
         {   // this method is te code to make the nav show
-            Navigation navForm = new Navigation();
-            navForm.MdiParent = this;
+            Navigation navForm = new Navigation
+            {
+                MdiParent = this
+            };
             navForm.Show();
         }
 
         private void ShowNavForm()
-        { // this method is te code to make the nav show
-            IntroWho introForm = new IntroWho();
-            introForm.MdiParent = this;
-            introForm.Show();
+        { // this method is the code to make the nav show
+            IntroWho introForm = new IntroWho
+            {
+                MdiParent = this
+            };
+
+            // Generate List of users to check if a first time user
+            List<User> Users = User.GetAllUsers();
+            if (Users.Count() == 0) // if there are no users in database
+            {
+                UserForms.addUser AddUser = new UserForms.addUser
+                {
+                    MdiParent = this
+                };
+                AddUser.Show(); // opens the adduser form
+            }
+            else // if there are users
+            {
+                introForm.Show();
+            }            
         }
 
-        private void navigationToolStripMenuItem_Click(object sender, EventArgs e)
-        { // this method is te code to make the nav buttons show
+        private void NavigationToolStripMenuItem_Click(object sender, EventArgs e)
+        { // this method is the code to make the nav buttons show
             ShowNavButtons();
         }
 
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {   // code for pop up verification box upon close
-            DialogResult choice = MessageBox.Show("Are you sure you want to quit? ", "Do you want to quit? ",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (choice == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                MessageBox.Show("Thank you for using 253 Car Mod Tracker");
-            }
+            //DialogResult choice = MessageBox.Show("Are you sure you want to quit? ", "Do you want to quit? ",
+            //MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //if (choice == DialogResult.No)
+            //{
+            //    e.Cancel = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Thank you for using 253 Car Mod Tracker");
+            //}
         }
 
-        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
         }
 
         
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        private void ToolStripTextBox1_Click(object sender, EventArgs e)
         {
             
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            frmCarSelection secondForm = new frmCarSelection();
-            secondForm.MdiParent = this;
+            frmCarSelection secondForm = new frmCarSelection
+            {
+                MdiParent = this
+            };
             secondForm.Show();
         }
 
-        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        private void MenuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
 
-        private void whoseCarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void WhoseCarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
            
         }
 
-        private void addCarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void AddCarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmCarSelection secondForm = new frmCarSelection();
-            secondForm.MdiParent = this;
+            frmCarSelection secondForm = new frmCarSelection
+            {
+                MdiParent = this
+            };
             secondForm.Show();
         }
 
-        private void navigationToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void NavigationToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Navigation navForm = new Navigation();
-            navForm.MdiParent = this;
+            Navigation navForm = new Navigation
+            {
+                MdiParent = this
+            };
             navForm.Show();
         }
 
-        private void addRepairToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void AddRepairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmModRepair ModRepair = new frmModRepair();
-            ModRepair.MdiParent = this;
+            frmModRepair ModRepair = new frmModRepair
+            {
+                MdiParent = this
+            };
             ModRepair.Show();
         }
 
-        private void deleteRepairToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void DeleteRepairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            DeleteCar DeleteCar = new DeleteCar();
-            DeleteCar.MdiParent = this;
+            DeleteCar DeleteCar = new DeleteCar
+            {
+                MdiParent = this
+            };
             DeleteCar.Show();
         }
 
-        private void editCarDetailsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void EditCarDetailsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            EditCar EditCar = new EditCar();
-            EditCar.MdiParent = this;
+            EditCar EditCar = new EditCar
+            {
+                MdiParent = this
+            };
             EditCar.Show();
         }
 
-        private void editRepairToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void EditRepairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            EditRepair EditRepair = new EditRepair();
-            EditRepair.MdiParent = this;
+            EditRepair EditRepair = new EditRepair
+            {
+                MdiParent = this
+            };
             EditRepair.Show();
         }
 
-        private void deleteCarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeleteCarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeleteCar deleteCar = new DeleteCar();
-            deleteCar.MdiParent = this;
+            DeleteCar deleteCar = new DeleteCar
+            {
+                MdiParent = this
+            };
             deleteCar.Show();
         }
 
-        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserForms.addUser AddUser = new UserForms.addUser();
+            UserForms.addUser AddUser = new UserForms.addUser
+            {
+                MdiParent = this
+            };
             AddUser.Show();
         }
 
-        private void changeUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChangeUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowNavForm();
         }
