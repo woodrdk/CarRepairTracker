@@ -22,7 +22,12 @@ namespace CarRepairTracker.Models
 
         public int? YearEnded { get; set; }
 
-        public virtual Make Makes { get; set; }
+        public virtual Make Makes { get; set; } // make the same for trim and engine
+
+        public virtual ICollection<Trim> Trims { get; set; }
+        public virtual ICollection<Engine> Engines { get; set; }
+
+
 
         //-------------------------------------- methods-------------------------------
         public static List<Model> GetAllModels(String make, String year)

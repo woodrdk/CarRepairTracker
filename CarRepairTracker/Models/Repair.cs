@@ -21,6 +21,21 @@ namespace CarRepairTracker.Models
         [DataType(DataType.Currency)]
         public double LaborCost { get; set; }
 
+        public double PartCost { get; set; }
+
+        // public double LaborCost  { get; set; } need to set this up proper for foreign keys
+
+        public double TotalCost { get; set; }
+
+        public string ShopName { get; set; }
+
+        public int Mileage { get; set; }
+
+        public string Misc { get; set; }
+
+        public virtual ICollection<Part> Parts { get; set; }
+
         // TODO: Add description
     }
+
 }

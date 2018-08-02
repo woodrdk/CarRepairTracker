@@ -32,5 +32,9 @@ namespace CarRepairTracker.Models
         public virtual DbSet<Repair> Repairs { get; set; }
 
         public virtual DbSet<UserCar> UserCars{ get; set; }
+
+        public virtual DbSet<Trim> Trims { get; set; }
+
+        public virtual DbSet<Engine> Engines { get; set; }
     }
 }

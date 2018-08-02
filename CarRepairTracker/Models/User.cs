@@ -22,6 +22,9 @@ namespace CarRepairTracker.Models
         [StringLength(40)]
         public string LastName { get; set; }
 
+        public virtual ICollection<UserCar> UserCars { get; set; }
+        public int UserId { get; internal set; }
+
         // TODO: Add description
 
         public static List<User> GetAllUsers()

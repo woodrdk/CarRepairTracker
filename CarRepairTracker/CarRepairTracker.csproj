@@ -66,16 +66,22 @@
     <Compile Include="CarForms\DeleteCar.Designer.cs">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808011957308_model.cs" />
-    <Compile Include="Migrations\201808011957308_model.Designer.cs">
-      <DependentUpon>201808011957308_model.cs</DependentUpon>
+    <Compile Include="Migrations\201808020558501_db.cs" />
+    <Compile Include="Migrations\201808020558501_db.Designer.cs">
+      <DependentUpon>201808020558501_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020609341_added partcost to repair.cs" />
+    <Compile Include="Migrations\201808020609341_added partcost to repair.Designer.cs">
+      <DependentUpon>201808020609341_added partcost to repair.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
+    <Compile Include="Models\Engine.cs" />
     <Compile Include="Models\Make.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Part.cs" />
     <Compile Include="Models\Repair.cs" />
+    <Compile Include="Models\Trim.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserCars.cs" />
     <Compile Include="RepairForms\DeleteRepair.cs">
@@ -146,11 +152,11 @@
     <EmbeddedResource Include="CarForms\DeleteCar.resx">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808011957308_model.resx">
-      <DependentUpon>201808011957308_model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808020558501_db.resx">
+      <DependentUpon>201808020558501_db.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311756380_Migraion Conflict.resx">
-      <DependentUpon>201807311756380_Migraion Conflict.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808020609341_added partcost to repair.resx">
+      <DependentUpon>201808020609341_added partcost to repair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>

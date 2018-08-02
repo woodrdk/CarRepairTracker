@@ -83,7 +83,7 @@ namespace CarRepairTracker
             {
                 UserCar userCars = new UserCar();
 
-                userCars.UserId = IntroWho.whoUsing; // pulls the variable of whos owner of car from intro form
+               // userCars.UserId = IntroWho.whoUsing; // pulls the variable of whos owner of car from intro form
 
                 userCars.CarNameDescription = txtCarNameIdentifier.Text;
                 userCars.Year = Int32.Parse( cbYear.SelectedItem.ToString());

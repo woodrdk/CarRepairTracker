@@ -22,7 +22,6 @@ namespace CarRepairTracker.Models
 
         public int? YearEnded { get; set; }
 
-        // for foreign key not working //
         public virtual ICollection<Model> Models { get; set; }
 
 
