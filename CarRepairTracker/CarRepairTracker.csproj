@@ -66,17 +66,9 @@
     <Compile Include="CarForms\DeleteCar.Designer.cs">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808020558501_db.cs" />
-    <Compile Include="Migrations\201808020558501_db.Designer.cs">
-      <DependentUpon>201808020558501_db.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808020609341_added partcost to repair.cs" />
-    <Compile Include="Migrations\201808020609341_added partcost to repair.Designer.cs">
-      <DependentUpon>201808020609341_added partcost to repair.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808020620166_repair date.cs" />
-    <Compile Include="Migrations\201808020620166_repair date.Designer.cs">
-      <DependentUpon>201808020620166_repair date.cs</DependentUpon>
+    <Compile Include="Migrations\201808021605178_Update Database.cs" />
+    <Compile Include="Migrations\201808021605178_Update Database.Designer.cs">
+      <DependentUpon>201808021605178_Update Database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
@@ -156,14 +148,8 @@
     <EmbeddedResource Include="CarForms\DeleteCar.resx">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808020558501_db.resx">
-      <DependentUpon>201808020558501_db.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808020609341_added partcost to repair.resx">
-      <DependentUpon>201808020609341_added partcost to repair.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808020620166_repair date.resx">
-      <DependentUpon>201808020620166_repair date.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808021605178_Update Database.resx">
+      <DependentUpon>201808021605178_Update Database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>
