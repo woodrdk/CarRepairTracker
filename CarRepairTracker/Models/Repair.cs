@@ -33,6 +33,8 @@ namespace CarRepairTracker.Models
 
         public string Misc { get; set; }
 
+        public DateTime RepairDate { get; set; }
+
         public virtual ICollection<Part> Parts { get; set; }
 
         // TODO: Add description

@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201808020609341_added partcost to repair.Designer.cs">
       <DependentUpon>201808020609341_added partcost to repair.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808020620166_repair date.cs" />
+    <Compile Include="Migrations\201808020620166_repair date.Designer.cs">
+      <DependentUpon>201808020620166_repair date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
     <Compile Include="Models\Engine.cs" />
@@ -157,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808020609341_added partcost to repair.resx">
       <DependentUpon>201808020609341_added partcost to repair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808020620166_repair date.resx">
+      <DependentUpon>201808020620166_repair date.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>
