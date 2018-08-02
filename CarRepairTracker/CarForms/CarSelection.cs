@@ -18,13 +18,10 @@ namespace CarRepairTracker
         public frmCarSelection()
         {
             InitializeComponent();
-            
-       
         }
         
         private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-
 
         }
 
@@ -38,8 +35,7 @@ namespace CarRepairTracker
             }
 
             cbMake.SelectedItem = "";
-
-            // temp vars for testing
+                // temp vars for testing
             cbTrim.Items.Add("HEMI");
             cbEngine.Items.Add("V8");
         }
@@ -53,7 +49,6 @@ namespace CarRepairTracker
         {
             String make = cbMake.Text;
             String year = cbYear.Text;
-
             List<Model> Models = Model.GetAllModels(make, year);
             cbModel.DataSource = Models;
             cbModel.DisplayMember = nameof(Model.Name);
@@ -68,12 +63,9 @@ namespace CarRepairTracker
         private void cbYear_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             String year = cbYear.Text;
-
             List<Make> Makes = Make.GetAllMakes(year);
             cbMake.DataSource = Makes;
             cbMake.DisplayMember = nameof(Make.Name);
-
-        
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -83,15 +75,15 @@ namespace CarRepairTracker
             {
                 UserCar userCars = new UserCar();
 
-               // userCars.UserId = IntroWho.whoUsing; // pulls the variable of whos owner of car from intro form
+                userCars.CurrUser = ((frmMain)MdiParent).whoIsUsing;
+                    //IntroWho.cbWho_SelectedIndexChanged(sender, e); // pulls the variable of whos owner of car from intro form
 
                 userCars.CarNameDescription = txtCarNameIdentifier.Text;
                 userCars.Year = Int32.Parse( cbYear.SelectedItem.ToString());
                 userCars.Make = ((Make)cbMake.SelectedItem).Name;
-                // another way to do prev line of code
-                // Make SelectedMake = cbMake.SelectedItem as Make;
-                // userCars.Make = SelectedMake.Name;
-            
+                    // another way to do prev line of code
+                    // Make SelectedMake = cbMake.SelectedItem as Make;
+                    // userCars.Make = SelectedMake.Name;
                 userCars.Model = ((Model)cbModel.SelectedItem).Name;
                 userCars.Trim = cbTrim.SelectedItem.ToString(); ;
                 userCars.Engine = cbEngine.SelectedItem.ToString(); ;
@@ -109,16 +101,14 @@ namespace CarRepairTracker
                 userCars.PurchaseDate = datePurchase.Value; 
                 //userCars.PurchasePrice = Convert.ToDouble(txtPurchasePrice.Text); //double.Parse
                 //userCars.PurchaseMileage = Convert.ToInt32(txtPurchaseMileage.Text);
-                
                 //userCars.Warranty = Convert.ToBoolean( cbWarranty.Text); // need to get data
                 userCars.ExpirationDate = dtpWarrExp.Value;
                 //userCars.ExpirationMileage = Convert.ToInt32(txtWarrMileage.Text);
                 userCars.Comments = txtComments.Text;
-
                 objUserContext.UserCars.Add(userCars);
                 objUserContext.SaveChanges();
-
-                // code to verify added
+           
+                // code to verify car added needs work
                 if((ifCarAdded + 1) == UserCar.GetAllUserCars().Count())
                 {
                     Close();

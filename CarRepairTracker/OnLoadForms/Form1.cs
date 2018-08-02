@@ -14,8 +14,10 @@ namespace CarRepairTracker
     public partial class frmMain : Form
     {
 
-        private frmCarSelection of = new frmCarSelection();
+       
+        
 
+        public User whoIsUsing;
         public frmMain()
         {
             InitializeComponent();
@@ -25,6 +27,8 @@ namespace CarRepairTracker
         {
             ShowNavButtons(); // on load  shows nav buttons
             ShowNavForm();      // on load shows nav form
+
+    
         }
 
         private void ShowNavButtons()
@@ -186,9 +190,20 @@ namespace CarRepairTracker
             AddUser.Show();
         }
 
+        private void IntroWho(object sender, EventArgs e)
+        {
+            IntroWho intro = new IntroWho
+            {
+                MdiParent = this
+            };
+            intro.Show();
+        }
+
         private void ChangeUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowNavForm();
         }
+
+
     }
 }

@@ -18,10 +18,14 @@ namespace CarRepairTracker
         {
             InitializeComponent();
         }
-        public static int whoUsing;
-        private void cbWho_SelectedIndexChanged(object sender, EventArgs e)
+        public static int whoUsing ; // used in many locations to keep track of who is using
+            // move the id to parent form 
+            // 
+        
+        public void cbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //whoUsing = ((User)cbWho.SelectedItem).UserID; // defines the user id of who picked            
+            
+            // defines the user id of who picked         
         }
 
 
@@ -65,7 +69,10 @@ namespace CarRepairTracker
         private void btnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
         {
             who = cbWho.Text; // defines the variable as the selected text from the who drop down box
-           
+            // submit 
+            ((frmMain)MdiParent).whoIsUsing = ((User)cbWho.SelectedItem);
+
+
             string addCar = "Add a car";    // makes variable to save typing later
             if (who == "Add New User")    // if when clicked submit and the value is add a new user
             {
@@ -81,14 +88,17 @@ namespace CarRepairTracker
                 pnlWho.Visible = false;
                 if (cbCarOfWho.SelectedItem == null || cbCarOfWho.Text == null)
                 {
-                    frmCarSelection UsersCars = new frmCarSelection();
-                    UsersCars.Show();
+                    frmCarSelection NewCarForm = new frmCarSelection
+                    {
+                        MdiParent = this.MdiParent
+                    };
+                    NewCarForm.Show();
                     // make the add car form run
                 }
 
                 scDisplay.Visible = true;   // makes the scdisplay visible
                 lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
-
+                
             }
         }
 

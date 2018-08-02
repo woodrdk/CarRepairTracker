@@ -7,13 +7,13 @@ namespace CarRepairTracker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class db : IMigrationMetadata
+    public sealed partial class dbfix : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(db));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(dbfix));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808020558501_db"; }
+            get { return "201808021820188_db fix"; }
         }
         
         string IMigrationMetadata.Source

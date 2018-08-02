@@ -66,9 +66,13 @@
     <Compile Include="CarForms\DeleteCar.Designer.cs">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808021605178_Update Database.cs" />
-    <Compile Include="Migrations\201808021605178_Update Database.Designer.cs">
-      <DependentUpon>201808021605178_Update Database.cs</DependentUpon>
+    <Compile Include="Migrations\201808021720113_db.cs" />
+    <Compile Include="Migrations\201808021720113_db.Designer.cs">
+      <DependentUpon>201808021720113_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808021820188_db fix.cs" />
+    <Compile Include="Migrations\201808021820188_db fix.Designer.cs">
+      <DependentUpon>201808021820188_db fix.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
@@ -148,8 +152,11 @@
     <EmbeddedResource Include="CarForms\DeleteCar.resx">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808021605178_Update Database.resx">
-      <DependentUpon>201808021605178_Update Database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808021720113_db.resx">
+      <DependentUpon>201808021720113_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808021820188_db fix.resx">
+      <DependentUpon>201808021820188_db fix.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>
