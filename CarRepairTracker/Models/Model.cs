@@ -22,15 +22,9 @@ namespace CarRepairTracker.Models
 
         public int? YearEnded { get; set; }
 
-
-        // next two are for foreign key
-        // [ForeignKey("Makes")]
-       // public int MakeID { get; set; }
         public virtual Make Makes { get; set; }
 
-        // TODO: Add description
-
-
+        //-------------------------------------- methods-------------------------------
         public static List<Model> GetAllModels(String make, String year)
         {
             
