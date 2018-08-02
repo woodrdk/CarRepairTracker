@@ -68,17 +68,17 @@ namespace CarRepairTracker.Models
             using (CarRepairDbContext context = new CarRepairDbContext())
             {
 
-                //var GetAllUserCar =
-                //    (from carUser in context.UserCars
-                //     where (                                    // where
-                //           (carUser.UserId is equal IntroWho.whoUsing.ToString())      // year make started is less than or equal to the year looking for
-                //           )
+                var GetAllUserCar =
+                    (from carUser in context.UserCars
+                     where (                                    
+                           (carUser.UserId.UserID == IntroWho.whoUsing)  
+                           )
 
-                //     select carUser).ToList();
+                   select carUser).ToList();
 
-                //List<UserCar> UserCars = GetAllUserCar.ToList();
+                List<UserCar> UserCars = GetAllUserCar.ToList();
 
-                return null;// GetAllUserCar;
+                return GetAllUserCar;
             }
         }
         
