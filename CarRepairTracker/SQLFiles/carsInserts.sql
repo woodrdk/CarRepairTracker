@@ -1,132 +1,95 @@
 -- all auto brand year info is from wikipedia.com
 INSERT Makes (Name, YearStarted, YearEnded) VALUES 
 
--- all auto brand year info is from wikipedia.com
-INSERT Makes (Name, YearStarted, YearEnded) VALUES 
+('Aston Martin ', 1913, null),
+('Acura ', 1986, null),
+('AM General ', 1970, null),
+('Alfa Romeo ', 1910, null),
+('Audi ', 1989, null),
+('Bentley ', 1919, null),
+('BMW ', 1916, null),
+('Bugatti ', 1909, null),
+('Buick ', 1899, null),
+('Cadillac ', 1902, null),
+('Chrysler ', 1925, null),
+('Chevrolet ', 1911, null),
+('Dodge', 1900, null),
+('Datsun ', 1931, 1986),
+('Datsun ', 2013, null),
+('Dodge ', 1900, null),
+('Fiat ', 1899, null),
+('Ferrari ', 1939, null),
+('Ford ', 1903, null),
+('GMC ', 1911, null),
+('GM ', 1908, null),
+('Hyundai ', 1967, null),
+('Holden ', 1856, null),
+('Hennessey', 1991, null),
+('Honda ', 1946, null),
+('Infiniti ', 1989, null),
+('Isuzu ', 1953, null),
+('Jeep ', 1941, null),
+('Jaguar ', 1933, null),
+('Kia ', 1962, null),
+('Land Rover ', 1967, null),
+('Rover ', 1948, null),
+('Lincoln ', 1917, null),
+('Lotus ', 1952, null),
+('Lexus ', 1989, null),
+('Lancia ', 1906, null),
+('Lamborghini ', 1963, null),
+('Maybach ', 1909, null),
+('Mazda ', 1920, null),
+('Mitsubishi ', 1970, null),
+('Mitsubishi', 1917, 1921),
+('Mitsubishi', 1959, null),
+('Mercedes-Benz', 1870, null),
+('Mercury ', 1938, 2011),
+('Maserati ', 1914, null),
+('MINI ', 1959, null),
+('Nissan ', 1933, null),
+('Opel ', 1862, null),
+('Porsche ', 1931, null),
+('Pontiac ', 1926, 2010),
+('Ram ', 2009, null),
+('Rolls Royce ', 1906, null),
+('Subaru ', 1953, null),
+('Suzuki ', 1937, null),
+('Smart ', 1994, null),
+('Sprinter (Dodge or Freightliner) ', 1995, null),
+('Scion',  2003, 2016),
+('Tesla ', 2003, null),
+('Toyota ', 1937, null),
+('Triumph ', 1921, null),
+('Volvo ', 1924, null),
+('Volkswagen ', 1937, null),
 
-('Aston Martin ')
-('Tesla ')
-('Jaguar ')
-('Maserati ')
-('Land Rover ')
-('Rolls Royce ')
-('Toyota ')
-('BMW ')
-('Bugatti ')
-('MINI ')
-('Ford ')
-('Lincoln ')
-('Mercury ')
-('Lotus ')
-('Chevrolet ')
-('Buick ')
-('Cadillac ')
-('Holden ')
-('Opel ')
-('GMC ')
-('Mazda ')
-('Honda ')
-('Acura ')
-('Dodge ')
-('Chrysler ')
-('Nissan ')
-('Infiniti ')
-('Mitsubishi ')
-('Volkswagen ')
-('Jeep ')
-('Club Car ')
-('Volvo ')
-('Fiat ')
-('Alfa Romeo ')
-('Ram ')
-('Lancia ')
-('Hyundai ')
-('Kia ')
-('Lamborghini ')
-('smart ')
-('Optima ')
-('Suzuki ')
-('Lexus ')
-('Subaru ')
-('Maybach ')
-('Pontiac ')
-('Isuzu ')
-('AM General ')
-('Ferrari ')
-('Sprinter (Dodge or Freightliner) ')
-('Audi ')
-('Bentley ')
-('Porsche ')
-('Triumph ')
-
-
-
-
-
--- American Cars
-( 'Dodge', 1900, 2018),
-('AM General', 2011, null),
 ('Anteros', 2005, null),
 ('Aurica', 2010, null),
 ('Buick', 1903, null),
 ('BXR', 2008, null),
-('Chrysler', 1925, null),
-('Chevrolet', 1911, null),
-('Cadillac', 1902, null),
-('Dodge', 1900, null),
 ('Elio Motors', 2009, null),
 ('Equus Automotive', 2014, null),
 ('E-Z-GO', 1954, null),
 ('Falcon', 2009, null),
 ('Faraday', 2014, null),
 ('Fisker', 2011, 2014),
-('Ford', 1903, null),
-('GMC', 1913, null),
-('Hennessey', 1991, null),
-('Jeep', 1941, null),
+
 ('Karma', 2016, null),
-('Lincoln', 1917, null),
 ('Local', 2007, null),
 ('Lucid Motors', 2014, null),
 ('Lyons', 2011, null),
 ('Mosler', 1993, 2013),
 ('Niama-Reisser', 2005, null),
 ('Panoz', 1989, null),
-('Polaris', 1954, null),
-('Pontiac', 1926, 2010),
 ('Racefab', 1991, null),
-('Ram', 2009, null),
 ('Rezvani', 2014, null),
 ('Rossion', 2007, null),
 ('Shelby American', 1992, null),
 ('SSC', 1999, null),
-('Tesla', 2003, null),
 ('Zimmer', 1978, 1988),
-('Zimmer', 1997, null),
+('Zimmer', 1997, null)
 
---Japanese
-('Acura', 1986, null),
-('Datsun', 1933, 1986),
-('Honda', 1946, null),
-('Infiniti', 1989, null),
-('Isuzu', 1953, null),
-('Lexus', 1989, null),
-('Mazda', 1960, null),
-('Mitsubishi', 1917, 1921),
-('Mitsubishi', 1959, null),
-('Nissan', 1933, null),
-('Scion',  2003, 2016),
-('Suzuki', 1956, null),
-('Toyota', 1937, null),
-('Subaru', 1953, null),
-
--- German
-('Audi', 1989, null), 
-('BMW', 1917, null),
-('Mercedes-Benz', 1870, null),
-('Opel', 1862, null), 
-('Porsche', 1931, null), 
-('Volkswagen', 1937, null) 
 
 
 
