@@ -1,5 +1,68 @@
 -- all auto brand year info is from wikipedia.com
 INSERT Makes (Name, YearStarted, YearEnded) VALUES 
+
+-- all auto brand year info is from wikipedia.com
+INSERT Makes (Name, YearStarted, YearEnded) VALUES 
+
+('Aston Martin ')
+('Tesla ')
+('Jaguar ')
+('Maserati ')
+('Land Rover ')
+('Rolls Royce ')
+('Toyota ')
+('BMW ')
+('Bugatti ')
+('MINI ')
+('Ford ')
+('Lincoln ')
+('Mercury ')
+('Lotus ')
+('Chevrolet ')
+('Buick ')
+('Cadillac ')
+('Holden ')
+('Opel ')
+('GMC ')
+('Mazda ')
+('Honda ')
+('Acura ')
+('Dodge ')
+('Chrysler ')
+('Nissan ')
+('Infiniti ')
+('Mitsubishi ')
+('Volkswagen ')
+('Jeep ')
+('Club Car ')
+('Volvo ')
+('Fiat ')
+('Alfa Romeo ')
+('Ram ')
+('Lancia ')
+('Hyundai ')
+('Kia ')
+('Lamborghini ')
+('smart ')
+('Optima ')
+('Suzuki ')
+('Lexus ')
+('Subaru ')
+('Maybach ')
+('Pontiac ')
+('Isuzu ')
+('AM General ')
+('Ferrari ')
+('Sprinter (Dodge or Freightliner) ')
+('Audi ')
+('Bentley ')
+('Porsche ')
+('Triumph ')
+
+
+
+
+
 -- American Cars
 ( 'Dodge', 1900, 2018),
 ('AM General', 2011, null),
