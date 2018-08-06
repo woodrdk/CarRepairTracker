@@ -86,7 +86,7 @@ namespace CarRepairTracker
             else
             {
                 pnlWho.Visible = false;
-                if (cbCarOfWho.SelectedItem == null || cbCarOfWho.Text == null)
+                if (cbCarOfWho.SelectedItem == null || cbCarOfWho.Text == null || cbCarOfWho.Text == "Add a new car")
                 {
                     frmCarSelection NewCarForm = new frmCarSelection
                     {

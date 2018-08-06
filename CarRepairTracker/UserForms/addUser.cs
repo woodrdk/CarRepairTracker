@@ -22,16 +22,18 @@ namespace CarRepairTracker.UserForms
         {
             using (CarRepairDbContext objUserContext = new CarRepairDbContext())
             {
+
                 User userName = new User();
                 userName.FirstName = txtFirstName.Text;
                 userName.LastName = txtLastName.Text;
                 objUserContext.Users.Add(userName);
                 objUserContext.SaveChanges();
 
-
+                MessageBox.Show("User " + userName.FirstName + " added successfully");
                 // need to put in code for if inserted properly  alerts ya it was inserted
+                // also need to repopulate the intro form  select user dropdown
             };
-            
+            Close();
 
 
         }
