@@ -36,6 +36,10 @@ namespace CarRepairTracker.UserForms
                 // }
                 pnlDeleteUserSuccess.Visible = false;
                 MessageBox.Show("You deleted " + deleted);
+
+                User whoToDelete = ((User)cbUserToDelete.SelectedItem);
+
+                User.Delete(whoToDelete);
             }
 
             pnlDeleteUserSuccess.Visible = true;
@@ -53,9 +57,7 @@ namespace CarRepairTracker.UserForms
             {
                 cbUserToDelete.DataSource = Users; // get users from database
                 cbUserToDelete.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
-            }
-
-           
+            }           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
