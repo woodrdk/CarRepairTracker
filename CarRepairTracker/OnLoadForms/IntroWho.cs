@@ -19,26 +19,15 @@ namespace CarRepairTracker
             InitializeComponent();
         }
         public static int whoUsing ; // used in many locations to keep track of who is using
-            // move the id to parent form 
-            // 
-        
+                
         public void cbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            // defines the user id of who picked         
-        }
-
-
-        private void IntroWho_Load(object sender, EventArgs e)
-        {
-            string addNew = "Add a new user";
-
-            List<User> Users = User.GetAllUsers();
-            
             string addNewCar = "Add a new car";     // variable to add the input 
             List<UserCar> UserCars = UserCar.GetAllUserCars(); // makes list of users cars
+            cbCarOfWho.DataSource = null;
             if (UserCars.Count() == 0)  // if no cars in the users car list
             {
+                cbCarOfWho.Items.Clear();
                 cbCarOfWho.Items.Add(addNewCar);    // input add a new car to drop down
             }
             else   // if user has cars
@@ -46,12 +35,17 @@ namespace CarRepairTracker
                 cbCarOfWho.DataSource = UserCars;   // pulls cars from database
                 cbCarOfWho.DisplayMember = nameof(UserCar.CarNameDescription);  // populates the dropdown with the users cars
             }
+        }
 
+
+        private void IntroWho_Load(object sender, EventArgs e)
+        {
+            string addNew = "Add a new user";
+            List<User> Users = User.GetAllUsers();
+          
             if (Users.Count() == 0) // if there are no users in database
             {
-                //cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
-
-                UserForms.addUser AddUser = new UserForms.addUser();
+                 UserForms.addUser AddUser = new UserForms.addUser();
                 AddUser.Show(); // opens the adduser form
             }
             else // if there are users
@@ -70,9 +64,9 @@ namespace CarRepairTracker
         {
             who = cbWho.Text; // defines the variable as the selected text from the who drop down box
             // submit 
-            ((frmMain)MdiParent).whoIsUsing = ((User)cbWho.SelectedItem);
-
-
+            whoUsing = Convert.ToInt32(((User)cbWho.SelectedItem).UserID);
+            ((frmMain)MdiParent).whoIsUsing = ((User)cbWho.SelectedItem);   // defines the user id of who picked         
+            
             string addCar = "Add a car";    // makes variable to save typing later
             if (who == "Add New User")    // if when clicked submit and the value is add a new user
             {
@@ -92,13 +86,10 @@ namespace CarRepairTracker
                     {
                         MdiParent = this.MdiParent
                     };
-                    NewCarForm.Show();
-                    // make the add car form run
+                    NewCarForm.Show(); // make the add car form run
                 }
-
                 scDisplay.Visible = true;   // makes the scdisplay visible
                 lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
-                
             }
         }
 
