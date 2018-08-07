@@ -40,7 +40,6 @@
             this.pnlWhichCar = new System.Windows.Forms.Panel();
             this.btnWhichCar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefreshList = new System.Windows.Forms.Button();
             this.pnlWho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scDisplay)).BeginInit();
             this.scDisplay.Panel1.SuspendLayout();
@@ -80,7 +79,6 @@
             // 
             // pnlWho
             // 
-            this.pnlWho.Controls.Add(this.btnRefreshList);
             this.pnlWho.Controls.Add(this.lblWho);
             this.pnlWho.Controls.Add(this.btnSubmit);
             this.pnlWho.Controls.Add(this.cbWho);
@@ -175,16 +173,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Hello, which car do you wish to manage today?";
             // 
-            // btnRefreshList
-            // 
-            this.btnRefreshList.Location = new System.Drawing.Point(24, 59);
-            this.btnRefreshList.Name = "btnRefreshList";
-            this.btnRefreshList.Size = new System.Drawing.Size(75, 23);
-            this.btnRefreshList.TabIndex = 3;
-            this.btnRefreshList.Text = "Refresh List";
-            this.btnRefreshList.UseVisualStyleBackColor = true;
-            this.btnRefreshList.Click += new System.EventHandler(this.BtnRefreshList_Click);
-            // 
             // IntroWho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +211,5 @@
         private System.Windows.Forms.Panel pnlWhichCar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnWhichCar;
-        private System.Windows.Forms.Button btnRefreshList;
     }
 }

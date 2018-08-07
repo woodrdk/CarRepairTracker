@@ -31,6 +31,7 @@ namespace CarRepairTracker
             if (Users.Count() == 0)
             {
                 UserForms.AddUser AddUser = new UserForms.AddUser();
+
                 // Opens the AddUser form and ActiveControl sets focus for window
                 AddUser.Show(ActiveControl);
             }
@@ -59,11 +60,6 @@ namespace CarRepairTracker
                 cbCarOfWho.DataSource = UserCars;   // pulls cars from database
                 cbCarOfWho.DisplayMember = nameof(UserCar.CarNameDescription);  // populates the dropdown with the users cars
             }
-        }
-
-        private void BtnRefreshList_Click(object sender, EventArgs e)
-        {
-            PopulateUserList();
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
@@ -116,21 +112,11 @@ namespace CarRepairTracker
         {
             List<User> Users = User.GetAllUsers();
 
-            if (Users.Count() == 0) // if there are no users in database
-            {
-                //cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
+            Users.Insert(0, new User() { FirstName = "Select a user" });
+            cbWho.DataSource = Users; // get users from database
 
-                UserForms.AddUser AddUser = new UserForms.AddUser();
-                AddUser.Show(); // opens the adduser form
-            }
-            else // if there are users
-            {
-                Users.Insert(0, new User() { FirstName = "Select a user" });
-                cbWho.DataSource = Users; // get users from database
-
-                cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
-                cbWho.SelectedIndex = 0;
-            }
+            cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
+            cbWho.SelectedIndex = 0;
         }
 
         private void lblCarOfWho_SelectedIndexChanged(object sender, EventArgs e)

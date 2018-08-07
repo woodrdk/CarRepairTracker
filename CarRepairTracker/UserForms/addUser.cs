@@ -59,6 +59,8 @@ namespace CarRepairTracker.UserForms
                 //IntroWho FirstTimeUserIntroWho = new IntroWho();
                 //// Opens the intro who form after first time user registers
                 //FirstTimeUserIntroWho.Show();   
+                var IntroWho = Application.OpenForms.OfType<IntroWho>().Single();
+                IntroWho.PopulateUserList();
             }         
         }
 
