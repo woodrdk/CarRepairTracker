@@ -69,7 +69,7 @@ namespace CarRepairTracker
             whoUsing = Convert.ToInt32(((User)cbWho.SelectedItem).UserID);
             ((frmMain)MdiParent).whoIsUsing = ((User)cbWho.SelectedItem);   // defines the user id of who picked         
             
-            string addCar = "Add a car";    // makes variable to save typing later
+           // string addCar = "Add a car";    // makes variable to save typing later
             if (who == "Add New User")    // if when clicked submit and the value is add a new user
             {
                 UserForms.AddUser AddUser = new UserForms.AddUser();    
@@ -92,7 +92,6 @@ namespace CarRepairTracker
                 }
                 pnlWhichCar.Visible = true;
 
-                
             }
         }
 
