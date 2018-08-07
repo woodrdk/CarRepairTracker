@@ -88,8 +88,9 @@ namespace CarRepairTracker
                     };
                     NewCarForm.Show(); // make the add car form run
                 }
-                scDisplay.Visible = true;   // makes the scdisplay visible
-                lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
+                pnlWhichCar.Visible = true;
+
+                
             }
         }
 
@@ -115,6 +116,12 @@ namespace CarRepairTracker
             scDisplay.Visible = false;
             cbWho.Visible = false;
             lblWho.Text = "Which car would you like to change to?";
+        }
+
+        private void btnWhichCar_Click(object sender, EventArgs e)
+        {
+            scDisplay.Visible = true;   // makes the scdisplay visible
+            lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
         }
     }
 }
