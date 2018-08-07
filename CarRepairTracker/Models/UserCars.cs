@@ -67,14 +67,13 @@ namespace CarRepairTracker.Models
         {
             using (CarRepairDbContext context = new CarRepairDbContext())
             {
-
                 var GetAllUserCar =
                     (from carUser in context.UserCars
                      where (                                    
                            (carUser.CurrUser.UserID == IntroWho.whoUsing)  
                            )
 
-                   select carUser).ToList();
+                     select carUser).ToList();
 
                 List<UserCar> UserCars = GetAllUserCar.ToList();
 
