@@ -38,8 +38,8 @@
             this.lblWhoPicked = new System.Windows.Forms.Label();
             this.cbCarOfWho = new System.Windows.Forms.ComboBox();
             this.pnlWhichCar = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnWhichCar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlWho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scDisplay)).BeginInit();
             this.scDisplay.Panel1.SuspendLayout();
@@ -52,11 +52,11 @@
             // 
             this.cbWho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbWho.FormattingEnabled = true;
-            this.cbWho.Location = new System.Drawing.Point(24, 49);
+            this.cbWho.Location = new System.Drawing.Point(24, 32);
             this.cbWho.Name = "cbWho";
             this.cbWho.Size = new System.Drawing.Size(121, 21);
             this.cbWho.TabIndex = 0;
-            this.cbWho.SelectedIndexChanged += new System.EventHandler(this.cbWho_SelectedIndexChanged);
+            this.cbWho.SelectedIndexChanged += new System.EventHandler(this.CbWho_SelectedIndexChanged);
             // 
             // lblWho
             // 
@@ -69,13 +69,13 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(195, 49);
+            this.btnSubmit.Location = new System.Drawing.Point(151, 32);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // pnlWho
             // 
@@ -84,7 +84,7 @@
             this.pnlWho.Controls.Add(this.cbWho);
             this.pnlWho.Location = new System.Drawing.Point(12, 12);
             this.pnlWho.Name = "pnlWho";
-            this.pnlWho.Size = new System.Drawing.Size(298, 92);
+            this.pnlWho.Size = new System.Drawing.Size(309, 92);
             this.pnlWho.TabIndex = 3;
             // 
             // scDisplay
@@ -114,7 +114,7 @@
             this.btnChangeCar.TabIndex = 1;
             this.btnChangeCar.Text = "Change Car";
             this.btnChangeCar.UseVisualStyleBackColor = true;
-            this.btnChangeCar.Click += new System.EventHandler(this.btnChangeCar_Click);
+            this.btnChangeCar.Click += new System.EventHandler(this.BtnChangeCar_Click);
             // 
             // btnRepairHistory
             // 
@@ -154,15 +154,6 @@
             this.pnlWhichCar.TabIndex = 4;
             this.pnlWhichCar.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hello, which car do you wish to manage today?";
-            // 
             // btnWhichCar
             // 
             this.btnWhichCar.Location = new System.Drawing.Point(168, 51);
@@ -171,7 +162,16 @@
             this.btnWhichCar.TabIndex = 6;
             this.btnWhichCar.Text = "Select Car";
             this.btnWhichCar.UseVisualStyleBackColor = true;
-            this.btnWhichCar.Click += new System.EventHandler(this.btnWhichCar_Click);
+            this.btnWhichCar.Click += new System.EventHandler(this.BtnWhichCar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hello, which car do you wish to manage today?";
             // 
             // IntroWho
             // 

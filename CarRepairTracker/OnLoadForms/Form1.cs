@@ -11,28 +11,34 @@ using CarRepairTracker.Models;
 
 namespace CarRepairTracker
 {
-    public partial class frmMain : Form
-    {
-
-       
-        
+    public partial class FrmMain : Form
+    {       
 
         public User whoIsUsing;
-        public frmMain()
+        public FrmMain()
+
         {
             InitializeComponent();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            ShowNavButtons(); // on load  shows nav buttons
-            ShowNavForm();      // on load shows nav form
+            ShowNavButtons();   // on load  shows nav buttons
+            ShowNavForm();      // on load shows nav form    
+        }
 
-    
+        private void NavigationToolStripMenuItem_Click(object sender, EventArgs e)
+        { // this method is the code to make the nav buttons show
+            ShowNavButtons();
+        }
+
+        private void ChangeUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowNavForm();
         }
 
         private void ShowNavButtons()
-        {   // this method is te code to make the nav show
+        {   // this method is the code to make the nav show
             Navigation navForm = new Navigation
             {
                 MdiParent = this
@@ -46,55 +52,16 @@ namespace CarRepairTracker
             {
                 MdiParent = this
             };
+            introForm.Show();          
+        }
 
-            // Generate List of users to check if a first time user
-            List<User> Users = User.GetAllUsers();
-            if (Users.Count() == 0) // if there are no users in database
+        private void IntroWho(object sender, EventArgs e)
+        {
+            IntroWho intro = new IntroWho
             {
-                UserForms.AddUser AddUser = new UserForms.AddUser
-                {
-                    MdiParent = this
-                };
-                AddUser.Show(); // opens the adduser form
-            }
-            else // if there are users
-            {
-                introForm.Show();
-            }            
-        }
-
-        private void NavigationToolStripMenuItem_Click(object sender, EventArgs e)
-        { // this method is the code to make the nav buttons show
-            ShowNavButtons();
-        }
-
-        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {   // code for pop up verification box upon close
-            //DialogResult choice = MessageBox.Show("Are you sure you want to quit? ", "Do you want to quit? ",
-            //MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            //if (choice == DialogResult.No)
-            //{
-            //    e.Cancel = true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Thank you for using 253 Car Mod Tracker");
-            //}
-        }
-
-        private void ExitToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }        
-
-        private void ToolStripTextBox1_Click(object sender, EventArgs e)
-        {
-            
+                MdiParent = this
+            };
+            intro.Show();
         }
 
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -104,16 +71,6 @@ namespace CarRepairTracker
                 MdiParent = this
             };
             secondForm.Show();
-        }
-
-        private void MenuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void WhoseCarToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-           
         }
 
         private void AddCarToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -188,20 +145,44 @@ namespace CarRepairTracker
             AddUser.Show();
         }
 
-        private void IntroWho(object sender, EventArgs e)
-        {
-            IntroWho intro = new IntroWho
-            {
-                MdiParent = this
-            };
-            intro.Show();
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {   // code for pop up verification box upon close
+            //DialogResult choice = MessageBox.Show("Are you sure you want to quit? ", "Do you want to quit? ",
+            //MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //if (choice == DialogResult.No)
+            //{
+            //    e.Cancel = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Thank you for using 253 Car Mod Tracker");
+            //}
         }
 
-        private void ChangeUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ShowNavForm();
+            Close();
         }
 
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void WhoseCarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }
