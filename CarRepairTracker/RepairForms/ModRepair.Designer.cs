@@ -60,7 +60,7 @@
             // lblPartName
             // 
             this.lblPartName.AutoSize = true;
-            this.lblPartName.Location = new System.Drawing.Point(18, 57);
+            this.lblPartName.Location = new System.Drawing.Point(11, 6);
             this.lblPartName.Name = "lblPartName";
             this.lblPartName.Size = new System.Drawing.Size(57, 13);
             this.lblPartName.TabIndex = 0;
@@ -69,7 +69,7 @@
             // lblPartNum
             // 
             this.lblPartNum.AutoSize = true;
-            this.lblPartNum.Location = new System.Drawing.Point(18, 97);
+            this.lblPartNum.Location = new System.Drawing.Point(11, 46);
             this.lblPartNum.Name = "lblPartNum";
             this.lblPartNum.Size = new System.Drawing.Size(36, 13);
             this.lblPartNum.TabIndex = 1;
@@ -78,7 +78,7 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(152, 77);
+            this.lblDate.Location = new System.Drawing.Point(137, 46);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(30, 13);
             this.lblDate.TabIndex = 2;
@@ -87,7 +87,7 @@
             // lblPartCost
             // 
             this.lblPartCost.AutoSize = true;
-            this.lblPartCost.Location = new System.Drawing.Point(19, 176);
+            this.lblPartCost.Location = new System.Drawing.Point(12, 125);
             this.lblPartCost.Name = "lblPartCost";
             this.lblPartCost.Size = new System.Drawing.Size(50, 13);
             this.lblPartCost.TabIndex = 3;
@@ -96,7 +96,7 @@
             // lblLaborCost
             // 
             this.lblLaborCost.AutoSize = true;
-            this.lblLaborCost.Location = new System.Drawing.Point(19, 216);
+            this.lblLaborCost.Location = new System.Drawing.Point(12, 207);
             this.lblLaborCost.Name = "lblLaborCost";
             this.lblLaborCost.Size = new System.Drawing.Size(58, 13);
             this.lblLaborCost.TabIndex = 4;
@@ -105,16 +105,16 @@
             // lblMisc
             // 
             this.lblMisc.AutoSize = true;
-            this.lblMisc.Location = new System.Drawing.Point(225, 187);
+            this.lblMisc.Location = new System.Drawing.Point(137, 172);
             this.lblMisc.Name = "lblMisc";
-            this.lblMisc.Size = new System.Drawing.Size(32, 13);
+            this.lblMisc.Size = new System.Drawing.Size(35, 13);
             this.lblMisc.TabIndex = 5;
-            this.lblMisc.Text = "Misc.";
+            this.lblMisc.Text = "Notes";
             // 
             // lblPartBrand
             // 
             this.lblPartBrand.AutoSize = true;
-            this.lblPartBrand.Location = new System.Drawing.Point(19, 136);
+            this.lblPartBrand.Location = new System.Drawing.Point(12, 85);
             this.lblPartBrand.Name = "lblPartBrand";
             this.lblPartBrand.Size = new System.Drawing.Size(57, 13);
             this.lblPartBrand.TabIndex = 6;
@@ -123,16 +123,16 @@
             // lblShop
             // 
             this.lblShop.AutoSize = true;
-            this.lblShop.Location = new System.Drawing.Point(22, 295);
+            this.lblShop.Location = new System.Drawing.Point(12, 247);
             this.lblShop.Name = "lblShop";
-            this.lblShop.Size = new System.Drawing.Size(32, 13);
+            this.lblShop.Size = new System.Drawing.Size(61, 13);
             this.lblShop.TabIndex = 7;
-            this.lblShop.Text = "Shop";
+            this.lblShop.Text = "Shop name";
             // 
             // lblMileage
             // 
             this.lblMileage.AutoSize = true;
-            this.lblMileage.Location = new System.Drawing.Point(152, 117);
+            this.lblMileage.Location = new System.Drawing.Point(137, 86);
             this.lblMileage.Name = "lblMileage";
             this.lblMileage.Size = new System.Drawing.Size(44, 13);
             this.lblMileage.TabIndex = 8;
@@ -141,7 +141,7 @@
             // lblQty
             // 
             this.lblQty.AutoSize = true;
-            this.lblQty.Location = new System.Drawing.Point(152, 170);
+            this.lblQty.Location = new System.Drawing.Point(137, 125);
             this.lblQty.Name = "lblQty";
             this.lblQty.Size = new System.Drawing.Size(26, 13);
             this.lblQty.TabIndex = 9;
@@ -149,71 +149,71 @@
             // 
             // txtQty
             // 
-            this.txtQty.Location = new System.Drawing.Point(155, 196);
+            this.txtQty.Location = new System.Drawing.Point(140, 142);
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(23, 20);
             this.txtQty.TabIndex = 10;
             // 
             // rtbNotes
             // 
-            this.rtbNotes.Location = new System.Drawing.Point(228, 213);
+            this.rtbNotes.Location = new System.Drawing.Point(140, 188);
             this.rtbNotes.Name = "rtbNotes";
-            this.rtbNotes.Size = new System.Drawing.Size(100, 96);
+            this.rtbNotes.Size = new System.Drawing.Size(200, 96);
             this.rtbNotes.TabIndex = 11;
             this.rtbNotes.Text = "";
             // 
             // txtMileage
             // 
-            this.txtMileage.Location = new System.Drawing.Point(155, 137);
+            this.txtMileage.Location = new System.Drawing.Point(140, 102);
             this.txtMileage.Name = "txtMileage";
             this.txtMileage.Size = new System.Drawing.Size(83, 20);
             this.txtMileage.TabIndex = 12;
             // 
             // txtPartName
             // 
-            this.txtPartName.Location = new System.Drawing.Point(19, 74);
+            this.txtPartName.Location = new System.Drawing.Point(12, 23);
             this.txtPartName.Name = "txtPartName";
             this.txtPartName.Size = new System.Drawing.Size(100, 20);
             this.txtPartName.TabIndex = 13;
             // 
             // txtPartNum
             // 
-            this.txtPartNum.Location = new System.Drawing.Point(21, 113);
+            this.txtPartNum.Location = new System.Drawing.Point(14, 62);
             this.txtPartNum.Name = "txtPartNum";
             this.txtPartNum.Size = new System.Drawing.Size(100, 20);
             this.txtPartNum.TabIndex = 14;
             // 
             // txtPartBrand
             // 
-            this.txtPartBrand.Location = new System.Drawing.Point(22, 153);
+            this.txtPartBrand.Location = new System.Drawing.Point(15, 102);
             this.txtPartBrand.Name = "txtPartBrand";
             this.txtPartBrand.Size = new System.Drawing.Size(100, 20);
             this.txtPartBrand.TabIndex = 15;
             // 
             // txtPartCost
             // 
-            this.txtPartCost.Location = new System.Drawing.Point(22, 193);
+            this.txtPartCost.Location = new System.Drawing.Point(15, 142);
             this.txtPartCost.Name = "txtPartCost";
             this.txtPartCost.Size = new System.Drawing.Size(100, 20);
             this.txtPartCost.TabIndex = 16;
             // 
             // txtLaborCost
             // 
-            this.txtLaborCost.Location = new System.Drawing.Point(22, 233);
+            this.txtLaborCost.Location = new System.Drawing.Point(15, 224);
             this.txtLaborCost.Name = "txtLaborCost";
             this.txtLaborCost.Size = new System.Drawing.Size(100, 20);
             this.txtLaborCost.TabIndex = 17;
             // 
             // txtShopName
             // 
-            this.txtShopName.Location = new System.Drawing.Point(22, 312);
+            this.txtShopName.Location = new System.Drawing.Point(12, 264);
             this.txtShopName.Name = "txtShopName";
             this.txtShopName.Size = new System.Drawing.Size(100, 20);
             this.txtShopName.TabIndex = 18;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 94);
+            this.dateTimePicker1.Location = new System.Drawing.Point(140, 63);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 19;
@@ -221,7 +221,7 @@
             // lblCarSelected
             // 
             this.lblCarSelected.AutoSize = true;
-            this.lblCarSelected.Location = new System.Drawing.Point(200, 44);
+            this.lblCarSelected.Location = new System.Drawing.Point(137, 30);
             this.lblCarSelected.Name = "lblCarSelected";
             this.lblCarSelected.Size = new System.Drawing.Size(68, 13);
             this.lblCarSelected.TabIndex = 20;
@@ -231,14 +231,14 @@
             // 
             this.cbCars.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCars.FormattingEnabled = true;
-            this.cbCars.Location = new System.Drawing.Point(274, 36);
+            this.cbCars.Location = new System.Drawing.Point(211, 22);
             this.cbCars.Name = "cbCars";
             this.cbCars.Size = new System.Drawing.Size(121, 21);
             this.cbCars.TabIndex = 21;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(13, 338);
+            this.btnClose.Location = new System.Drawing.Point(15, 300);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 22;
@@ -247,16 +247,17 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(320, 338);
+            this.btnClear.Location = new System.Drawing.Point(265, 300);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 23;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(239, 338);
+            this.btnAdd.Location = new System.Drawing.Point(184, 300);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 24;
@@ -265,7 +266,7 @@
             // 
             // txtTotalCost
             // 
-            this.txtTotalCost.Location = new System.Drawing.Point(21, 272);
+            this.txtTotalCost.Location = new System.Drawing.Point(15, 180);
             this.txtTotalCost.Name = "txtTotalCost";
             this.txtTotalCost.Size = new System.Drawing.Size(100, 20);
             this.txtTotalCost.TabIndex = 25;
@@ -273,11 +274,11 @@
             // lblTotalCost
             // 
             this.lblTotalCost.AutoSize = true;
-            this.lblTotalCost.Location = new System.Drawing.Point(128, 272);
+            this.lblTotalCost.Location = new System.Drawing.Point(12, 165);
             this.lblTotalCost.Name = "lblTotalCost";
-            this.lblTotalCost.Size = new System.Drawing.Size(184, 13);
+            this.lblTotalCost.Size = new System.Drawing.Size(75, 13);
             this.lblTotalCost.TabIndex = 26;
-            this.lblTotalCost.Text = "Total Cost will be asked when added ";
+            this.lblTotalCost.Text = "Total part cost";
             // 
             // frmModRepair
             // 
