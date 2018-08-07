@@ -57,7 +57,7 @@ namespace CarRepairTracker
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            UserForms.addUser AddUser = new UserForms.addUser();
+            UserForms.AddUser AddUser = new UserForms.AddUser();
             AddUser.Show();
         }
 

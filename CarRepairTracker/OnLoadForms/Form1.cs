@@ -51,7 +51,7 @@ namespace CarRepairTracker
             List<User> Users = User.GetAllUsers();
             if (Users.Count() == 0) // if there are no users in database
             {
-                UserForms.addUser AddUser = new UserForms.addUser
+                UserForms.AddUser AddUser = new UserForms.AddUser
                 {
                     MdiParent = this
                 };
@@ -90,9 +90,7 @@ namespace CarRepairTracker
         private void CutToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
-        }
-
-        
+        }        
 
         private void ToolStripTextBox1_Click(object sender, EventArgs e)
         {
@@ -183,7 +181,7 @@ namespace CarRepairTracker
 
         private void AddUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserForms.addUser AddUser = new UserForms.addUser
+            UserForms.AddUser AddUser = new UserForms.AddUser
             {
                 MdiParent = this
             };

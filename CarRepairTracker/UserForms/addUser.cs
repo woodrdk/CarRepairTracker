@@ -11,21 +11,36 @@ using System.Windows.Forms;
 
 namespace CarRepairTracker.UserForms
 {
-    public partial class addUser : Form
+    public partial class AddUser : Form
     {
-        public addUser()
+        public AddUser()
         {
             InitializeComponent();
         }
 
-        private void btnAddUserName_Click(object sender, EventArgs e)
+        private void AddUser_Load(object sender, EventArgs e)
+        {
+            List<User> Users = User.GetAllUsers();
+            if (Users.Count() == 0) // if there are no users in database
+            {
+                lblFirstTimeUser.Show();
+            }
+            else
+            {
+                lblFirstTimeUser.Hide();
+            }
+        }
+
+        private void BtnAddUserName_Click(object sender, EventArgs e)
         {
             using (CarRepairDbContext objUserContext = new CarRepairDbContext())
             {
 
-                User userName = new User();
-                userName.FirstName = txtFirstName.Text;
-                userName.LastName = txtLastName.Text;
+                User userName = new User
+                {
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text
+                };
                 objUserContext.Users.Add(userName);
                 objUserContext.SaveChanges();
 
@@ -33,24 +48,24 @@ namespace CarRepairTracker.UserForms
                 // need to put in code for if inserted properly  alerts ya it was inserted
                 // also need to repopulate the intro form  select user dropdown
             };
+            // Closes initial AddUser Form
             Close();
 
-
+            // Checks if first time user
+            List<User> Users = User.GetAllUsers();
+            // If a first time user just registered, take to IntroWho form
+            if (Users.Count() == 1)
+            {
+                // Creates a new IntroWho form object
+                IntroWho FirstTimeUserIntroWho = new IntroWho();
+                // Opens the intro who form after first time user registers
+                FirstTimeUserIntroWho.Show();                
+            }         
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void addUser_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

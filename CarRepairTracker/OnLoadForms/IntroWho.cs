@@ -51,7 +51,7 @@ namespace CarRepairTracker
             {
                 //cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
 
-                UserForms.addUser AddUser = new UserForms.addUser();
+                UserForms.AddUser AddUser = new UserForms.AddUser();
                 AddUser.Show(); // opens the adduser form
             }
             else // if there are users
@@ -76,7 +76,7 @@ namespace CarRepairTracker
             string addCar = "Add a car";    // makes variable to save typing later
             if (who == "Add New User")    // if when clicked submit and the value is add a new user
             {
-                UserForms.addUser AddUser = new UserForms.addUser();    
+                UserForms.AddUser AddUser = new UserForms.AddUser();    
                 AddUser.Show(); // opens the adduser form
             }
             else if(who == "Select a user")
