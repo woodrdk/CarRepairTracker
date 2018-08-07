@@ -45,8 +45,6 @@ namespace CarRepairTracker.UserForms
                 objUserContext.SaveChanges();
 
                 MessageBox.Show("User " + userName.FirstName + " added successfully");
-                // need to put in code for if inserted properly  alerts ya it was inserted
-                // also need to repopulate the intro form  select user dropdown
             };
             // Closes initial AddUser Form
             Close();
@@ -57,9 +55,10 @@ namespace CarRepairTracker.UserForms
             if (Users.Count() == 1)
             {
                 // Creates a new IntroWho form object
-                IntroWho FirstTimeUserIntroWho = new IntroWho();
-                // Opens the intro who form after first time user registers
-                FirstTimeUserIntroWho.Show();                
+
+                //IntroWho FirstTimeUserIntroWho = new IntroWho();
+                //// Opens the intro who form after first time user registers
+                //FirstTimeUserIntroWho.Show();   
             }         
         }
 

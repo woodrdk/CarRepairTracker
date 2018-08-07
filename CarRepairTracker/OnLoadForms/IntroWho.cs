@@ -14,13 +14,37 @@ namespace CarRepairTracker
   
     public partial class IntroWho : Form
     {
+
+        String who; //variable in class scope
+        public static int whoUsing; // used in many locations to keep track of who is using
+
         public IntroWho()
         {
             InitializeComponent();
         }
-        public static int whoUsing ; // used in many locations to keep track of who is using
-                
-        public void cbWho_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void IntroWho_Load(object sender, EventArgs e)
+        {
+            List<User> Users = User.GetAllUsers();
+
+            // If there are no users in the list, open AddUser window
+            if (Users.Count() == 0)
+            {
+                UserForms.AddUser AddUser = new UserForms.AddUser();
+                // Opens the AddUser form and ActiveControl sets focus for window
+                AddUser.Show(ActiveControl);
+            }
+
+            Users.Insert(0, new User() { FirstName = "Select a user" });
+            // Gets users from the database
+            cbWho.DataSource = Users;
+
+            // Input user first name to drop down list
+            cbWho.DisplayMember = nameof(User.FirstName); 
+            cbWho.SelectedIndex = 0;
+        }
+
+        public void CbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
             string addNewCar = "Add a new car";     // variable to add the input 
             List<UserCar> UserCars = UserCar.GetAllUserCars(); // makes list of users cars
@@ -37,39 +61,19 @@ namespace CarRepairTracker
             }
         }
 
-
-        private void IntroWho_Load(object sender, EventArgs e)
+        private void BtnRefreshList_Click(object sender, EventArgs e)
         {
-            string addNew = "Add a new user";
-            List<User> Users = User.GetAllUsers();
-          
-            if (Users.Count() == 0) // if there are no users in database
-            {
-                //cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
-
-                UserForms.AddUser AddUser = new UserForms.AddUser();
-                AddUser.Show(); // opens the adduser form
-            }
-            else // if there are users
-            {
-                Users.Insert(0, new User() { FirstName = "Select a user" });
-                cbWho.DataSource = Users; // get users from database
-
-                cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
-                cbWho.SelectedIndex = 0;
-            }
+            PopulateUserList();
         }
 
-        String who; //variable in class scope
- 
-        private void btnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
+        private void BtnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
         {
             who = cbWho.Text; // defines the variable as the selected text from the who drop down box
             // submit 
             whoUsing = Convert.ToInt32(((User)cbWho.SelectedItem).UserID);
-            ((frmMain)MdiParent).whoIsUsing = ((User)cbWho.SelectedItem);   // defines the user id of who picked         
+            ((FrmMain)MdiParent).whoIsUsing = ((User)cbWho.SelectedItem);   // defines the user id of who picked         
             
-            string addCar = "Add a car";    // makes variable to save typing later
+            //string addCar = "Add a car";    // makes variable to save typing later
             if (who == "Add New User")    // if when clicked submit and the value is add a new user
             {
                 UserForms.AddUser AddUser = new UserForms.AddUser();    
@@ -90,29 +94,11 @@ namespace CarRepairTracker
                     };
                     NewCarForm.Show(); // make the add car form run
                 }
-                pnlWhichCar.Visible = true;
-
-                
+                pnlWhichCar.Visible = true;               
             }
         }
 
-        private void lblCarOfWho_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-    
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void btnRepairHistory_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void btnChangeCar_Click(object sender, EventArgs e)
+        private void BtnChangeCar_Click(object sender, EventArgs e)
         {
             pnlWho.Visible = true;
             scDisplay.Visible = false;
@@ -120,10 +106,47 @@ namespace CarRepairTracker
             lblWho.Text = "Which car would you like to change to?";
         }
 
-        private void btnWhichCar_Click(object sender, EventArgs e)
+        private void BtnWhichCar_Click(object sender, EventArgs e)
         {
             scDisplay.Visible = true;   // makes the scdisplay visible
             lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
+        }
+
+        public void PopulateUserList()
+        {
+            List<User> Users = User.GetAllUsers();
+
+            if (Users.Count() == 0) // if there are no users in database
+            {
+                //cbWho.Items.Add(addNew);    // insert add a new user to dropdown box
+
+                UserForms.AddUser AddUser = new UserForms.AddUser();
+                AddUser.Show(); // opens the adduser form
+            }
+            else // if there are users
+            {
+                Users.Insert(0, new User() { FirstName = "Select a user" });
+                cbWho.DataSource = Users; // get users from database
+
+                cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
+                cbWho.SelectedIndex = 0;
+            }
+        }
+
+        private void lblCarOfWho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnRepairHistory_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

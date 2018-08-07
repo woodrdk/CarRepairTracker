@@ -75,7 +75,7 @@ namespace CarRepairTracker
             {
                 UserCar userCars = new UserCar();
 
-                userCars.CurrUser = ((frmMain)MdiParent).whoIsUsing;
+                userCars.CurrUser = ((FrmMain)MdiParent).whoIsUsing;
                     //IntroWho.cbWho_SelectedIndexChanged(sender, e); // pulls the variable of whos owner of car from intro form
                 userCars.CarNameDescription = txtCarNameIdentifier.Text;
                 userCars.Year = Int32.Parse( cbYear.SelectedItem.ToString());
