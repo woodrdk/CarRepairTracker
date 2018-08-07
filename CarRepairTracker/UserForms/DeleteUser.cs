@@ -21,23 +21,17 @@ namespace CarRepairTracker.UserForms
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             string deleted = cbUserToDelete.Text;
-
             DialogResult choice = MessageBox.Show("Are you sure you want to delete " + deleted, "Do you want to quit? ",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (choice == DialogResult.No)
+            if (choice == DialogResult.Yes)
             {
-
-            }
-            else
-            {// --------------------------------------------------------------- needs finished
-
+                // --------------------------------------------------------------- needs finished
                 // if( deletion from database is successful){
                 // lblCarDeletionSuccess.Text = " Success you deleted " + deleted + " from the car list";
                 // }
                 pnlDeleteUserSuccess.Visible = false;
                 MessageBox.Show("You deleted " + deleted);
             }
-
             pnlDeleteUserSuccess.Visible = true;
             lblDeletedUserSuccess.Text = " You successfully deleted " + deleted + " from the user list!";
         }
@@ -55,7 +49,6 @@ namespace CarRepairTracker.UserForms
                 cbUserToDelete.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
             }
 
-           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

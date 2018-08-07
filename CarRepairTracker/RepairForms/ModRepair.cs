@@ -21,5 +21,17 @@ namespace CarRepairTracker
         {
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtPartName.Text = "";
+            txtPartNum.Text = "";
+            txtPartBrand.Text = "";
+            txtPartCost.Text = "";
+            txtQty.Text = "";
+            rtbNotes.Text = "";
+            txtMileage.Text = "";
+
+        }
     }
 }
