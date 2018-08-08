@@ -15,9 +15,9 @@ namespace CarRepairTracker
     public partial class IntroWho : Form
     {
 
-        String who; //variable in class scope
+        //String who; //variable in class scope
         public static int whoUsing; // used in many locations to keep track of who is using
-
+        public static string who;
         public IntroWho()
         {
             InitializeComponent();
@@ -47,6 +47,70 @@ namespace CarRepairTracker
 
         public void CbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
+            PopulateCarList();
+        }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
+        {
+            who = cbWho.Text; // defines the variable as the selected text from the who drop down box
+            // submit 
+            whoUsing = User.GetUserId(); //Convert.ToInt32(((User)cbWho.SelectedItem).UserID);
+            //((FrmMain)MdiParent).whoIsUsing = User.GetUserId();    // defines the user id of who picked         
+            
+            //string addCar = "Add a car";    // makes variable to save typing later
+            if (who == "Add New User")    // if when clicked submit and the value is add a new user
+            {
+                UserForms.AddUser AddUser = new UserForms.AddUser();    
+                AddUser.Show(); // opens the adduser form
+            }
+            if(who == "Select a user")
+            {
+                MessageBox.Show("Select a user");
+            }
+            else
+            {
+                pnlWho.Visible = false;
+                pnlWhichCar.Visible = true;               
+            }
+        }
+
+        private void BtnChangeCar_Click(object sender, EventArgs e)
+        {
+            pnlWho.Visible = true;
+            scDisplay.Visible = false;
+            cbWho.Visible = false;
+            lblWho.Text = "Which car would you like to change to?";
+        }
+
+        private void BtnWhichCar_Click(object sender, EventArgs e)
+        {
+            pnlWhichCar.Visible = false;
+            if (cbCarOfWho.SelectedItem == null || cbCarOfWho.Text == null || cbCarOfWho.Text == "Add a new car")
+            {
+                frmCarSelection NewCarForm = new frmCarSelection
+                {
+                    MdiParent = this.MdiParent
+                };
+                NewCarForm.Show(); // make the add car form run
+            }
+            scDisplay.Visible = true;   // makes the scdisplay visible
+            lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
+        }
+
+        public void PopulateUserList()
+        {
+            List<User> Users = User.GetAllUsers();
+
+            Users.Insert(0, new User() { FirstName = "Select a user" });
+            cbWho.DataSource = Users; // get users from database
+
+            cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
+            cbWho.SelectedIndex = 0;
+        }
+
+
+        public void PopulateCarList()
+        {
             string addNewCar = "Add a new car";     // variable to add the input 
             List<UserCar> UserCars = UserCar.GetAllUserCars(); // makes list of users cars
             cbCarOfWho.DataSource = null;
@@ -62,62 +126,6 @@ namespace CarRepairTracker
             }
         }
 
-        private void BtnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
-        {
-            who = cbWho.Text; // defines the variable as the selected text from the who drop down box
-            // submit 
-            whoUsing = Convert.ToInt32(((User)cbWho.SelectedItem).UserID);
-            ((FrmMain)MdiParent).whoIsUsing = ((User)cbWho.SelectedItem);   // defines the user id of who picked         
-            
-            //string addCar = "Add a car";    // makes variable to save typing later
-            if (who == "Add New User")    // if when clicked submit and the value is add a new user
-            {
-                UserForms.AddUser AddUser = new UserForms.AddUser();    
-                AddUser.Show(); // opens the adduser form
-            }
-            else if(who == "Select a user")
-            {
-                MessageBox.Show("Select a user");
-            }
-            else
-            {
-                pnlWho.Visible = false;
-                if (cbCarOfWho.SelectedItem == null || cbCarOfWho.Text == null || cbCarOfWho.Text == "Add a new car")
-                {
-                    frmCarSelection NewCarForm = new frmCarSelection
-                    {
-                        MdiParent = this.MdiParent
-                    };
-                    NewCarForm.Show(); // make the add car form run
-                }
-                pnlWhichCar.Visible = true;               
-            }
-        }
-
-        private void BtnChangeCar_Click(object sender, EventArgs e)
-        {
-            pnlWho.Visible = true;
-            scDisplay.Visible = false;
-            cbWho.Visible = false;
-            lblWho.Text = "Which car would you like to change to?";
-        }
-
-        private void BtnWhichCar_Click(object sender, EventArgs e)
-        {
-            scDisplay.Visible = true;   // makes the scdisplay visible
-            lblWhoPicked.Text = "Welcome " + who + " what would you like to do today? ";    // changes the label text to welcome message
-        }
-
-        public void PopulateUserList()
-        {
-            List<User> Users = User.GetAllUsers();
-
-            Users.Insert(0, new User() { FirstName = "Select a user" });
-            cbWho.DataSource = Users; // get users from database
-
-            cbWho.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
-            cbWho.SelectedIndex = 0;
-        }
 
         private void lblCarOfWho_SelectedIndexChanged(object sender, EventArgs e)
         {

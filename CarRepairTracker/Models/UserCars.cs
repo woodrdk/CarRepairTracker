@@ -60,7 +60,7 @@ namespace CarRepairTracker.Models
         [StringLength(500)]
         public string Comments { get; set; }
        
-        public User CurrUser { get; set; }
+        public int UserId { get; set; }
 
 
         public static List<UserCar> GetAllUserCars()
@@ -69,8 +69,8 @@ namespace CarRepairTracker.Models
             {
                 var GetAllUserCar =
                     (from carUser in context.UserCars
-                     where (                                    
-                           (carUser.CurrUser.UserID == IntroWho.whoUsing)  
+                     where (
+                           (IntroWho.whoUsing == carUser.UserId)
                            )
 
                      select carUser).ToList();
@@ -80,7 +80,7 @@ namespace CarRepairTracker.Models
                 return GetAllUserCar;
             }
         }
-        
+
 
     }
 }

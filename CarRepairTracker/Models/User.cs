@@ -40,6 +40,23 @@ namespace CarRepairTracker.Models
             }
         }
 
+        public static int GetUserId()
+        {
+            using (CarRepairDbContext context = new CarRepairDbContext())
+            {
+                var UserIDForCarSelection =
+                    (from c in context.Users
+                     where (
+                              (c.FirstName == IntroWho.who)
+                            )
+                     select new { c.UserID }).Single();
+                // int UsersSelectedID = UserIDForCarSelection;
+                int FinallyAnId = UserIDForCarSelection.UserID;
+                return FinallyAnId;
+            }
+        }
+
+
 
         public static void Delete(User p)
         { // not working
