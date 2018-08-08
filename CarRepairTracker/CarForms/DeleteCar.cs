@@ -26,7 +26,7 @@ namespace CarRepairTracker
         {
             Close();
         }
-        string deleted;
+        //string deleted;
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string deleted = cbCarDelete.Text;

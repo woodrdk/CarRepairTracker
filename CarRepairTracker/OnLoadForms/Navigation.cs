@@ -20,7 +20,7 @@ namespace CarRepairTracker
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
-            frmCarSelection frmCarSelection = new frmCarSelection();
+            AddCar frmCarSelection = new AddCar();
             frmCarSelection.Show();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace CarRepairTracker
 {
-    partial class frmCarSelection
+    partial class AddCar
     {
         /// <summary>
         /// Required designer variable.

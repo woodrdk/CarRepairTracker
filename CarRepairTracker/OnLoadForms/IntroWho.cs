@@ -89,7 +89,7 @@ namespace CarRepairTracker
             pnlWhichCar.Visible = false;
             if (cbCarOfWho.SelectedItem == null || cbCarOfWho.Text == null || cbCarOfWho.Text == "Add a new car")
             {
-                frmCarSelection NewCarForm = new frmCarSelection
+                AddCar NewCarForm = new AddCar
                 {
                     MdiParent = this.MdiParent
                 };

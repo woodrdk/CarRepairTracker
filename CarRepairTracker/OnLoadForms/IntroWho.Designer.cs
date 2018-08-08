@@ -52,7 +52,7 @@
             // 
             this.cbWho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbWho.FormattingEnabled = true;
-            this.cbWho.Location = new System.Drawing.Point(24, 32);
+            this.cbWho.Location = new System.Drawing.Point(82, 10);
             this.cbWho.Name = "cbWho";
             this.cbWho.Size = new System.Drawing.Size(121, 21);
             this.cbWho.TabIndex = 0;
@@ -61,15 +61,15 @@
             // lblWho
             // 
             this.lblWho.AutoSize = true;
-            this.lblWho.Location = new System.Drawing.Point(21, 16);
+            this.lblWho.Location = new System.Drawing.Point(5, 13);
             this.lblWho.Name = "lblWho";
-            this.lblWho.Size = new System.Drawing.Size(261, 13);
+            this.lblWho.Size = new System.Drawing.Size(71, 13);
             this.lblWho.TabIndex = 1;
-            this.lblWho.Text = "Hello, Whose car do you wish to keep track of today?";
+            this.lblWho.Text = "Choose User:";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(151, 32);
+            this.btnSubmit.Location = new System.Drawing.Point(128, 37);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 2;
@@ -84,12 +84,12 @@
             this.pnlWho.Controls.Add(this.cbWho);
             this.pnlWho.Location = new System.Drawing.Point(12, 12);
             this.pnlWho.Name = "pnlWho";
-            this.pnlWho.Size = new System.Drawing.Size(309, 92);
+            this.pnlWho.Size = new System.Drawing.Size(215, 74);
             this.pnlWho.TabIndex = 3;
             // 
             // scDisplay
             // 
-            this.scDisplay.Location = new System.Drawing.Point(12, 207);
+            this.scDisplay.Location = new System.Drawing.Point(12, 92);
             this.scDisplay.Name = "scDisplay";
             // 
             // scDisplay.Panel1
@@ -101,8 +101,8 @@
             // scDisplay.Panel2
             // 
             this.scDisplay.Panel2.Controls.Add(this.lblWhoPicked);
-            this.scDisplay.Size = new System.Drawing.Size(462, 231);
-            this.scDisplay.SplitterDistance = 126;
+            this.scDisplay.Size = new System.Drawing.Size(421, 231);
+            this.scDisplay.SplitterDistance = 114;
             this.scDisplay.TabIndex = 4;
             this.scDisplay.Visible = false;
             // 
@@ -129,7 +129,7 @@
             // lblWhoPicked
             // 
             this.lblWhoPicked.AutoSize = true;
-            this.lblWhoPicked.Location = new System.Drawing.Point(3, 4);
+            this.lblWhoPicked.Location = new System.Drawing.Point(7, 4);
             this.lblWhoPicked.Name = "lblWhoPicked";
             this.lblWhoPicked.Size = new System.Drawing.Size(114, 13);
             this.lblWhoPicked.TabIndex = 0;
@@ -138,7 +138,7 @@
             // cbCarOfWho
             // 
             this.cbCarOfWho.FormattingEnabled = true;
-            this.cbCarOfWho.Location = new System.Drawing.Point(24, 51);
+            this.cbCarOfWho.Location = new System.Drawing.Point(68, 10);
             this.cbCarOfWho.Name = "cbCarOfWho";
             this.cbCarOfWho.Size = new System.Drawing.Size(121, 21);
             this.cbCarOfWho.TabIndex = 5;
@@ -148,36 +148,36 @@
             this.pnlWhichCar.Controls.Add(this.btnWhichCar);
             this.pnlWhichCar.Controls.Add(this.label1);
             this.pnlWhichCar.Controls.Add(this.cbCarOfWho);
-            this.pnlWhichCar.Location = new System.Drawing.Point(176, 116);
+            this.pnlWhichCar.Location = new System.Drawing.Point(233, 12);
             this.pnlWhichCar.Name = "pnlWhichCar";
-            this.pnlWhichCar.Size = new System.Drawing.Size(298, 92);
+            this.pnlWhichCar.Size = new System.Drawing.Size(200, 74);
             this.pnlWhichCar.TabIndex = 4;
             this.pnlWhichCar.Visible = false;
             // 
             // btnWhichCar
             // 
-            this.btnWhichCar.Location = new System.Drawing.Point(168, 51);
+            this.btnWhichCar.Location = new System.Drawing.Point(114, 37);
             this.btnWhichCar.Name = "btnWhichCar";
             this.btnWhichCar.Size = new System.Drawing.Size(75, 23);
             this.btnWhichCar.TabIndex = 6;
-            this.btnWhichCar.Text = "Select Car";
+            this.btnWhichCar.Text = "Submit";
             this.btnWhichCar.UseVisualStyleBackColor = true;
             this.btnWhichCar.Click += new System.EventHandler(this.BtnWhichCar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 16);
+            this.label1.Location = new System.Drawing.Point(3, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 13);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Hello, which car do you wish to manage today?";
+            this.label1.Text = "Select Car:";
             // 
             // IntroWho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 462);
+            this.ClientSize = new System.Drawing.Size(444, 335);
             this.Controls.Add(this.pnlWhichCar);
             this.Controls.Add(this.scDisplay);
             this.Controls.Add(this.pnlWho);

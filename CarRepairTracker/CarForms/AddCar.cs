@@ -11,11 +11,9 @@ using System.Windows.Forms;
 
 namespace CarRepairTracker
 {
-    public partial class frmCarSelection : Form
+    public partial class AddCar : Form
     {
-        
-
-        public frmCarSelection()
+        public AddCar()
         {
             InitializeComponent();
         }

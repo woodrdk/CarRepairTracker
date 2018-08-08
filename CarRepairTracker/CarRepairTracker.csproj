@@ -54,11 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarForms\CarSelection.cs">
+    <Compile Include="CarForms\AddCar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CarForms\CarSelection.Designer.cs">
-      <DependentUpon>CarSelection.cs</DependentUpon>
+    <Compile Include="CarForms\AddCar.Designer.cs">
+      <DependentUpon>AddCar.cs</DependentUpon>
     </Compile>
     <Compile Include="CarForms\DeleteCar.cs">
       <SubType>Form</SubType>
@@ -82,6 +82,7 @@
     <Compile Include="Models\CarRepairDbContext.cs" />
     <Compile Include="Models\Engine.cs" />
     <Compile Include="Models\Make.cs" />
+    <Compile Include="Models\MDIChildExpander.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Part.cs" />
     <Compile Include="Models\Repair.cs" />
@@ -150,8 +151,8 @@
     <Compile Include="UserForms\EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CarForms\CarSelection.resx">
-      <DependentUpon>CarSelection.cs</DependentUpon>
+    <EmbeddedResource Include="CarForms\AddCar.resx">
+      <DependentUpon>AddCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarForms\DeleteCar.resx">
       <DependentUpon>DeleteCar.cs</DependentUpon>
