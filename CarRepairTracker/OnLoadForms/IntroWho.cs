@@ -47,7 +47,7 @@ namespace CarRepairTracker
 
         public void CbWho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PopulateCarList();
+            
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)    // when submit button is clicked do this
@@ -72,6 +72,8 @@ namespace CarRepairTracker
                 pnlWho.Visible = false;
                 pnlWhichCar.Visible = true;               
             }
+
+            PopulateCarList();
         }
 
         private void BtnChangeCar_Click(object sender, EventArgs e)

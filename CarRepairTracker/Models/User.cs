@@ -24,7 +24,6 @@ namespace CarRepairTracker.Models
 
         public virtual ICollection<UserCar> UserCars { get; set; }
         
-
         // TODO: Add description
 
         public static List<User> GetAllUsers()

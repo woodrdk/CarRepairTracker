@@ -33,9 +33,10 @@
             this.btnAddUserName = new System.Windows.Forms.Button();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.lblFirst = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstTimeUser = new System.Windows.Forms.Label();
+            this.lblUniqueNames = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -81,14 +82,14 @@
             this.txtLastName.Size = new System.Drawing.Size(87, 20);
             this.txtLastName.TabIndex = 5;
             // 
-            // lblFirst
+            // lblFirstName
             // 
-            this.lblFirst.AutoSize = true;
-            this.lblFirst.Location = new System.Drawing.Point(27, 74);
-            this.lblFirst.Name = "lblFirst";
-            this.lblFirst.Size = new System.Drawing.Size(60, 13);
-            this.lblFirst.TabIndex = 6;
-            this.lblFirst.Text = "First Name:";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(27, 74);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(60, 13);
+            this.lblFirstName.TabIndex = 6;
+            this.lblFirstName.Text = "First Name:";
             // 
             // lblLastName
             // 
@@ -108,14 +109,24 @@
             this.lblFirstTimeUser.TabIndex = 8;
             this.lblFirstTimeUser.Text = "Welcome first time user!";
             // 
+            // lblUniqueNames
+            // 
+            this.lblUniqueNames.AutoSize = true;
+            this.lblUniqueNames.Location = new System.Drawing.Point(155, 46);
+            this.lblUniqueNames.Name = "lblUniqueNames";
+            this.lblUniqueNames.Size = new System.Drawing.Size(150, 13);
+            this.lblUniqueNames.TabIndex = 9;
+            this.lblUniqueNames.Text = "(Unique Names Only For Now)";
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(223, 205);
+            this.ClientSize = new System.Drawing.Size(328, 209);
+            this.Controls.Add(this.lblUniqueNames);
             this.Controls.Add(this.lblFirstTimeUser);
             this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.lblFirst);
+            this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.btnAddUserName);
@@ -136,8 +147,9 @@
         private System.Windows.Forms.Button btnAddUserName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.Label lblFirst;
+        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstTimeUser;
+        private System.Windows.Forms.Label lblUniqueNames;
     }
 }
