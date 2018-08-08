@@ -18,44 +18,48 @@ namespace CarRepairTracker.UserForms
             InitializeComponent();
         }
 
-        private void btnDeleteUser_Click(object sender, EventArgs e)
+        private void BtnDeleteUser_Click(object sender, EventArgs e)
         {
+            
             string deleted = cbUserToDelete.Text;
+
             DialogResult choice = MessageBox.Show("Are you sure you want to delete " + deleted, "Do you want to quit? ",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (choice == DialogResult.Yes)
             {
-                // --------------------------------------------------------------- needs finished
+
+                // Needs finished
                 // if( deletion from database is successful){
                 // lblCarDeletionSuccess.Text = " Success you deleted " + deleted + " from the car list";
                 // }
-                pnlDeleteUserSuccess.Visible = false;
+
                 MessageBox.Show("You deleted " + deleted);
-
                 User whoToDelete = ((User)cbUserToDelete.SelectedItem);
-
                 User.Delete(whoToDelete);
+                Close();
             }
-            pnlDeleteUserSuccess.Visible = true;
-            lblDeletedUserSuccess.Text = " You successfully deleted " + deleted + " from the user list!";
         }
 
         private void DeleteUser_Load(object sender, EventArgs e)
         {
             List<User> Users = User.GetAllUsers();
-            if (Users.Count() == 0) // if there are no users in database
+            // If there are no users in database
+            if (Users.Count() == 0)
             {
-                cbUserToDelete.Items.Add("No users to delete");    // insert add a new user to dropdown box
+                cbUserToDelete.Items.Add("No users to delete");
             }
-            else // if there are users
+            // If there are users
+            else
             {
-                cbUserToDelete.DataSource = Users; // get users from database
-                cbUserToDelete.DisplayMember = nameof(User.FirstName); // input user first name to drop down list
+                // Get users from database
+                cbUserToDelete.DataSource = Users;
+                // Input user first name to drop down list
+                cbUserToDelete.DisplayMember = nameof(User.FirstName); 
             }
 
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }

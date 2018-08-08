@@ -60,7 +60,7 @@ namespace CarRepairTracker
             //string addCar = "Add a car";    // makes variable to save typing later
             if (who == "Add New User")    // if when clicked submit and the value is add a new user
             {
-                UserForms.AddUser AddUser = new UserForms.AddUser();    
+                UserForms.AddUser AddUser = new UserForms.AddUser();
                 AddUser.Show(); // opens the adduser form
             }
             if(who == "Select a user")
