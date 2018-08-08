@@ -78,6 +78,18 @@
     <Compile Include="Migrations\201808080209547_carlist.Designer.cs">
       <DependentUpon>201808080209547_carlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808082128536_repairParts.cs" />
+    <Compile Include="Migrations\201808082128536_repairParts.Designer.cs">
+      <DependentUpon>201808082128536_repairParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808082137410_repairid.cs" />
+    <Compile Include="Migrations\201808082137410_repairid.Designer.cs">
+      <DependentUpon>201808082137410_repairid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808082200282_database.cs" />
+    <Compile Include="Migrations\201808082200282_database.Designer.cs">
+      <DependentUpon>201808082200282_database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
     <Compile Include="Models\Engine.cs" />
@@ -164,6 +176,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808080209547_carlist.resx">
       <DependentUpon>201808080209547_carlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808082128536_repairParts.resx">
+      <DependentUpon>201808082128536_repairParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808082137410_repairid.resx">
+      <DependentUpon>201808082137410_repairid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808082200282_database.resx">
+      <DependentUpon>201808082200282_database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>

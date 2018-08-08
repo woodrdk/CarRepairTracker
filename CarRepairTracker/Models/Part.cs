@@ -16,7 +16,7 @@ namespace CarRepairTracker.Models
               // If PK property is an integer, it will be an identity column by default.
         public int PartID { get; set; }
 
-        public int PartNumber { get; set; }
+        public string PartNumber { get; set; }
 
         [Required] // You can use parentheses after required, but it is not required
         [StringLength(40)]
@@ -30,8 +30,8 @@ namespace CarRepairTracker.Models
 
         public string PartBrand { get; set; }
 
-        public short Qty { get; set; }
-
+        public int Qty { get; set; }
+        public int RepairID { get; set; }
         public virtual Repair Repairs { get; set; }
     }
 }
