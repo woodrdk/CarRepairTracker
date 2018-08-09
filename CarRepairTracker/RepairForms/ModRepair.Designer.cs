@@ -55,7 +55,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtTotalCost = new System.Windows.Forms.TextBox();
             this.lblTotalCost = new System.Windows.Forms.Label();
-            this.btnSame = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnNewRepair = new System.Windows.Forms.Button();
             this.gbAddPart = new System.Windows.Forms.GroupBox();
             this.gbAddPart.SuspendLayout();
@@ -251,7 +251,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(286, 323);
+            this.btnClear.Location = new System.Drawing.Point(33, 323);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 23;
@@ -261,7 +261,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(161, 323);
+            this.btnAdd.Location = new System.Drawing.Point(126, 323);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(119, 23);
             this.btnAdd.TabIndex = 24;
@@ -285,15 +285,15 @@
             this.lblTotalCost.TabIndex = 26;
             this.lblTotalCost.Text = "Total part cost";
             // 
-            // btnSame
+            // btnSave
             // 
-            this.btnSame.Location = new System.Drawing.Point(192, 396);
-            this.btnSame.Name = "btnSame";
-            this.btnSame.Size = new System.Drawing.Size(113, 23);
-            this.btnSame.TabIndex = 28;
-            this.btnSame.Text = "Same Repair";
-            this.btnSame.UseVisualStyleBackColor = true;
-            this.btnSame.Click += new System.EventHandler(this.btnSame_Click);
+            this.btnSave.Location = new System.Drawing.Point(248, 323);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(113, 23);
+            this.btnSave.TabIndex = 28;
+            this.btnSave.Text = "Save Repair";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSame_Click);
             // 
             // btnNewRepair
             // 
@@ -309,6 +309,7 @@
             // 
             this.gbAddPart.Controls.Add(this.btnClear);
             this.gbAddPart.Controls.Add(this.lblPartName);
+            this.gbAddPart.Controls.Add(this.btnSave);
             this.gbAddPart.Controls.Add(this.lblPartNum);
             this.gbAddPart.Controls.Add(this.lblDate);
             this.gbAddPart.Controls.Add(this.lblTotalCost);
@@ -339,7 +340,6 @@
             this.gbAddPart.TabIndex = 30;
             this.gbAddPart.TabStop = false;
             this.gbAddPart.Text = "Add Details";
-            this.gbAddPart.Visible = false;
             // 
             // frmModRepair
             // 
@@ -348,7 +348,6 @@
             this.ClientSize = new System.Drawing.Size(398, 440);
             this.Controls.Add(this.gbAddPart);
             this.Controls.Add(this.btnNewRepair);
-            this.Controls.Add(this.btnSame);
             this.Controls.Add(this.btnClose);
             this.Name = "frmModRepair";
             this.Text = "Modification / Repair";
@@ -388,7 +387,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtTotalCost;
         private System.Windows.Forms.Label lblTotalCost;
-        private System.Windows.Forms.Button btnSame;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnNewRepair;
         private System.Windows.Forms.GroupBox gbAddPart;
     }

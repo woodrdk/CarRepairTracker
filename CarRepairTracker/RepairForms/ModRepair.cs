@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace CarRepairTracker
 {
     public partial class frmModRepair : Form
@@ -18,15 +20,11 @@ namespace CarRepairTracker
             InitializeComponent();
         }
         public static int RepairID = 0;
+        
+
         private void frmModRepair_Load(object sender, EventArgs e)
         {
-            if (RepairID == 0)
-            {
-             
-                btnNewRepair.Visible = false;
-                btnSame.Visible = false;
-                gbAddPart.Visible = true;
-            }
+         
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -43,17 +41,18 @@ namespace CarRepairTracker
             txtLaborCost.Clear();
         }
 
+        CarRepairDbContext objUserContext = new CarRepairDbContext(); //replaces the using 
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            using (CarRepairDbContext objUserContext = new CarRepairDbContext())
-            {
+            
                 Repair CarRepair = new Repair();
                 CarRepair.RepairDate = dtpRepair.Value;
                 CarRepair.CarId = 0; // pull it from open car need to write code forthis
                 CarRepair.LaborCost = Convert.ToDouble(txtLaborCost.Text);
                 CarRepair.Mileage = Convert.ToInt32(txtMileage.Text);
                 CarRepair.Misc = rtbNotes.Text;
-               // CarRepair.Name = txtPartName.Text; 
+             // CarRepair.Name = txtPartName.Text; 
                 CarRepair.ShopName = txtShopName.Text;
                 CarRepair.TotalCost = Convert.ToDouble(txtTotalCost.Text);
                 CarRepair.RepairID = RepairID;
@@ -65,24 +64,19 @@ namespace CarRepairTracker
                 CarPart.Qty = Convert.ToInt32(txtQty.Text);
                 CarPart.PartName = txtPartName.Text; 
                 CarPart.RepairID = RepairID; 
-                
-
+             
                 objUserContext.Repairs.Add(CarRepair);
                 objUserContext.Parts.Add(CarPart);
-
-                objUserContext.SaveChanges(); 
-
-
-            }
         }
 
         private void btnSame_Click(object sender, EventArgs e)
         {
-            gbAddPart.Visible = true;
+            objUserContext.SaveChanges();
         }
 
         private void btnNewRepair_Click(object sender, EventArgs e)
         {
+            // restart repair
             RepairID ++;
             gbAddPart.Visible = true;
         }
