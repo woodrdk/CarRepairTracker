@@ -188,7 +188,7 @@ namespace CarRepairTracker
                 rtbNotes.Text = "";
                 foreach (string note in noteDetails)
                 {
-                    rtbNotes.Text = note + Environment.NewLine;
+                    rtbNotes.Text += (note + Environment.NewLine);
                 }
 
             }
