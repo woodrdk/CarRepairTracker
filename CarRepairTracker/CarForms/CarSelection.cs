@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -137,5 +138,61 @@ namespace CarRepairTracker
         {
             
         }
+
+        private void btnSaveNotes_Click(object sender, EventArgs e)
+        {
+            SaveNotes();
+        }
+
+        private void SaveNotes()
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Text File | *.txt:";
+            save.RestoreDirectory = true;
+            if(save.ShowDialog() == DialogResult.OK)
+            {
+                string path = save.FileName;
+                if (path == string.Empty)
+                {
+                    return;
+                }
+                StringBuilder CarNotes = GetNotesFromRTB();
+                File.WriteAllText(path, CarNotes.ToString());
+                MessageBox.Show("Data was saved");
+            }
+        }
+
+        private StringBuilder GetNotesFromRTB()
+        {
+            StringBuilder CarNotes = new StringBuilder();
+            CarNotes.AppendLine(rtbNotes.Text);
+            
+            return CarNotes;
+        }
+
+        private string GetMyDocumentsPath()
+        {
+            return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        }
+
+        private void btnLoadNotes_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.InitialDirectory = GetMyDocumentsPath();
+
+            fileDialog.Filter = "Text File |*.txt";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // read the file
+                List<string> noteDetails = File.ReadLines(fileDialog.FileName).ToList();
+                rtbNotes.Text = "";
+                foreach (string note in noteDetails)
+                {
+                    rtbNotes.Text = note + Environment.NewLine;
+                }
+
+            }
+        }
+
     }
 }

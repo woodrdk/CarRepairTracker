@@ -69,6 +69,7 @@
             this.lblOil = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gbPurchaseDetails = new System.Windows.Forms.GroupBox();
+            this.dtpWarrExp = new System.Windows.Forms.DateTimePicker();
             this.lblExpMileage = new System.Windows.Forms.Label();
             this.lblExpDate = new System.Windows.Forms.Label();
             this.txtWarrMileage = new System.Windows.Forms.TextBox();
@@ -85,7 +86,10 @@
             this.txtComments = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.dtpWarrExp = new System.Windows.Forms.DateTimePicker();
+            this.tabPageNotes = new System.Windows.Forms.TabPage();
+            this.btnLoadNotes = new System.Windows.Forms.Button();
+            this.btnSaveNotes = new System.Windows.Forms.Button();
+            this.rtbNotes = new System.Windows.Forms.RichTextBox();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
@@ -93,6 +97,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.gbPurchaseDetails.SuspendLayout();
+            this.tabPageNotes.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcVehicleData
@@ -100,6 +105,7 @@
             this.tcVehicleData.Controls.Add(this.tabPage1);
             this.tcVehicleData.Controls.Add(this.tabPage2);
             this.tcVehicleData.Controls.Add(this.tabPage3);
+            this.tcVehicleData.Controls.Add(this.tabPageNotes);
             this.tcVehicleData.Location = new System.Drawing.Point(12, 12);
             this.tcVehicleData.Name = "tcVehicleData";
             this.tcVehicleData.SelectedIndex = 0;
@@ -503,6 +509,13 @@
             this.gbPurchaseDetails.TabStop = false;
             this.gbPurchaseDetails.Text = "Purchase Details";
             // 
+            // dtpWarrExp
+            // 
+            this.dtpWarrExp.Location = new System.Drawing.Point(124, 222);
+            this.dtpWarrExp.Name = "dtpWarrExp";
+            this.dtpWarrExp.Size = new System.Drawing.Size(200, 20);
+            this.dtpWarrExp.TabIndex = 32;
+            // 
             // lblExpMileage
             // 
             this.lblExpMileage.AutoSize = true;
@@ -641,12 +654,46 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // dtpWarrExp
+            // tabPageNotes
             // 
-            this.dtpWarrExp.Location = new System.Drawing.Point(124, 222);
-            this.dtpWarrExp.Name = "dtpWarrExp";
-            this.dtpWarrExp.Size = new System.Drawing.Size(200, 20);
-            this.dtpWarrExp.TabIndex = 32;
+            this.tabPageNotes.Controls.Add(this.rtbNotes);
+            this.tabPageNotes.Controls.Add(this.btnLoadNotes);
+            this.tabPageNotes.Controls.Add(this.btnSaveNotes);
+            this.tabPageNotes.Location = new System.Drawing.Point(4, 22);
+            this.tabPageNotes.Name = "tabPageNotes";
+            this.tabPageNotes.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageNotes.Size = new System.Drawing.Size(618, 349);
+            this.tabPageNotes.TabIndex = 3;
+            this.tabPageNotes.Text = "Vehicle Notes";
+            this.tabPageNotes.UseVisualStyleBackColor = true;
+            // 
+            // btnLoadNotes
+            // 
+            this.btnLoadNotes.Location = new System.Drawing.Point(97, 89);
+            this.btnLoadNotes.Name = "btnLoadNotes";
+            this.btnLoadNotes.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadNotes.TabIndex = 27;
+            this.btnLoadNotes.Text = "Load Notes";
+            this.btnLoadNotes.UseVisualStyleBackColor = true;
+            this.btnLoadNotes.Click += new System.EventHandler(this.btnLoadNotes_Click);
+            // 
+            // btnSaveNotes
+            // 
+            this.btnSaveNotes.Location = new System.Drawing.Point(16, 89);
+            this.btnSaveNotes.Name = "btnSaveNotes";
+            this.btnSaveNotes.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveNotes.TabIndex = 26;
+            this.btnSaveNotes.Text = "Save Notes";
+            this.btnSaveNotes.UseVisualStyleBackColor = true;
+            this.btnSaveNotes.Click += new System.EventHandler(this.btnSaveNotes_Click);
+            // 
+            // rtbNotes
+            // 
+            this.rtbNotes.Location = new System.Drawing.Point(16, 118);
+            this.rtbNotes.Name = "rtbNotes";
+            this.rtbNotes.Size = new System.Drawing.Size(485, 200);
+            this.rtbNotes.TabIndex = 28;
+            this.rtbNotes.Text = "";
             // 
             // frmCarSelection
             // 
@@ -670,6 +717,7 @@
             this.tabPage3.ResumeLayout(false);
             this.gbPurchaseDetails.ResumeLayout(false);
             this.gbPurchaseDetails.PerformLayout();
+            this.tabPageNotes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -734,5 +782,9 @@
         private System.Windows.Forms.TextBox txtCarNameIdentifier;
         private System.Windows.Forms.Label lbltxtCarNameIdentifier;
         private System.Windows.Forms.DateTimePicker dtpWarrExp;
+        private System.Windows.Forms.TabPage tabPageNotes;
+        private System.Windows.Forms.RichTextBox rtbNotes;
+        private System.Windows.Forms.Button btnLoadNotes;
+        private System.Windows.Forms.Button btnSaveNotes;
     }
 }
