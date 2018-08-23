@@ -707,6 +707,7 @@
             this.btnEncrypt.TabIndex = 29;
             this.btnEncrypt.Text = "Encrypt Notes";
             this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // btnDecrypt
             // 
@@ -716,6 +717,7 @@
             this.btnDecrypt.TabIndex = 30;
             this.btnDecrypt.Text = "Decrypt Notes";
             this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // frmCarSelection
             // 
