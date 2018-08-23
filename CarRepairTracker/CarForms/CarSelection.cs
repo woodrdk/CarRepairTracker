@@ -37,12 +37,10 @@ namespace CarRepairTracker
         public frmCarSelection()
         {
             InitializeComponent();
-
         }
 
         private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void frmCarSelection_Load(object sender, EventArgs e)
@@ -62,7 +60,7 @@ namespace CarRepairTracker
 
         private void label9_Click(object sender, EventArgs e)
         {
-
+        // believe can be deleted needs verified
         }
 
         private void cbMake_SelectedIndexChanged(object sender, EventArgs e)
@@ -157,7 +155,8 @@ namespace CarRepairTracker
         {
             
         }
-
+ 
+        
         private void btnSaveNotes_Click(object sender, EventArgs e)
         {
             SaveNotes();
@@ -166,8 +165,9 @@ namespace CarRepairTracker
         private void SaveNotes()
         {
             SaveFileDialog save = new SaveFileDialog();
+            save.InitialDirectory = GetMyDocumentsPath();
             save.Filter = "Text File | *.txt:";
-            save.RestoreDirectory = true;
+            // save.RestoreDirectory = true;
             if(save.ShowDialog() == DialogResult.OK)
             {
                 string path = save.FileName;
@@ -178,6 +178,7 @@ namespace CarRepairTracker
                 StringBuilder CarNotes = GetNotesFromRTB();
                 File.WriteAllText(path, CarNotes.ToString());
                 MessageBox.Show("Data was saved");
+                rtbNotes.Text = "";
             }
         }
 
@@ -238,10 +239,11 @@ namespace CarRepairTracker
             string keytxt = sr.ReadToEnd();
             rsa.FromXmlString(keytxt);
             rsa.PersistKeyInCsp = true;
-            if (rsa.PublicOnly == true)
-                label1.Text = "Key: " + cspp.KeyContainerName + " - Public Only";
-            else
-                label1.Text = "Key: " + cspp.KeyContainerName + " - Full Key Pair";
+                // prepare to delete following
+                //if (rsa.PublicOnly == true)
+                //    label1.Text = "Key: " + cspp.KeyContainerName + " - Public Only";
+                //else
+                //    label1.Text = "Key: " + cspp.KeyContainerName + " - Full Key Pair";
             sr.Close();
 
             //---------------------------------------------------------

@@ -73,7 +73,6 @@
             this.lblExpMileage = new System.Windows.Forms.Label();
             this.lblExpDate = new System.Windows.Forms.Label();
             this.txtWarrMileage = new System.Windows.Forms.TextBox();
-            this.lblWarranty = new System.Windows.Forms.Label();
             this.cbWarranty = new System.Windows.Forms.CheckBox();
             this.lblPurchaseMileage = new System.Windows.Forms.Label();
             this.txtPurchaseMileage = new System.Windows.Forms.TextBox();
@@ -85,13 +84,18 @@
             this.lblComments = new System.Windows.Forms.Label();
             this.txtComments = new System.Windows.Forms.TextBox();
             this.tabPageNotes = new System.Windows.Forms.TabPage();
+            this.btnDecrypt = new System.Windows.Forms.Button();
+            this.btnEncrypt = new System.Windows.Forms.Button();
             this.rtbNotes = new System.Windows.Forms.RichTextBox();
             this.btnLoadNotes = new System.Windows.Forms.Button();
             this.btnSaveNotes = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnEncrypt = new System.Windows.Forms.Button();
-            this.btnDecrypt = new System.Windows.Forms.Button();
+            this.gbEDSave = new System.Windows.Forms.GroupBox();
+            this.gbNotes = new System.Windows.Forms.GroupBox();
+            this.gbEncDycNotes = new System.Windows.Forms.GroupBox();
+            this.btnEncNotes = new System.Windows.Forms.Button();
+            this.btnDecNotes = new System.Windows.Forms.Button();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
@@ -100,6 +104,9 @@
             this.tabPage3.SuspendLayout();
             this.gbPurchaseDetails.SuspendLayout();
             this.tabPageNotes.SuspendLayout();
+            this.gbEDSave.SuspendLayout();
+            this.gbNotes.SuspendLayout();
+            this.gbEncDycNotes.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcVehicleData
@@ -493,7 +500,6 @@
             this.gbPurchaseDetails.Controls.Add(this.lblExpMileage);
             this.gbPurchaseDetails.Controls.Add(this.lblExpDate);
             this.gbPurchaseDetails.Controls.Add(this.txtWarrMileage);
-            this.gbPurchaseDetails.Controls.Add(this.lblWarranty);
             this.gbPurchaseDetails.Controls.Add(this.cbWarranty);
             this.gbPurchaseDetails.Controls.Add(this.lblPurchaseMileage);
             this.gbPurchaseDetails.Controls.Add(this.txtPurchaseMileage);
@@ -513,7 +519,7 @@
             // 
             // dtpWarrExp
             // 
-            this.dtpWarrExp.Location = new System.Drawing.Point(124, 222);
+            this.dtpWarrExp.Location = new System.Drawing.Point(111, 200);
             this.dtpWarrExp.Name = "dtpWarrExp";
             this.dtpWarrExp.Size = new System.Drawing.Size(200, 20);
             this.dtpWarrExp.TabIndex = 32;
@@ -521,7 +527,7 @@
             // lblExpMileage
             // 
             this.lblExpMileage.AutoSize = true;
-            this.lblExpMileage.Location = new System.Drawing.Point(371, 190);
+            this.lblExpMileage.Location = new System.Drawing.Point(9, 229);
             this.lblExpMileage.Name = "lblExpMileage";
             this.lblExpMileage.Size = new System.Drawing.Size(93, 13);
             this.lblExpMileage.TabIndex = 31;
@@ -530,7 +536,7 @@
             // lblExpDate
             // 
             this.lblExpDate.AutoSize = true;
-            this.lblExpDate.Location = new System.Drawing.Point(39, 222);
+            this.lblExpDate.Location = new System.Drawing.Point(7, 206);
             this.lblExpDate.Name = "lblExpDate";
             this.lblExpDate.Size = new System.Drawing.Size(79, 13);
             this.lblExpDate.TabIndex = 30;
@@ -538,28 +544,19 @@
             // 
             // txtWarrMileage
             // 
-            this.txtWarrMileage.Location = new System.Drawing.Point(411, 222);
+            this.txtWarrMileage.Location = new System.Drawing.Point(111, 229);
             this.txtWarrMileage.Name = "txtWarrMileage";
-            this.txtWarrMileage.Size = new System.Drawing.Size(100, 20);
+            this.txtWarrMileage.Size = new System.Drawing.Size(200, 20);
             this.txtWarrMileage.TabIndex = 29;
-            // 
-            // lblWarranty
-            // 
-            this.lblWarranty.AutoSize = true;
-            this.lblWarranty.Location = new System.Drawing.Point(3, 190);
-            this.lblWarranty.Name = "lblWarranty";
-            this.lblWarranty.Size = new System.Drawing.Size(56, 13);
-            this.lblWarranty.TabIndex = 26;
-            this.lblWarranty.Text = "Warranty?";
             // 
             // cbWarranty
             // 
             this.cbWarranty.AutoSize = true;
-            this.cbWarranty.Location = new System.Drawing.Point(63, 186);
+            this.cbWarranty.Location = new System.Drawing.Point(10, 186);
             this.cbWarranty.Name = "cbWarranty";
-            this.cbWarranty.Size = new System.Drawing.Size(80, 17);
+            this.cbWarranty.Size = new System.Drawing.Size(75, 17);
             this.cbWarranty.TabIndex = 25;
-            this.cbWarranty.Text = "checkBox1";
+            this.cbWarranty.Text = "Warranty?";
             this.cbWarranty.UseVisualStyleBackColor = true;
             this.cbWarranty.CheckedChanged += new System.EventHandler(this.cbWarranty_CheckedChanged);
             // 
@@ -574,16 +571,16 @@
             // 
             // txtPurchaseMileage
             // 
-            this.txtPurchaseMileage.Location = new System.Drawing.Point(124, 142);
+            this.txtPurchaseMileage.Location = new System.Drawing.Point(111, 137);
             this.txtPurchaseMileage.Name = "txtPurchaseMileage";
-            this.txtPurchaseMileage.Size = new System.Drawing.Size(100, 20);
+            this.txtPurchaseMileage.Size = new System.Drawing.Size(200, 20);
             this.txtPurchaseMileage.TabIndex = 23;
             // 
             // txtPurchasePrice
             // 
             this.txtPurchasePrice.Location = new System.Drawing.Point(111, 106);
             this.txtPurchasePrice.Name = "txtPurchasePrice";
-            this.txtPurchasePrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPurchasePrice.Size = new System.Drawing.Size(200, 20);
             this.txtPurchasePrice.TabIndex = 22;
             // 
             // lblPurchasePrice
@@ -638,11 +635,10 @@
             // 
             // tabPageNotes
             // 
-            this.tabPageNotes.Controls.Add(this.btnDecrypt);
-            this.tabPageNotes.Controls.Add(this.btnEncrypt);
+            this.tabPageNotes.Controls.Add(this.gbEncDycNotes);
+            this.tabPageNotes.Controls.Add(this.gbNotes);
+            this.tabPageNotes.Controls.Add(this.gbEDSave);
             this.tabPageNotes.Controls.Add(this.rtbNotes);
-            this.tabPageNotes.Controls.Add(this.btnLoadNotes);
-            this.tabPageNotes.Controls.Add(this.btnSaveNotes);
             this.tabPageNotes.Location = new System.Drawing.Point(4, 22);
             this.tabPageNotes.Name = "tabPageNotes";
             this.tabPageNotes.Padding = new System.Windows.Forms.Padding(3);
@@ -650,6 +646,26 @@
             this.tabPageNotes.TabIndex = 3;
             this.tabPageNotes.Text = "Vehicle Notes";
             this.tabPageNotes.UseVisualStyleBackColor = true;
+            // 
+            // btnDecrypt
+            // 
+            this.btnDecrypt.Location = new System.Drawing.Point(6, 60);
+            this.btnDecrypt.Name = "btnDecrypt";
+            this.btnDecrypt.Size = new System.Drawing.Size(99, 23);
+            this.btnDecrypt.TabIndex = 30;
+            this.btnDecrypt.Text = "Decrypt Notes";
+            this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
+            // 
+            // btnEncrypt
+            // 
+            this.btnEncrypt.Location = new System.Drawing.Point(6, 31);
+            this.btnEncrypt.Name = "btnEncrypt";
+            this.btnEncrypt.Size = new System.Drawing.Size(99, 23);
+            this.btnEncrypt.TabIndex = 29;
+            this.btnEncrypt.Text = "Encrypt Notes";
+            this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // rtbNotes
             // 
@@ -661,7 +677,7 @@
             // 
             // btnLoadNotes
             // 
-            this.btnLoadNotes.Location = new System.Drawing.Point(97, 89);
+            this.btnLoadNotes.Location = new System.Drawing.Point(6, 60);
             this.btnLoadNotes.Name = "btnLoadNotes";
             this.btnLoadNotes.Size = new System.Drawing.Size(75, 23);
             this.btnLoadNotes.TabIndex = 27;
@@ -671,7 +687,7 @@
             // 
             // btnSaveNotes
             // 
-            this.btnSaveNotes.Location = new System.Drawing.Point(16, 89);
+            this.btnSaveNotes.Location = new System.Drawing.Point(6, 31);
             this.btnSaveNotes.Name = "btnSaveNotes";
             this.btnSaveNotes.Size = new System.Drawing.Size(75, 23);
             this.btnSaveNotes.TabIndex = 26;
@@ -699,25 +715,56 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnEncrypt
+            // gbEDSave
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(297, 89);
-            this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(99, 23);
-            this.btnEncrypt.TabIndex = 29;
-            this.btnEncrypt.Text = "Encrypt Notes";
-            this.btnEncrypt.UseVisualStyleBackColor = true;
-            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
+            this.gbEDSave.Controls.Add(this.btnDecrypt);
+            this.gbEDSave.Controls.Add(this.btnEncrypt);
+            this.gbEDSave.Location = new System.Drawing.Point(384, 12);
+            this.gbEDSave.Name = "gbEDSave";
+            this.gbEDSave.Size = new System.Drawing.Size(117, 100);
+            this.gbEDSave.TabIndex = 31;
+            this.gbEDSave.TabStop = false;
+            this.gbEDSave.Text = "Save / Load";
             // 
-            // btnDecrypt
+            // gbNotes
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(402, 89);
-            this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(99, 23);
-            this.btnDecrypt.TabIndex = 30;
-            this.btnDecrypt.Text = "Decrypt Notes";
-            this.btnDecrypt.UseVisualStyleBackColor = true;
-            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
+            this.gbNotes.Controls.Add(this.btnSaveNotes);
+            this.gbNotes.Controls.Add(this.btnLoadNotes);
+            this.gbNotes.Location = new System.Drawing.Point(16, 12);
+            this.gbNotes.Name = "gbNotes";
+            this.gbNotes.Size = new System.Drawing.Size(120, 100);
+            this.gbNotes.TabIndex = 32;
+            this.gbNotes.TabStop = false;
+            this.gbNotes.Text = "Save / Load Notes";
+            // 
+            // gbEncDycNotes
+            // 
+            this.gbEncDycNotes.Controls.Add(this.btnDecNotes);
+            this.gbEncDycNotes.Controls.Add(this.btnEncNotes);
+            this.gbEncDycNotes.Location = new System.Drawing.Point(186, 12);
+            this.gbEncDycNotes.Name = "gbEncDycNotes";
+            this.gbEncDycNotes.Size = new System.Drawing.Size(147, 100);
+            this.gbEncDycNotes.TabIndex = 33;
+            this.gbEncDycNotes.TabStop = false;
+            this.gbEncDycNotes.Text = "Encrypt / Decrpyt Notes";
+            // 
+            // btnEncNotes
+            // 
+            this.btnEncNotes.Location = new System.Drawing.Point(7, 31);
+            this.btnEncNotes.Name = "btnEncNotes";
+            this.btnEncNotes.Size = new System.Drawing.Size(134, 23);
+            this.btnEncNotes.TabIndex = 0;
+            this.btnEncNotes.Text = "Encrypt Current Notes";
+            this.btnEncNotes.UseVisualStyleBackColor = true;
+            // 
+            // btnDecNotes
+            // 
+            this.btnDecNotes.Location = new System.Drawing.Point(7, 60);
+            this.btnDecNotes.Name = "btnDecNotes";
+            this.btnDecNotes.Size = new System.Drawing.Size(134, 23);
+            this.btnDecNotes.TabIndex = 1;
+            this.btnDecNotes.Text = "Decrypt  Current Notes";
+            this.btnDecNotes.UseVisualStyleBackColor = true;
             // 
             // frmCarSelection
             // 
@@ -742,6 +789,9 @@
             this.gbPurchaseDetails.ResumeLayout(false);
             this.gbPurchaseDetails.PerformLayout();
             this.tabPageNotes.ResumeLayout(false);
+            this.gbEDSave.ResumeLayout(false);
+            this.gbNotes.ResumeLayout(false);
+            this.gbEncDycNotes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -792,7 +842,6 @@
         private System.Windows.Forms.Label lblExpMileage;
         private System.Windows.Forms.Label lblExpDate;
         private System.Windows.Forms.TextBox txtWarrMileage;
-        private System.Windows.Forms.Label lblWarranty;
         private System.Windows.Forms.CheckBox cbWarranty;
         private System.Windows.Forms.Label lblPurchaseMileage;
         private System.Windows.Forms.TextBox txtPurchaseMileage;
@@ -812,5 +861,10 @@
         private System.Windows.Forms.Button btnSaveNotes;
         private System.Windows.Forms.Button btnDecrypt;
         private System.Windows.Forms.Button btnEncrypt;
+        private System.Windows.Forms.GroupBox gbEDSave;
+        private System.Windows.Forms.GroupBox gbNotes;
+        private System.Windows.Forms.GroupBox gbEncDycNotes;
+        private System.Windows.Forms.Button btnDecNotes;
+        private System.Windows.Forms.Button btnEncNotes;
     }
 }
