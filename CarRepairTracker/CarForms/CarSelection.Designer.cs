@@ -84,12 +84,14 @@
             this.lblPurchased = new System.Windows.Forms.Label();
             this.lblComments = new System.Windows.Forms.Label();
             this.txtComments = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.tabPageNotes = new System.Windows.Forms.TabPage();
+            this.rtbNotes = new System.Windows.Forms.RichTextBox();
             this.btnLoadNotes = new System.Windows.Forms.Button();
             this.btnSaveNotes = new System.Windows.Forms.Button();
-            this.rtbNotes = new System.Windows.Forms.RichTextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnEncrypt = new System.Windows.Forms.Button();
+            this.btnDecrypt = new System.Windows.Forms.Button();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
@@ -634,28 +636,10 @@
             this.txtComments.Size = new System.Drawing.Size(440, 20);
             this.txtComments.TabIndex = 16;
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.Location = new System.Drawing.Point(559, 393);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 25;
-            this.btnSubmit.Text = "Save";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(478, 393);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 24;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // tabPageNotes
             // 
+            this.tabPageNotes.Controls.Add(this.btnDecrypt);
+            this.tabPageNotes.Controls.Add(this.btnEncrypt);
             this.tabPageNotes.Controls.Add(this.rtbNotes);
             this.tabPageNotes.Controls.Add(this.btnLoadNotes);
             this.tabPageNotes.Controls.Add(this.btnSaveNotes);
@@ -666,6 +650,14 @@
             this.tabPageNotes.TabIndex = 3;
             this.tabPageNotes.Text = "Vehicle Notes";
             this.tabPageNotes.UseVisualStyleBackColor = true;
+            // 
+            // rtbNotes
+            // 
+            this.rtbNotes.Location = new System.Drawing.Point(16, 118);
+            this.rtbNotes.Name = "rtbNotes";
+            this.rtbNotes.Size = new System.Drawing.Size(485, 200);
+            this.rtbNotes.TabIndex = 28;
+            this.rtbNotes.Text = "";
             // 
             // btnLoadNotes
             // 
@@ -687,13 +679,43 @@
             this.btnSaveNotes.UseVisualStyleBackColor = true;
             this.btnSaveNotes.Click += new System.EventHandler(this.btnSaveNotes_Click);
             // 
-            // rtbNotes
+            // btnSubmit
             // 
-            this.rtbNotes.Location = new System.Drawing.Point(16, 118);
-            this.rtbNotes.Name = "rtbNotes";
-            this.rtbNotes.Size = new System.Drawing.Size(485, 200);
-            this.rtbNotes.TabIndex = 28;
-            this.rtbNotes.Text = "";
+            this.btnSubmit.Location = new System.Drawing.Point(559, 393);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 25;
+            this.btnSubmit.Text = "Save";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(478, 393);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnEncrypt
+            // 
+            this.btnEncrypt.Location = new System.Drawing.Point(297, 89);
+            this.btnEncrypt.Name = "btnEncrypt";
+            this.btnEncrypt.Size = new System.Drawing.Size(99, 23);
+            this.btnEncrypt.TabIndex = 29;
+            this.btnEncrypt.Text = "Encrypt Notes";
+            this.btnEncrypt.UseVisualStyleBackColor = true;
+            // 
+            // btnDecrypt
+            // 
+            this.btnDecrypt.Location = new System.Drawing.Point(402, 89);
+            this.btnDecrypt.Name = "btnDecrypt";
+            this.btnDecrypt.Size = new System.Drawing.Size(99, 23);
+            this.btnDecrypt.TabIndex = 30;
+            this.btnDecrypt.Text = "Decrypt Notes";
+            this.btnDecrypt.UseVisualStyleBackColor = true;
             // 
             // frmCarSelection
             // 
@@ -786,5 +808,7 @@
         private System.Windows.Forms.RichTextBox rtbNotes;
         private System.Windows.Forms.Button btnLoadNotes;
         private System.Windows.Forms.Button btnSaveNotes;
+        private System.Windows.Forms.Button btnDecrypt;
+        private System.Windows.Forms.Button btnEncrypt;
     }
 }
