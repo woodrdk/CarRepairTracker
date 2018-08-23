@@ -96,6 +96,9 @@
             this.gbEncDycNotes = new System.Windows.Forms.GroupBox();
             this.btnEncNotes = new System.Windows.Forms.Button();
             this.btnDecNotes = new System.Windows.Forms.Button();
+            this.lblNonTextNotes = new System.Windows.Forms.Label();
+            this.lblEncDec = new System.Windows.Forms.Label();
+            this.lblEncNotes = new System.Windows.Forms.Label();
             this.tcVehicleData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbIdentifications.SuspendLayout();
@@ -118,7 +121,7 @@
             this.tcVehicleData.Location = new System.Drawing.Point(12, 12);
             this.tcVehicleData.Name = "tcVehicleData";
             this.tcVehicleData.SelectedIndex = 0;
-            this.tcVehicleData.Size = new System.Drawing.Size(626, 375);
+            this.tcVehicleData.Size = new System.Drawing.Size(503, 375);
             this.tcVehicleData.TabIndex = 12;
             // 
             // tabPage1
@@ -512,7 +515,7 @@
             this.gbPurchaseDetails.Controls.Add(this.txtComments);
             this.gbPurchaseDetails.Location = new System.Drawing.Point(27, 23);
             this.gbPurchaseDetails.Name = "gbPurchaseDetails";
-            this.gbPurchaseDetails.Size = new System.Drawing.Size(533, 298);
+            this.gbPurchaseDetails.Size = new System.Drawing.Size(445, 298);
             this.gbPurchaseDetails.TabIndex = 0;
             this.gbPurchaseDetails.TabStop = false;
             this.gbPurchaseDetails.Text = "Purchase Details";
@@ -630,7 +633,7 @@
             // 
             this.txtComments.Location = new System.Drawing.Point(86, 272);
             this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(440, 20);
+            this.txtComments.Size = new System.Drawing.Size(359, 20);
             this.txtComments.TabIndex = 16;
             // 
             // tabPageNotes
@@ -642,14 +645,14 @@
             this.tabPageNotes.Location = new System.Drawing.Point(4, 22);
             this.tabPageNotes.Name = "tabPageNotes";
             this.tabPageNotes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNotes.Size = new System.Drawing.Size(618, 349);
+            this.tabPageNotes.Size = new System.Drawing.Size(495, 349);
             this.tabPageNotes.TabIndex = 3;
             this.tabPageNotes.Text = "Vehicle Notes";
             this.tabPageNotes.UseVisualStyleBackColor = true;
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(6, 60);
+            this.btnDecrypt.Location = new System.Drawing.Point(6, 71);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(99, 23);
             this.btnDecrypt.TabIndex = 30;
@@ -659,7 +662,7 @@
             // 
             // btnEncrypt
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(6, 31);
+            this.btnEncrypt.Location = new System.Drawing.Point(6, 42);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(99, 23);
             this.btnEncrypt.TabIndex = 29;
@@ -671,13 +674,13 @@
             // 
             this.rtbNotes.Location = new System.Drawing.Point(16, 118);
             this.rtbNotes.Name = "rtbNotes";
-            this.rtbNotes.Size = new System.Drawing.Size(485, 200);
+            this.rtbNotes.Size = new System.Drawing.Size(456, 200);
             this.rtbNotes.TabIndex = 28;
             this.rtbNotes.Text = "";
             // 
             // btnLoadNotes
             // 
-            this.btnLoadNotes.Location = new System.Drawing.Point(6, 60);
+            this.btnLoadNotes.Location = new System.Drawing.Point(6, 71);
             this.btnLoadNotes.Name = "btnLoadNotes";
             this.btnLoadNotes.Size = new System.Drawing.Size(75, 23);
             this.btnLoadNotes.TabIndex = 27;
@@ -687,7 +690,7 @@
             // 
             // btnSaveNotes
             // 
-            this.btnSaveNotes.Location = new System.Drawing.Point(6, 31);
+            this.btnSaveNotes.Location = new System.Drawing.Point(6, 42);
             this.btnSaveNotes.Name = "btnSaveNotes";
             this.btnSaveNotes.Size = new System.Drawing.Size(75, 23);
             this.btnSaveNotes.TabIndex = 26;
@@ -697,7 +700,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(559, 393);
+            this.btnSubmit.Location = new System.Drawing.Point(413, 393);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 25;
@@ -707,7 +710,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(478, 393);
+            this.btnCancel.Location = new System.Drawing.Point(332, 393);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 24;
@@ -717,9 +720,10 @@
             // 
             // gbEDSave
             // 
+            this.gbEDSave.Controls.Add(this.lblEncNotes);
             this.gbEDSave.Controls.Add(this.btnDecrypt);
             this.gbEDSave.Controls.Add(this.btnEncrypt);
-            this.gbEDSave.Location = new System.Drawing.Point(384, 12);
+            this.gbEDSave.Location = new System.Drawing.Point(355, 12);
             this.gbEDSave.Name = "gbEDSave";
             this.gbEDSave.Size = new System.Drawing.Size(117, 100);
             this.gbEDSave.TabIndex = 31;
@@ -728,20 +732,22 @@
             // 
             // gbNotes
             // 
+            this.gbNotes.Controls.Add(this.lblNonTextNotes);
             this.gbNotes.Controls.Add(this.btnSaveNotes);
             this.gbNotes.Controls.Add(this.btnLoadNotes);
             this.gbNotes.Location = new System.Drawing.Point(16, 12);
             this.gbNotes.Name = "gbNotes";
-            this.gbNotes.Size = new System.Drawing.Size(120, 100);
+            this.gbNotes.Size = new System.Drawing.Size(141, 100);
             this.gbNotes.TabIndex = 32;
             this.gbNotes.TabStop = false;
             this.gbNotes.Text = "Save / Load Notes";
             // 
             // gbEncDycNotes
             // 
+            this.gbEncDycNotes.Controls.Add(this.lblEncDec);
             this.gbEncDycNotes.Controls.Add(this.btnDecNotes);
             this.gbEncDycNotes.Controls.Add(this.btnEncNotes);
-            this.gbEncDycNotes.Location = new System.Drawing.Point(186, 12);
+            this.gbEncDycNotes.Location = new System.Drawing.Point(176, 12);
             this.gbEncDycNotes.Name = "gbEncDycNotes";
             this.gbEncDycNotes.Size = new System.Drawing.Size(147, 100);
             this.gbEncDycNotes.TabIndex = 33;
@@ -750,27 +756,56 @@
             // 
             // btnEncNotes
             // 
-            this.btnEncNotes.Location = new System.Drawing.Point(7, 31);
+            this.btnEncNotes.Location = new System.Drawing.Point(7, 42);
             this.btnEncNotes.Name = "btnEncNotes";
             this.btnEncNotes.Size = new System.Drawing.Size(134, 23);
             this.btnEncNotes.TabIndex = 0;
             this.btnEncNotes.Text = "Encrypt Current Notes";
             this.btnEncNotes.UseVisualStyleBackColor = true;
+            this.btnEncNotes.Click += new System.EventHandler(this.btnEncNotes_Click);
             // 
             // btnDecNotes
             // 
-            this.btnDecNotes.Location = new System.Drawing.Point(7, 60);
+            this.btnDecNotes.Location = new System.Drawing.Point(7, 71);
             this.btnDecNotes.Name = "btnDecNotes";
             this.btnDecNotes.Size = new System.Drawing.Size(134, 23);
             this.btnDecNotes.TabIndex = 1;
             this.btnDecNotes.Text = "Decrypt  Current Notes";
             this.btnDecNotes.UseVisualStyleBackColor = true;
+            this.btnDecNotes.Click += new System.EventHandler(this.btnDecNotes_Click);
+            // 
+            // lblNonTextNotes
+            // 
+            this.lblNonTextNotes.AutoSize = true;
+            this.lblNonTextNotes.Location = new System.Drawing.Point(6, 23);
+            this.lblNonTextNotes.Name = "lblNonTextNotes";
+            this.lblNonTextNotes.Size = new System.Drawing.Size(130, 13);
+            this.lblNonTextNotes.TabIndex = 28;
+            this.lblNonTextNotes.Text = "Non Encypted Text Notes";
+            // 
+            // lblEncDec
+            // 
+            this.lblEncDec.AutoSize = true;
+            this.lblEncDec.Location = new System.Drawing.Point(6, 23);
+            this.lblEncDec.Name = "lblEncDec";
+            this.lblEncDec.Size = new System.Drawing.Size(142, 13);
+            this.lblEncDec.TabIndex = 2;
+            this.lblEncDec.Text = "Encrypt Deypt Current Notes";
+            // 
+            // lblEncNotes
+            // 
+            this.lblEncNotes.AutoSize = true;
+            this.lblEncNotes.Location = new System.Drawing.Point(0, 22);
+            this.lblEncNotes.Name = "lblEncNotes";
+            this.lblEncNotes.Size = new System.Drawing.Size(76, 13);
+            this.lblEncNotes.TabIndex = 31;
+            this.lblEncNotes.Text = "Encypted Files";
             // 
             // frmCarSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 431);
+            this.ClientSize = new System.Drawing.Size(534, 431);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tcVehicleData);
@@ -790,8 +825,11 @@
             this.gbPurchaseDetails.PerformLayout();
             this.tabPageNotes.ResumeLayout(false);
             this.gbEDSave.ResumeLayout(false);
+            this.gbEDSave.PerformLayout();
             this.gbNotes.ResumeLayout(false);
+            this.gbNotes.PerformLayout();
             this.gbEncDycNotes.ResumeLayout(false);
+            this.gbEncDycNotes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -866,5 +904,8 @@
         private System.Windows.Forms.GroupBox gbEncDycNotes;
         private System.Windows.Forms.Button btnDecNotes;
         private System.Windows.Forms.Button btnEncNotes;
+        private System.Windows.Forms.Label lblEncDec;
+        private System.Windows.Forms.Label lblNonTextNotes;
+        private System.Windows.Forms.Label lblEncNotes;
     }
 }

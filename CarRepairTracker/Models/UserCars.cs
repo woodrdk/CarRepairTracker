@@ -62,6 +62,10 @@ namespace CarRepairTracker.Models
        
         public int UserId { get; set; }
 
+        [StringLength(int.MaxValue)]
+        public string Notes { get; set; }
+
+
 
         public static List<UserCar> GetAllUserCars()
         {

@@ -82,6 +82,10 @@
     <Compile Include="Migrations\201808222204048_ne.Designer.cs">
       <DependentUpon>201808222204048_ne.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808231827163_encrypt.cs" />
+    <Compile Include="Migrations\201808231827163_encrypt.Designer.cs">
+      <DependentUpon>201808231827163_encrypt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
     <Compile Include="Models\Engine.cs" />
@@ -171,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808222204048_ne.resx">
       <DependentUpon>201808222204048_ne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808231827163_encrypt.resx">
+      <DependentUpon>201808231827163_encrypt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>
