@@ -1,3 +1,5 @@
+https://vpic.nhtsa.dot.gov/api/Home
+
 
 <Make_Name>Aston Martin</Make_Name>
 
@@ -5349,9 +5351,9 @@
 </ModelsForMake>
 <ModelsForMake>
 <Make_ID>1291</Make_ID>
-<Make_Name>Albert Böcker GmbH & Co. KG</Make_Name>
+<Make_Name>Albert BÃ¶cker GmbH & Co. KG</Make_Name>
 <Model_ID>4622</Model_ID>
-<Model_Name>Albert Böcker GmbH & Co. KG</Model_Name>
+<Model_Name>Albert BÃ¶cker GmbH & Co. KG</Model_Name>
 </ModelsForMake>
 <ModelsForMake>
 <Make_ID>472</Make_ID>
@@ -13702,7 +13704,7 @@ Gateway, Sundance FW, Sundance XLT FW, Sundance XLT TT, & Sundance TT
 </ModelsForMake>
 <ModelsForMake>
 <Make_ID>6317</Make_ID>
-<Make_Name>ShoreLand’r</Make_Name>
+<Make_Name>ShoreLandÂ’r</Make_Name>
 <Model_ID>24784</Model_ID>
 <Model_Name>ShoreLand'r</Model_Name>
 </ModelsForMake>
