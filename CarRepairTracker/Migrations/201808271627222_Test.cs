@@ -3,7 +3,7 @@ namespace CarRepairTracker.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class encrypt : DbMigration
+    public partial class Test : DbMigration
     {
         public override void Up()
         {
