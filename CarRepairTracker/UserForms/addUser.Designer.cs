@@ -133,7 +133,7 @@
             this.Controls.Add(this.lblWhatIsYourName);
             this.Controls.Add(this.btnCancel);
             this.Name = "AddUser";
-            this.Text = "Add User Name";
+            this.Text = "Add User";
             this.Load += new System.EventHandler(this.AddUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

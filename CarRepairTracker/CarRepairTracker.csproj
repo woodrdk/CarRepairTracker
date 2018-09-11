@@ -66,25 +66,9 @@
     <Compile Include="CarForms\DeleteCar.Designer.cs">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808021720113_db.cs" />
-    <Compile Include="Migrations\201808021720113_db.Designer.cs">
-      <DependentUpon>201808021720113_db.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808021820188_db fix.cs" />
-    <Compile Include="Migrations\201808021820188_db fix.Designer.cs">
-      <DependentUpon>201808021820188_db fix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808080209547_carlist.cs" />
-    <Compile Include="Migrations\201808080209547_carlist.Designer.cs">
-      <DependentUpon>201808080209547_carlist.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808222204048_ne.cs" />
-    <Compile Include="Migrations\201808222204048_ne.Designer.cs">
-      <DependentUpon>201808222204048_ne.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808231827163_encrypt.cs" />
-    <Compile Include="Migrations\201808231827163_encrypt.Designer.cs">
-      <DependentUpon>201808231827163_encrypt.cs</DependentUpon>
+    <Compile Include="Migrations\201809110439000_none.cs" />
+    <Compile Include="Migrations\201809110439000_none.Designer.cs">
+      <DependentUpon>201809110439000_none.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarRepairDbContext.cs" />
@@ -164,20 +148,8 @@
     <EmbeddedResource Include="CarForms\DeleteCar.resx">
       <DependentUpon>DeleteCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808021720113_db.resx">
-      <DependentUpon>201808021720113_db.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808021820188_db fix.resx">
-      <DependentUpon>201808021820188_db fix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808080209547_carlist.resx">
-      <DependentUpon>201808080209547_carlist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808222204048_ne.resx">
-      <DependentUpon>201808222204048_ne.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808231827163_encrypt.resx">
-      <DependentUpon>201808231827163_encrypt.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809110439000_none.resx">
+      <DependentUpon>201809110439000_none.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairForms\DeleteRepair.resx">
       <DependentUpon>DeleteRepair.cs</DependentUpon>

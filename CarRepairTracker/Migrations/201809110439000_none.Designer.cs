@@ -7,13 +7,13 @@ namespace CarRepairTracker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class encrypt : IMigrationMetadata
+    public sealed partial class none : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(encrypt));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(none));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808231827163_encrypt"; }
+            get { return "201809110439000_none"; }
         }
         
         string IMigrationMetadata.Source

@@ -26,12 +26,10 @@ namespace CarRepairTracker
         private void IntroWho_Load(object sender, EventArgs e)
         {
             List<User> Users = User.GetAllUsers();
-
             // If there are no users in the list, open AddUser window
             if (Users.Count() == 0)
             {
                 UserForms.AddUser AddUser = new UserForms.AddUser();
-
                 // Opens the AddUser form and ActiveControl sets focus for window
                 AddUser.Show(ActiveControl);
             }
@@ -70,6 +68,7 @@ namespace CarRepairTracker
             else
             {
                 pnlWho.Visible = false;
+                lblName.Text = "Hello " + cbWho.SelectedIndex;
                 pnlWhichCar.Visible = true;               
             }
 
@@ -142,6 +141,16 @@ namespace CarRepairTracker
         private void btnRepairHistory_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void pnlWhichCar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

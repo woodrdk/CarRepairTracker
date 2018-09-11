@@ -39,7 +39,8 @@
             this.cbCarOfWho = new System.Windows.Forms.ComboBox();
             this.pnlWhichCar = new System.Windows.Forms.Panel();
             this.btnWhichCar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHello = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.pnlWho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scDisplay)).BeginInit();
             this.scDisplay.Panel1.SuspendLayout();
@@ -145,14 +146,16 @@
             // 
             // pnlWhichCar
             // 
+            this.pnlWhichCar.Controls.Add(this.lblName);
             this.pnlWhichCar.Controls.Add(this.btnWhichCar);
-            this.pnlWhichCar.Controls.Add(this.label1);
+            this.pnlWhichCar.Controls.Add(this.lblHello);
             this.pnlWhichCar.Controls.Add(this.cbCarOfWho);
             this.pnlWhichCar.Location = new System.Drawing.Point(176, 116);
             this.pnlWhichCar.Name = "pnlWhichCar";
             this.pnlWhichCar.Size = new System.Drawing.Size(298, 92);
             this.pnlWhichCar.TabIndex = 4;
             this.pnlWhichCar.Visible = false;
+            this.pnlWhichCar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlWhichCar_Paint);
             // 
             // btnWhichCar
             // 
@@ -164,14 +167,23 @@
             this.btnWhichCar.UseVisualStyleBackColor = true;
             this.btnWhichCar.Click += new System.EventHandler(this.BtnWhichCar_Click);
             // 
-            // label1
+            // lblHello
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hello, which car do you wish to manage today?";
+            this.lblHello.AutoSize = true;
+            this.lblHello.Location = new System.Drawing.Point(24, 35);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(200, 13);
+            this.lblHello.TabIndex = 1;
+            this.lblHello.Text = "which car do you wish to manage today?";
+            this.lblHello.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(24, 13);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 13);
+            this.lblName.TabIndex = 7;
             // 
             // IntroWho
             // 
@@ -209,7 +221,8 @@
         private System.Windows.Forms.Button btnChangeCar;
         private System.Windows.Forms.ComboBox cbCarOfWho;
         private System.Windows.Forms.Panel pnlWhichCar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHello;
         private System.Windows.Forms.Button btnWhichCar;
+        private System.Windows.Forms.Label lblName;
     }
 }

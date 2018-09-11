@@ -51,6 +51,7 @@
             this.cbUserToDelete.Name = "cbUserToDelete";
             this.cbUserToDelete.Size = new System.Drawing.Size(161, 21);
             this.cbUserToDelete.TabIndex = 4;
+            this.cbUserToDelete.SelectedIndexChanged += new System.EventHandler(this.cbUserToDelete_SelectedIndexChanged);
             // 
             // btnDeleteUser
             // 
@@ -81,7 +82,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDeleteUser);
             this.Name = "DeleteUser";
-            this.Text = "DeleteUser";
+            this.Text = "Delete user";
             this.Load += new System.EventHandler(this.DeleteUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

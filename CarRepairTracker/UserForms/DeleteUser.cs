@@ -63,5 +63,10 @@ namespace CarRepairTracker.UserForms
         {
             Close();
         }
+
+        private void cbUserToDelete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
