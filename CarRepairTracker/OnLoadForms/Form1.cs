@@ -146,17 +146,17 @@ namespace CarRepairTracker
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {   // code for pop up verification box upon close
-            //DialogResult choice = MessageBox.Show("Are you sure you want to quit? ", "Do you want to quit? ",
-            //MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            //if (choice == DialogResult.No)
-            //{
-            //    e.Cancel = true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Thank you for using 253 Car Mod Tracker");
-            //}
+        {   //  code for pop up verification box upon close
+            // DialogResult choice = MessageBox.Show("Are you sure you want to quit? ", "Do you want to quit? ",
+            // MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            // if (choice == DialogResult.No)
+            // {
+            //     e.Cancel = true;
+            // }
+            // else
+            // {
+            //     MessageBox.Show("Thank you for using 253 Car Mod Tracker");
+            // }
         }
 
         private void ExitToolStripMenuItem1_Click(object sender, EventArgs e)
